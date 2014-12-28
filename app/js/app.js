@@ -23,7 +23,7 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router']).
                 url: '/user',
                 controller: 'UserController as user',
                 templateUrl: '/user/views/user.html'
-            })
+            });
 //            .state('view2', {
 //                url: '/view2/:firstname/:lastname',
 //                controller: 'Controller2',
