@@ -5,8 +5,8 @@ angular.module('adsSystem.ads', []).
         $stateProvider
             .state('home', {
                 url: '/',
-                controller: 'HomeController',
-                templateUrl: '/views/home.html'
+//                controller: 'HomeController',
+                templateUrl: 'modules/ads/views/home.html'
             })
             .state('login', {
                 url: '/login',
@@ -33,5 +33,5 @@ angular.module('adsSystem.ads', []).
 //                },
 //                templateUrl: '/partials/view2.html'
 //            });
-        $urlRouterProvider.otherwise('/');
-    })
+        $urlRouterProvider.otherwise('home');
+    });
