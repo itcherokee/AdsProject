@@ -4,10 +4,10 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router']).
     config(function ($stateProvider, $urlRouterProvider) {
         //$stateProvider and $urlRouterProvider are from ui.router module
         $stateProvider
-            .state('allAds', {
-                url: '/ads',
-                controller: 'Controller1',
-                templateUrl: '/ads/allads.html'
+            .state('home', {
+                url: '/home',
+                controller: 'HomeController',
+                templateUrl: '/ads/home.html'
             })
             .state('login', {
                 url: '/login',
@@ -15,7 +15,7 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router']).
                 templateUrl: '/login/views/login.html'
             })
             .state('register', {
-                url: '/login',
+                url: '/register',
                 controller: 'RegisterController as register',
                 templateUrl: '/login/views/register.html'
             })
@@ -34,5 +34,5 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router']).
 //                },
 //                templateUrl: '/partials/view2.html'
 //            });
-        $urlRouterProvider.otherwise('/view1');
+        $urlRouterProvider.otherwise('home');
     });
