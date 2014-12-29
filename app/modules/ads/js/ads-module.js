@@ -5,7 +5,7 @@ angular.module('adsSystem.ads', []).
         $stateProvider
             .state('home', {
                 url: '/',
-//                controller: 'HomeController',
+                controller: 'HomeController',
                 templateUrl: 'modules/ads/views/home.html'
             })
             .state('login', {
