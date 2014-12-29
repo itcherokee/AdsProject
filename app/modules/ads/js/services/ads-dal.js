@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adsSystem.ads').factory('adsData',['$http', function($http){
+angular.module('adsSystem.ads').factory('adsData',['$http', '$log', function($http, $log){
     function isLoggedIn(){
         return false;
     }
@@ -13,7 +13,7 @@ angular.module('adsSystem.ads').factory('adsData',['$http', function($http){
         return $http({
             method: 'GET',
             url: 'http://softuni-ads.azurewebsites.net/api/ads'
-        });
+        })
     }
 
     function getAllTowns (){

@@ -4,7 +4,18 @@
 	<a ui-sref="register">Register</a>
 </div>
 <div>
-	Main content
+	<div data-ng-repeat="ad in ads">
+		<h3>{{ad.title}}</h3>{{ad.date}}
+		<div>
+			<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
+		</div>
+		<div>
+			<textarea >{{ad.text}}</textarea><br/>
+			Name: <input type="text" data-ng-model="ad.ownerName"/> <br/>
+			Email: <input type="text" data-ng-model="ad.ownerEmail"/> <br/>
+			Tel.: <input type="text" data-ng-model="ad.ownerPhone"/> <br/>
+		</div>
+	</div>
 </div>
 <div>
 	<div>
