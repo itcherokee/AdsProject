@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/ads/js/services/ads-dal.js" afterPath="$PROJECT_DIR$/app/modules/ads/js/services/ads-dal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/ads/js/controllers/ads-home-controller.js" afterPath="$PROJECT_DIR$/app/modules/ads/js/controllers/ads-home-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/ads/js/ads-module.js" afterPath="$PROJECT_DIR$/app/modules/ads/js/ads-module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/ads/views/home.html" afterPath="$PROJECT_DIR$/app/modules/ads/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -549,7 +544,11 @@
       <created>1419875776130</created>
       <updated>1419875776130</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="display of all ads added">
+      <created>1419879284119</created>
+      <updated>1419879284119</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -605,7 +604,8 @@
     <MESSAGE value="fixed routing with adsModule home screen" />
     <MESSAGE value="added ads data access layer (handling REST calls for ads)" />
     <MESSAGE value="renaming js files to follow common naming for easy discovery and identifing&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="renaming js files to follow common naming for easy discovery and identifing&#10;" />
+    <MESSAGE value="display of all ads added" />
+    <option name="LAST_COMMIT_MESSAGE" value="display of all ads added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
