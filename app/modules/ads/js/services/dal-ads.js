@@ -1,6 +1,14 @@
 'use strict';
 
-angular.module('adsSystem').factory('dal',['$http', function($http){
+angular.module('adsSystem.ads').factory(['$http', function($http){
+    function isLoggedIn(){
+        return false;
+    }
+
+    function getAllAds(){
+
+    }
+
     function getAllPublishedAds(){
 
     }
@@ -8,11 +16,14 @@ angular.module('adsSystem').factory('dal',['$http', function($http){
     function getAllTowns (){
 
     }
+
     function getAllCategories(){
 
     }
 
     return {
+        isLoggedIn: isLoggedIn,
+        getAllAds : getAllAds,
         getAllPublishedAds : getAllPublishedAds,
         getAllCategories : getAllCategories,
         getAllTowns : getAllTowns

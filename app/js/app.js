@@ -5,9 +5,9 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router']).
         //$stateProvider and $urlRouterProvider are from ui.router module
         $stateProvider
             .state('home', {
-                url: '/home',
+                url: '/',
                 controller: 'HomeController',
-                templateUrl: '/ads/home.html'
+                templateUrl: '/index.html'
             })
             .state('login', {
                 url: '/login',
@@ -18,12 +18,12 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router']).
                 url: '/register',
                 controller: 'RegisterController as register',
                 templateUrl: '/login/views/register.html'
-            })
-            .state('user', {
-                url: '/user',
-                controller: 'UserController as user',
-                templateUrl: '/user/views/user.html'
             });
+//            .state('user', {
+//                url: '/user',
+//                controller: 'UserController as user',
+//                templateUrl: '/user/views/user.html'
+//            });
 //            .state('view2', {
 //                url: '/view2/:firstname/:lastname',
 //                controller: 'Controller2',
@@ -34,5 +34,10 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router']).
 //                },
 //                templateUrl: '/partials/view2.html'
 //            });
-        $urlRouterProvider.otherwise('home');
-    });
+        $urlRouterProvider.otherwise('/');
+    })
+    .run(['$state', '$rootScope', '$stateParams', function ($state, $rootScope, $stateParams) {
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+        $state.on('/')
+    }]);
