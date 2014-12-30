@@ -16,8 +16,6 @@ angular.module('adsSystem').controller('adsHomeController', ['adsData', '$scope'
             });
     }
 
-    loadAds();
-
     adsData.getAllCategories()
         .success(function(data){
             $scope.categories = data;
@@ -38,11 +36,13 @@ angular.module('adsSystem').controller('adsHomeController', ['adsData', '$scope'
         $scope.categoryId = categoryId;
         $scope.startPage = 1;
         loadAds();
-    }
+    };
 
     $scope.clickTownHandler= function clickTownHandler(townId){
         $scope.townId = townId;
         $scope.startPage = 1;
         loadAds();
-    }
+    };
+
+    loadAds();
 }]);

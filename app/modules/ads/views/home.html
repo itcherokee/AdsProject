@@ -10,7 +10,7 @@
 			<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
 		</div>
 		<div>
-			<textarea >{{ad.text}}</textarea><br/>
+			<textarea>{{ad.text}}</textarea><br/>
 			Name: <input type="text" data-ng-model="ad.ownerName"/> <br/>
 			Email: <input type="text" data-ng-model="ad.ownerEmail"/> <br/>
 			Tel.: <input type="text" data-ng-model="ad.ownerPhone"/> <br/>
@@ -21,10 +21,11 @@
 	<div>
 		<h3>Categories</h3>
 		<ul>
-			<li>All</li>
+			<li>
+				<a data-ng-click="clickCategoryHandler(null)" href="">All</a>
+			</li>
 			<li data-ng-repeat="category in categories">
-				{{category}}
-				<a data-ng-click="clickCategoryHandler(category.id)" href="">{{category.name}} - {{category.id}}</a>
+				<a data-ng-click="clickCategoryHandler(category.id)" href="">{{category.name}}</a>
 
 			</li>
 		</ul>

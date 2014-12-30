@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/ads/js/services/ads-dal.js" afterPath="$PROJECT_DIR$/app/modules/ads/js/services/ads-dal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/ads/js/controllers/ads-home-controller.js" afterPath="$PROJECT_DIR$/app/modules/ads/js/controllers/ads-home-controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/ads/views/home.html" afterPath="$PROJECT_DIR$/app/modules/ads/views/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -48,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/modules/ads/views/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="765">
-              <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.261807" vertical-offset="0" max-vertical-offset="974">
+              <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -78,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ads-home-controller.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ads-home-controller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/ads/js/controllers/ads-home-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.714" vertical-offset="0" max-vertical-offset="1000">
-              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,8 +123,8 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/modules/ads/js/ads-module.js" />
         <option value="$PROJECT_DIR$/app/modules/ads/js/services/ads-dal.js" />
-        <option value="$PROJECT_DIR$/app/modules/ads/views/home.html" />
         <option value="$PROJECT_DIR$/app/modules/ads/js/controllers/ads-home-controller.js" />
+        <option value="$PROJECT_DIR$/app/modules/ads/views/home.html" />
       </list>
     </option>
   </component>
@@ -555,7 +554,11 @@
       <created>1419929940480</created>
       <updated>1419929940480</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added category handler">
+      <created>1419938570667</created>
+      <updated>1419938570667</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -613,7 +616,8 @@
     <MESSAGE value="renaming js files to follow common naming for easy discovery and identifing&#10;" />
     <MESSAGE value="display of all ads added" />
     <MESSAGE value="fetch and visualisation of categories &amp; towns" />
-    <option name="LAST_COMMIT_MESSAGE" value="fetch and visualisation of categories &amp; towns" />
+    <MESSAGE value="added category handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="added category handler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -781,18 +785,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/ads/views/home.html">
+    <entry file="file://$PROJECT_DIR$/app/modules/ads/js/controllers/ads-home-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="765">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/ads/js/controllers/ads-home-controller.js">
+    <entry file="file://$PROJECT_DIR$/app/modules/ads/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.714" vertical-offset="0" max-vertical-offset="1000">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.261807" vertical-offset="0" max-vertical-offset="974">
+          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
           <folding />
         </state>
       </provider>
