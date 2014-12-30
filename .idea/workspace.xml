@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/ads/views/home.html" afterPath="$PROJECT_DIR$/app/modules/ads/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -30,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43634498" vertical-offset="0" max-vertical-offset="974">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.31416836" vertical-offset="0" max-vertical-offset="974">
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -610,7 +608,11 @@
       <created>1419964414302</created>
       <updated>1419964414302</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="some fixes on bootstrap">
+      <created>1419965533538</created>
+      <updated>1419965533538</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -672,7 +674,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added bootstrap and ui-bootstrap directives" />
     <MESSAGE value="added app.js to script tag" />
     <MESSAGE value="fixed css file&#10;" />
     <MESSAGE value="added support for ui-router as some minor fixes in the module.config" />
@@ -697,7 +698,8 @@
     <MESSAGE value="Added All in Towns filter as part of array" />
     <MESSAGE value="better filtering on ads (off-line)" />
     <MESSAGE value="fixed filtering - strict" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed filtering - strict" />
+    <MESSAGE value="some fixes on bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fixes on bootstrap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -883,8 +885,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43634498" vertical-offset="0" max-vertical-offset="974">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.31416836" vertical-offset="0" max-vertical-offset="974">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding />
         </state>
       </provider>
