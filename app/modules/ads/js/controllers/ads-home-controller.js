@@ -5,6 +5,11 @@ angular.module('adsSystem').controller('adsHomeController', ['adsData', '$scope'
     $scope.categoryId = null;
     $scope.startPage = 1;
 
+    var allElement = {
+        'id' : null,
+        'name' : 'All'
+    }
+
     function loadAds(){
         adsData.getAllPublishedAds($scope.startPage, $scope.townId, $scope.categoryId)
             .success(function(data){
@@ -27,6 +32,7 @@ angular.module('adsSystem').controller('adsHomeController', ['adsData', '$scope'
     adsData.getAllTowns()
         .success(function(data){
             $scope.towns = data;
+            $scope.towns.unshift(allElement);
         })
         .error(function(error){
             $log.error('Towns cannot be loaded from server!');
@@ -39,12 +45,13 @@ angular.module('adsSystem').controller('adsHomeController', ['adsData', '$scope'
     };
 
     $scope.clickTownHandler= function clickTownHandler(townId){
+
         $scope.townId = townId;
         $scope.startPage = 1;
+
         loadAds();
     };
 
-    $scope.accordionShowOneItem = true;
     $scope.accordionStatus = {
         showOneItem : true,
         categoryIsOpen: false,

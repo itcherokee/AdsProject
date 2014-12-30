@@ -41,9 +41,9 @@
 						 ng-class="{'glyphicon-chevron-down': accordionStatus.townIsOpen, 'glyphicon-chevron-right': !accordionStatus.townIsOpen}"></i>
 			</span>
 
-			<div>
-				<button data-ng-click="clickTownHandler(null)" type="button" class="btn btn-link">All</button>
-			</div>
+			<!--<div>-->
+				<!--<button data-ng-click="clickTownHandler(null)" type="button" class="btn btn-link">All</button>-->
+			<!--</div>-->
 			<div data-ng-repeat="town in towns">
 				<button data-ng-click="clickTownHandler(town.id)" type="button" class="btn btn-link">{{town.name}}
 					({{town.id}})

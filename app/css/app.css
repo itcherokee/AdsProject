@@ -3,3 +3,8 @@
 .nav, .pagination, .carousel, .panel-title a {
     cursor: pointer;
 }
+
+/*selected link, filter*/
+.active-link {
+    font-style: italic;
+}
