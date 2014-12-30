@@ -21,20 +21,19 @@
 	<div>
 		<h3>Categories</h3>
 		<ul>
-			<li>
-				<a data-ng-click="clickCategoryHandler(null)" href="">All</a>
-			</li>
+			<li><a data-ng-click="clickCategoryHandler(null)" href="">All</a></li>
 			<li data-ng-repeat="category in categories">
 				<a data-ng-click="clickCategoryHandler(category.id)" href="">{{category.name}}</a>
-
 			</li>
 		</ul>
 	</div>
 	<div>
 		<h3>Towns</h3>
 		<ul>
-			<li>All</li>
-			<li data-ng-repeat="town in towns">{{town.name}}</li>
+			<li><a data-ng-click="clickTownHandler(null)" href="">All</a></li>
+			<li data-ng-repeat="town in towns">
+				<a data-ng-click="clickTownHandler(town.id)" href="">{{town.name}}</a>
+			</li>
 		</ul>
 	</div>
 </div>
