@@ -3,6 +3,7 @@
 	<a ui-sref="login">Login</a>
 	<a ui-sref="register">Register</a>
 </div>
+		{{townId}} --- {{categoryId}}
 <div>
 	<div data-ng-repeat="ad in ads">
 		<h3>{{ad.title}}</h3>{{ad.date | date:'d-MMM-yyyy'}}
@@ -23,7 +24,7 @@
 		<ul>
 			<li><a data-ng-click="clickCategoryHandler(null)" href="">All</a></li>
 			<li data-ng-repeat="category in categories">
-				<a data-ng-click="clickCategoryHandler(category.id)" href="">{{category.name}}</a>
+				<a data-ng-click="clickCategoryHandler(category.id)" href="">{{category.name}} ({{category.id}})</a>
 			</li>
 		</ul>
 	</div>
@@ -32,8 +33,11 @@
 		<ul>
 			<li><a data-ng-click="clickTownHandler(null)" href="">All</a></li>
 			<li data-ng-repeat="town in towns">
-				<a data-ng-click="clickTownHandler(town.id)" href="">{{town.name}}</a>
+				<a data-ng-click="clickTownHandler(town.id)" href="">{{town.name}} ({{town.id}})</a>
 			</li>
 		</ul>
 	</div>
+</div>
+<div>
+	<a href="" data-ng-repeat=""></a>
 </div>

@@ -30,14 +30,14 @@ angular.module('adsSystem.ads').factory('adsData',['$http', '$log', function($ht
     function getAllTowns (){
         return $http({
             method: 'GET',
-            url: 'http://softuni-ads.azurewebsites.net/api/categories'
+            url: 'http://softuni-ads.azurewebsites.net/api/towns'
         })
     }
 
     function getAllCategories(){
         return $http({
             method: 'GET',
-            url: 'http://softuni-ads.azurewebsites.net/api/towns'
+            url: 'http://softuni-ads.azurewebsites.net/api/categories'
         })
     }
 
