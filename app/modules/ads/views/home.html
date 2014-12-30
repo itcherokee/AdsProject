@@ -35,7 +35,7 @@
 				Towns <i class="pull-right glyphicon"
 						 ng-class="{'glyphicon-chevron-down': accordionStatus.townIsOpen, 'glyphicon-chevron-right': !accordionStatus.townIsOpen}"></i>
 			</span>
-			<a href="" class="btn btn-block" data-ng-repeat="town in towns.data"
+			<a href="" class="btn btn-block" data-ng-repeat="town in towns.data | orderBy: 'name' "
 			   data-ng-class="{'active-link' : towns.selected==town }"
 			   data-ng-click="towns.selected = town;  clickTownHandler(town.id)">
 				{{town.name}}
