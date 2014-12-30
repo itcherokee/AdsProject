@@ -3,8 +3,7 @@
 	<a ui-sref="login">Login</a>
 	<a ui-sref="register">Register</a>
 </div>
-{{townId}} --- {{categoryId}}
-<div  class="col-md-6">
+<div  class="col-md-8">
 	<div data-ng-repeat="ad in ads | filter:{categoryId: categoryId}:isCategoryFilterStrict | filter : {townId : townId}:isTownFilterStrict">
 		<h3>{{ad.title}}</h3>{{ad.categoryId + '--' + ad.townId}} | {{ad.date | date:'d-MMM-yyyy'}}
 		<div>
