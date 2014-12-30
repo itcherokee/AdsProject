@@ -19,11 +19,35 @@
 	</div>
 </div>
 <div>
-	<div accordion>
-		<div accordion-group heading="Categories" >
-			<div><button data-ng-click="clickCategoryHandler(null)" type="button" class="btn btn-link">All</button></div>
+	<div data-accordion close-others="accordionStatus.showOneItem">
+		<div data-accordion-group is-open="accordionStatus.categoryIsOpen">
+			<span data-accordion-heading>
+				Categories <i class="pull-right glyphicon"
+							  ng-class="{'glyphicon-chevron-down': accordionStatus.categoryIsOpen, 'glyphicon-chevron-right': !accordionStatus.categoryIsOpen}"></i>
+			</span>
+
+			<div>
+				<button data-ng-click="clickCategoryHandler(null)" type="button" class="btn btn-link">All</button>
+			</div>
 			<div data-ng-repeat="category in categories">
-				<button data-ng-click="clickCategoryHandler(category.id)" type="button" class="btn btn-link">{{category.name}} ({{category.id}})</button>
+				<button data-ng-click="clickCategoryHandler(category.id)" type="button" class="btn btn-link">
+					{{category.name}} ({{category.id}})
+				</button>
+			</div>
+		</div>
+		<div data-accordion-group is-open="accordionStatus.townIsOpen">
+			<span data-accordion-heading>
+				Towns <i class="pull-right glyphicon"
+						 ng-class="{'glyphicon-chevron-down': accordionStatus.townIsOpen, 'glyphicon-chevron-right': !accordionStatus.townIsOpen}"></i>
+			</span>
+
+			<div>
+				<button data-ng-click="clickTownHandler(null)" type="button" class="btn btn-link">All</button>
+			</div>
+			<div data-ng-repeat="town in towns">
+				<button data-ng-click="clickTownHandler(town.id)" type="button" class="btn btn-link">{{town.name}}
+					({{town.id}})
+				</button>
 			</div>
 		</div>
 	</div>
@@ -37,16 +61,16 @@
 	<!--</li>-->
 	<!--</ul>-->
 	<!--</div>-->
-	<div>
-		<h3>Towns</h3>
-		<ul>
-			<li><a data-ng-click="clickTownHandler(null)" href="">All</a></li>
-			<li data-ng-repeat="town in towns">
-				<a data-ng-click="clickTownHandler(town.id)" href="">{{town.name}} ({{town.id}})</a>
-			</li>
-		</ul>
-	</div>
+	<!--<div>-->
+	<!--<h3>Towns</h3>-->
+	<!--<ul>-->
+	<!--<li><a data-ng-click="clickTownHandler(null)" href="">All</a></li>-->
+	<!--<li data-ng-repeat="town in towns">-->
+	<!--<a data-ng-click="clickTownHandler(town.id)" href="">{{town.name}} ({{town.id}})</a>-->
+	<!--</li>-->
+	<!--</ul>-->
+	<!--</div>-->
 </div>
 <div>
-	<a href="" data-ng-repeat=""></a>
+	<!--<a href="" data-ng-repeat=""></a>-->
 </div>

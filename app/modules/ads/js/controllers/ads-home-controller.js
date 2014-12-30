@@ -45,5 +45,11 @@ angular.module('adsSystem').controller('adsHomeController', ['adsData', '$scope'
     };
 
     $scope.accordionShowOneItem = true;
+    $scope.accordionStatus = {
+        showOneItem : true,
+        categoryIsOpen: false,
+        townIsOpen: false
+    };
+
     loadAds();
 }]);
