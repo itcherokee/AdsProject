@@ -22,8 +22,8 @@
 	<!--</script>-->
 </head>
 <body ng-app="adsSystem" class="container">
-<header id="topbar" class="page-header row">
-	<span class=" col-md-12">Ads - {{$state.current.name}}</span>
+<header id="topbar" class="page-header row text-center">
+	<h3 class=" col-md-12">Ads - <span class="text-capitalize" ng-bind="$state.current.name"></span></h3>
 </header>
 <div ui-view class="row"></div>
 <footer class="row">

@@ -10,3 +10,13 @@
     border: 1px solid brown;
     /*font-style: italic;*/
 }
+
+.login-register {
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.login-register a {
+    margin-top: 10px;
+}

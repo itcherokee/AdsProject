@@ -1,23 +1,30 @@
-<div class="col-md-2">
-	To publish a new ad, please login
-	<a ui-sref="login">Login</a>
-	<a ui-sref="register">Register</a>
+<div class="col-md-2 login-register">
+	To publish a new ad, please login.
+	<a ui-sref="login" class="btn btn-block btn-default">Login</a>
+	<a ui-sref="register" class="btn btn-block btn-default">Register</a>
 </div>
-<div  class="col-md-8">
-	<div data-ng-repeat="ad in ads | filter:{categoryId: categoryId}:isCategoryFilterStrict | filter : {townId : townId}:isTownFilterStrict">
-		<h3>{{ad.title}}</h3>{{ad.categoryId + '--' + ad.townId}} | {{ad.date | date:'d-MMM-yyyy'}}
-		<div>
-			<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
+<div class="col-md-8">
+	<div data-ng-repeat="ad in ads | filter:{categoryId: categoryId}:isCategoryFilterStrict | filter : {townId : townId}:isTownFilterStrict"
+		 class="col-md-12">
+		<div class="row">
+			<div class="col-md-9"><h3>{{ad.title}}</h3></div>
+			<span class="col-md-3">{{ad.categoryId + '--' + ad.townId}} | {{ad.date | date:'d-MMM-yyyy'}}</span>
 		</div>
-		<div>
-			<textarea>{{ad.text}}</textarea><br/>
-			Name: <input type="text" data-ng-model="ad.ownerName"/> <br/>
-			Email: <input type="text" data-ng-model="ad.ownerEmail"/> <br/>
-			Tel.: <input type="text" data-ng-model="ad.ownerPhone"/> <br/>
+		<div class="row">
+			<div class="col-md-4">
+				<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
+			</div>
+			<div class="col-md-8">
+				<div>{{ad.text}}</div>
+				<br/>
+				Name: <input type="text" data-ng-model="ad.ownerName"/> <br/>
+				Email: <input type="text" data-ng-model="ad.ownerEmail"/> <br/>
+				Tel.: <input type="text" data-ng-model="ad.ownerPhone"/> <br/>
+			</div>
 		</div>
 	</div>
 </div>
-<div  class="col-md-2">
+<div class="col-md-2">
 	<div data-accordion close-others="accordionStatus.showOneItem">
 		<div data-accordion-group is-open="accordionStatus.categoryIsOpen">
 			<span data-accordion-heading>
@@ -40,29 +47,8 @@
 			   data-ng-click="towns.selected = town;  clickTownHandler(town.id)">
 				{{town.name}}
 			</a>
-			<!--<div>-->
-			<!--<button data-ng-click="clickTownHandler(null)" type="button" class="btn btn-link">All</button>-->
-			<!--</div>-->
-			<!--<div data-tabset vertical="true" type="pills">-->
-			<!--<tab heading="sdfsdfdsfsdf"></tab>-->
-			<!--</div>-->
-
-			<!--<ul class="nav nav-pills nav-stacked">-->
-			<!--<li data-ng-repeat="town in towns.data" role="presentation">-->
-			<!--<a href=""-->
-			<!--data-ng-class="{'active' : towns.selected == town}"-->
-			<!--data-ng-click="towns.selected = town; clickTownHandler(town.id)">{{town.name}}</a>-->
-			<!--</li>-->
-			<!--</ul>-->
-			<!--<div data-ng-repeat="town in towns">-->
-			<!--<button data-ng-click="clickTownHandler(town.id)" type="button" class="btn btn-link">{{town.name}}-->
-			<!--({{town.id}})-->
-			<!--</button>-->
-			<!--</div>-->
 		</div>
 	</div>
 
 </div>
-<div>
-	<!--<a href="" data-ng-repeat=""></a>-->
-</div>
+
