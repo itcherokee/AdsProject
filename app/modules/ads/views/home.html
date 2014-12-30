@@ -5,7 +5,7 @@
 </div>
 {{townId}} --- {{categoryId}}
 <div>
-	<div data-ng-repeat="ad in ads">
+	<div data-ng-repeat="ad in ads | filter:{categoryId: categoryId}">
 		<h3>{{ad.title}}</h3>{{ad.date | date:'d-MMM-yyyy'}}
 		<div>
 			<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
@@ -25,15 +25,11 @@
 				Categories <i class="pull-right glyphicon"
 							  ng-class="{'glyphicon-chevron-down': accordionStatus.categoryIsOpen, 'glyphicon-chevron-right': !accordionStatus.categoryIsOpen}"></i>
 			</span>
-
-			<div>
-				<button data-ng-click="clickCategoryHandler(null)" type="button" class="btn btn-link">All</button>
-			</div>
-			<div data-ng-repeat="category in categories">
-				<button data-ng-click="clickCategoryHandler(category.id)" type="button" class="btn btn-link">
-					{{category.name}} ({{category.id}})
-				</button>
-			</div>
+			<a href="" class="btn btn-block" data-ng-repeat="category in categories.data"
+					data-ng-class="{'active-link' : categories.selected==category }"
+					data-ng-click="categories.selected = category;  clickCategoryHandler(category.id)">
+				{{category.name}} <!-- {{category.id}})-->
+			</a>
 		</div>
 		<div data-accordion-group is-open="accordionStatus.townIsOpen">
 			<span data-accordion-heading>
@@ -42,13 +38,24 @@
 			</span>
 
 			<!--<div>-->
-				<!--<button data-ng-click="clickTownHandler(null)" type="button" class="btn btn-link">All</button>-->
+			<!--<button data-ng-click="clickTownHandler(null)" type="button" class="btn btn-link">All</button>-->
 			<!--</div>-->
-			<div data-ng-repeat="town in towns">
-				<button data-ng-click="clickTownHandler(town.id)" type="button" class="btn btn-link">{{town.name}}
-					({{town.id}})
-				</button>
+			<div data-tabset vertical="true" type="pills">
+				<tab heading="sdfsdfdsfsdf"></tab>
 			</div>
+
+			<ul class="nav nav-pills nav-stacked">
+				<li data-ng-repeat="town in towns.data" role="presentation">
+					<a href=""
+					   data-ng-class="{'active' : towns.selected == town}"
+					   data-ng-click="towns.selected = town; clickTownHandler(town.id)">{{town.name}}</a>
+				</li>
+			</ul>
+			<!--<div data-ng-repeat="town in towns">-->
+				<!--<button data-ng-click="clickTownHandler(town.id)" type="button" class="btn btn-link">{{town.name}}-->
+					<!--({{town.id}})-->
+				<!--</button>-->
+			<!--</div>-->
 		</div>
 	</div>
 

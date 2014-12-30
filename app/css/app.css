@@ -6,5 +6,7 @@
 
 /*selected link, filter*/
 .active-link {
-    font-style: italic;
+    background-color : yellow;
+    border: 1px solid brown;
+    /*font-style: italic;*/
 }

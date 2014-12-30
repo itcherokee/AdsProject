@@ -1,50 +1,63 @@
 'use strict';
 
 angular.module('adsSystem').controller('adsHomeController', ['adsData', '$scope', '$log', function (adsData, $scope) {
-    $scope.townId = null;
-    $scope.categoryId = null;
+    $scope.townId = '';
+    $scope.categoryId = '';
     $scope.startPage = 1;
 
     var allElement = {
-        'id' : null,
-        'name' : 'All'
+        'id': '',
+        'name': 'All'
     }
 
-    function loadAds(){
+    function loadAds() {
         adsData.getAllPublishedAds($scope.startPage, $scope.townId, $scope.categoryId)
-            .success(function(data){
+            .success(function (data) {
                 $scope.ads = data.ads;
 
             })
-            .error(function(error){
+            .error(function (error) {
                 $log.error('Ads can not be loaded from server!');
             });
     }
 
     adsData.getAllCategories()
-        .success(function(data){
-            $scope.categories = data;
+        .success(function (data) {
+            var categories = {
+                selected: null,
+                data: data
+            };
+
+            categories.data.unshift(allElement);
+            categories.selected = categories.data[0];
+            $scope.categories = categories;
         })
-        .error(function(error){
+        .error(function (error) {
             $log.error('Categories cannot be loaded from server!');
         });
 
     adsData.getAllTowns()
-        .success(function(data){
-            $scope.towns = data;
-            $scope.towns.unshift(allElement);
+        .success(function (data) {
+            var towns = {
+                selected: null,
+                data: data
+            };
+
+            towns.data.unshift(allElement);
+            towns.selected = towns.data[0];
+            $scope.towns = towns;
         })
-        .error(function(error){
+        .error(function (error) {
             $log.error('Towns cannot be loaded from server!');
         });
 
-    $scope.clickCategoryHandler = function clickCategoryHandler(categoryId){
+    $scope.clickCategoryHandler = function clickCategoryHandler(categoryId) {
         $scope.categoryId = categoryId;
-        $scope.startPage = 1;
-        loadAds();
+//        $scope.startPage = 1;
+//        loadAds();
     };
 
-    $scope.clickTownHandler= function clickTownHandler(townId){
+    $scope.clickTownHandler = function clickTownHandler(townId) {
 
         $scope.townId = townId;
         $scope.startPage = 1;
@@ -53,7 +66,7 @@ angular.module('adsSystem').controller('adsHomeController', ['adsData', '$scope'
     };
 
     $scope.accordionStatus = {
-        showOneItem : true,
+        showOneItem: true,
         categoryIsOpen: false,
         townIsOpen: false
     };
