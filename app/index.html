@@ -20,13 +20,13 @@
 		<!--});-->
 	<!--</script>-->
 </head>
-<body ng-app="adsSystem">
-<header id="topbar">
-	Ads - {{$state.current.name}}
+<body ng-app="adsSystem" class="container">
+<header id="topbar" class="row">
+	<span class=" col-md-12">Ads - {{$state.current.name}}</span>
 </header>
-<div ui-view></div>
-<footer>
-	&copy 2014 by Software University Foundation, No Rights Reserved
+<div ui-view class="row"></div>
+<footer class="row">
+	<span class="col-md-12">§copy 2014 by Software University Foundation, No Rights Reserved</span>
 </footer>
 <script src="libs/angular.js"></script>
 <script src="libs/angular-ui-router.js"></script>

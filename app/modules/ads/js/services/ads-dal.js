@@ -11,7 +11,7 @@ angular.module('adsSystem.ads').factory('adsData',['$http', '$log', function($ht
 
     function getAllPublishedAds(startPage, townId, categoryId){
         var parameters ={
-            PageSize : 3,
+            PageSize : 100,
             StartPage : startPage || 1
         };
         if (categoryId) {

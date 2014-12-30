@@ -53,16 +53,17 @@ angular.module('adsSystem').controller('adsHomeController', ['adsData', '$scope'
 
     $scope.clickCategoryHandler = function clickCategoryHandler(categoryId) {
         $scope.categoryId = categoryId;
+        $scope.isCategoryFilterStrict = categoryId !== '';
 //        $scope.startPage = 1;
 //        loadAds();
     };
 
     $scope.clickTownHandler = function clickTownHandler(townId) {
-
         $scope.townId = townId;
-        $scope.startPage = 1;
-
-        loadAds();
+        $scope.isTownFilterStrict = townId !== '';
+//        $scope.startPage = 1;
+//
+//        loadAds();
     };
 
     $scope.accordionStatus = {
