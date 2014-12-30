@@ -22,7 +22,11 @@
 		<h3>Categories</h3>
 		<ul>
 			<li>All</li>
-			<li data-ng-repeat="category in categories"><a {{category.name}}</li>
+			<li data-ng-repeat="category in categories">
+				{{category}}
+				<a data-ng-click="clickCategoryHandler(category.id)" href="">{{category.name}} - {{category.id}}</a>
+
+			</li>
 		</ul>
 	</div>
 	<div>
