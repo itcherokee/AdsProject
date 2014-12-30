@@ -17,11 +17,17 @@ angular.module('adsSystem.ads').factory('adsData',['$http', '$log', function($ht
     }
 
     function getAllTowns (){
-
+        return $http({
+            method: 'GET',
+            url: 'http://softuni-ads.azurewebsites.net/api/categories'
+        })
     }
 
     function getAllCategories(){
-
+        return $http({
+            method: 'GET',
+            url: 'http://softuni-ads.azurewebsites.net/api/towns'
+        })
     }
 
     return {

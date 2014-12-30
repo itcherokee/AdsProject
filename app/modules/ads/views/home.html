@@ -5,7 +5,7 @@
 </div>
 <div>
 	<div data-ng-repeat="ad in ads">
-		<h3>{{ad.title}}</h3>{{ad.date}}
+		<h3>{{ad.title}}</h3>{{ad.date | date:'d-MMM-yyyy'}}
 		<div>
 			<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
 		</div>
@@ -22,14 +22,14 @@
 		<h3>Categories</h3>
 		<ul>
 			<li>All</li>
-			<li data-ng-repeat="category in categories"></li>
+			<li data-ng-repeat="category in categories"><a {{category.name}}</li>
 		</ul>
 	</div>
 	<div>
 		<h3>Towns</h3>
 		<ul>
 			<li>All</li>
-			<li data-ng-repeat="town in towns"></li>
+			<li data-ng-repeat="town in towns">{{town.name}}</li>
 		</ul>
 	</div>
 </div>
