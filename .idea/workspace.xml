@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/ads/views/home.html" afterPath="$PROJECT_DIR$/app/modules/ads/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -619,7 +616,11 @@
       <created>1419966060606</created>
       <updated>1419966060606</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fixing some bootstrap positioning of main content">
+      <created>1419968499515</created>
+      <updated>1419968499515</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -681,7 +682,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixed css file&#10;" />
     <MESSAGE value="added support for ui-router as some minor fixes in the module.config" />
     <MESSAGE value="added services (DAL) and HomeController" />
     <MESSAGE value="created data access layer service&#10;" />
@@ -706,7 +706,8 @@
     <MESSAGE value="fixed filtering - strict" />
     <MESSAGE value="some fixes on bootstrap" />
     <MESSAGE value="sorting on Towns filter applied" />
-    <option name="LAST_COMMIT_MESSAGE" value="sorting on Towns filter applied" />
+    <MESSAGE value="fixing some bootstrap positioning of main content" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing some bootstrap positioning of main content" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
