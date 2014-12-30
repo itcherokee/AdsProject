@@ -44,5 +44,6 @@ angular.module('adsSystem').controller('adsHomeController', ['adsData', '$scope'
         loadAds();
     };
 
+    $scope.accordionShowOneItem = true;
     loadAds();
 }]);
