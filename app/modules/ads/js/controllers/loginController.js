@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('adsSystem').controller('LoginController', ['loginService', '$scope', '$log', function (loginService, $scope, $log) {
+angular.module('adsSystem').controller('LoginController', ['authenticateService', '$scope', '$log', function (authenticateService, $scope, $log) {
     $scope.login = function(){
-        loginService.userLogin($scope.user)
+        authenticateService.userLogin($scope.user)
             .success(function(data){
-                alert('logged in!!!')
-
+                alert('logged in!!!');
+                sessionStorage['User']=data.username;
             })
             .error(function(error){
 

@@ -10,20 +10,21 @@
 	<!--<script type="text/javascript" src="libs/angular-loader.min.js"></script>-->
 	<!--<script type="text/javascript" src="libs/script.min.js"></script>-->
 	<!--<script type="text/javascript">-->
-		<!--$script([-->
-			<!--'libs/angular.js',-->
-			<!--'libs/angular-ui-router.js',-->
-			<!--'libs/ui-bootstrap-tpls-0.12.0.js',-->
-			<!--'js/app.js',-->
-			<!--'modules/ads/js/ads-module.js'-->
-		<!--], function () {-->
-			<!--angular.bootstrap(document, ['adsSystem']);-->
-		<!--});-->
+	<!--$script([-->
+	<!--'libs/angular.js',-->
+	<!--'libs/angular-ui-router.js',-->
+	<!--'libs/ui-bootstrap-tpls-0.12.0.js',-->
+	<!--'js/app.js',-->
+	<!--'modules/ads/js/ads-module.js'-->
+	<!--], function () {-->
+	<!--angular.bootstrap(document, ['adsSystem']);-->
+	<!--});-->
 	<!--</script>-->
 </head>
 <body ng-app="adsSystem" class="container">
 <header id="topbar" class="page-header row text-center">
-	<h3 class=" col-md-12"><a ui-sref="home">Ads</a> - <span class="text-capitalize" ng-bind="$state.current.name"></span></h3>
+	<h3 class=" col-md-12"><a ui-sref="home">Ads</a> - <span class="text-capitalize"
+															 ng-bind="$state.current.name"></span></h3>
 </header>
 <div ui-view class="row"></div>
 <footer class="row">
@@ -39,8 +40,8 @@
 <script src="modules/ads/js/controllers/registerController.js"></script>
 <script src="modules/dal/dalModule.js"></script>
 <script src="modules/dal/js/services/restService.js"></script>
+<script src="modules/dal/js/services/authenticateService.js"></script>
 <script src="modules/dal/js/services/dal-main.js"></script>
-<script src="modules/dal/js/services/loginService.js"></script>
 <script src="modules/dal/js/services/townService.js"></script>
 </body>
 </html>
