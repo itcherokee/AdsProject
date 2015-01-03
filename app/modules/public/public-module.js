@@ -5,25 +5,25 @@ angular.module('adsSystem.public', []).
         $stateProvider
             .state('root', {
                 abstract:true,
-                templateUrl: 'modules/public/views/home.html'
+                templateUrl: 'modules/public/views/public.html'
             })
             .state('home', {
                 url: '/',
-//                parent: 'root',
-                controller: 'HomeController',
+                parent: 'root',
+                controller: 'PublicHomeController',
                 templateUrl: 'modules/public/views/public-home.html'
             })
             .state('login', {
                 url: '/login',
                 parent: 'root',
-                controller: 'LoginController',
-                templateUrl: 'modules/public/views/home-login.html'
+                controller: 'PublicLoginController',
+                templateUrl: 'modules/public/views/public-login.html'
             })
             .state('register', {
                 url: '/register',
                 parent: 'root',
-                controller: 'RegisterController',
-                templateUrl: 'modules/public/views/home-register.html'
+                controller: 'PublicRegisterController',
+                templateUrl: 'modules/public/views/public-register.html'
             });
         $urlRouterProvider.otherwise('home');
     });
