@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('adsSystem.dal').factory('dalUserMain', function($http){
-
-
+angular.module('adsSystem.dal').factory('dalService',['$http', function($http){
     function isLoggedIn(){
         return false;
     }
@@ -25,21 +23,21 @@ angular.module('adsSystem.dal').factory('dalUserMain', function($http){
         return $http({
             params: parameters,
             method: 'GET',
-            url: API_ENDPOINT + 'ads'
+            url: API_PUBLIC_ENDPOINT + 'ads'
         })
     }
 
     function getAllTowns (){
         return $http({
             method: 'GET',
-            url: API_ENDPOINT + 'towns'
+            url: API_PUBLIC_ENDPOINT + 'towns'
         })
     }
 
     function getAllCategories(){
         return $http({
             method: 'GET',
-            url: API_ENDPOINT + 'categories'
+            url: API_PUBLIC_ENDPOINT + 'categories'
         })
     }
 
@@ -110,4 +108,4 @@ angular.module('adsSystem.dal').factory('dalUserMain', function($http){
         getUserProfile :getUserProfile,
         editUserProfile : editUserProfile
     }
-});
+}]);
