@@ -1,13 +1,19 @@
-<div class="col-md-6 col-md-offset-3">
-	<form name="userLoginForm" data-ng-onsubmit>
-		<h3>Login</h3>
-		<label for="username">Username:</label>
-		<input type="text" id="username" ng-model="user.name"/>
-		<label for="password">Username:</label>
-		<input type="password" id="password" ng-model="user.password"/>
-		<div class="row">
-			<input type="submit" value="Login" class="btn col-md-5"/>
-			<input type="button" value="Register here" class="btn-link col-md-5 col-md-offset-2"/>
+<div class="col-md-4 col-md-offset-4 login-register">
+	<form name="userLoginForm">
+		<div class="col-md-12 form-title">
+			<h3 class="text-center">Login</h3>
+		</div>
+		<div class="form-group" >
+			<label for="username">Username:</label>
+			<input type="text" class="form-control" id="username" placeholder="Username">
+		</div>
+		<div class="form-group">
+			<label for="password">Password:</label>
+			<input type="password" class="form-control" id="password" placeholder="Password">
+		</div>
+		<div class="col-md-12 row">
+			<input type="submit" value="Login" class="btn btn-default col-md-5 col-md-offset-1"/>
+			<input type="button" value="Register here" class="btn-link col-md-5 col-md-offset-1"/>
 		</div>
 	</form>
 </div>

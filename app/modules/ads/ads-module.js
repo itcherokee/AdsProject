@@ -13,8 +13,9 @@ angular.module('adsSystem.ads', []).
                 controller: 'adsHomeController',
                 templateUrl: 'modules/ads/views/home-public-ads.html'
             })
-            .state('home.login', {
+            .state('login', {
                 url: '/login',
+                parent: 'home',
                 controller: 'loginController',
                 templateUrl: 'modules/ads/views/home-public-login.html'
             })
