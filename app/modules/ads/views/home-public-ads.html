@@ -1,9 +1,4 @@
-<div class="col-md-2 login-register">
-	To publish a new ad, please login.
-	<a ui-sref="login" class="btn btn-block btn-default">Login</a>
-	<a ui-sref="register" class="btn btn-block btn-default">Register</a>
-</div>
-<div class="col-md-8">
+<div class="col-md-9">
 	<div data-ng-repeat="ad in ads | filter:{categoryId: categoryId}:isCategoryFilterStrict | filter : {townId : townId}:isTownFilterStrict"
 		 class="col-md-12">
 		<div class="row">
@@ -24,7 +19,7 @@
 		</div>
 	</div>
 </div>
-<div class="col-md-2">
+<div class="col-md-3">
 	<div data-accordion close-others="accordionStatus.showOneItem">
 		<div data-accordion-group is-open="accordionStatus.categoryIsOpen">
 			<span data-accordion-heading>

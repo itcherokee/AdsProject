@@ -4,9 +4,14 @@ angular.module('adsSystem.ads', []).
     config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
+//                url: '/',
+//                controller: 'adsHomeController',
+                templateUrl: 'modules/ads/views/home-public.html'
+            })
+            .state('home.ads', {
                 url: '/',
                 controller: 'adsHomeController',
-                templateUrl: 'modules/ads/views/home.html'
+                templateUrl: 'modules/ads/views/home-public-ads.html'
             })
             .state('login', {
                 url: '/login',

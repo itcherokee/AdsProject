@@ -1,111 +1,112 @@
 'use strict';
 
-angular.module('adsSystem.dal').factory('dalService',['$http', function($http){
-    function isLoggedIn(){
-        return false;
-    }
-
-    function getAllAds(){
-
-    }
-
-    function getAllPublishedAds(startPage, townId, categoryId){
-        var parameters ={
-            PageSize : 100,
-            StartPage : startPage || 1
-        };
-        if (categoryId) {
-            parameters['CategoryId'] = categoryId;
+angular.module('adsSystem.dal')
+    .factory('dalService', ['$http', 'API_PUBLIC_ENDPOINT', function ($http, API_PUBLIC_ENDPOINT) {
+        function isLoggedIn() {
+            return false;
         }
-        if (townId) {
-            parameters['TownId'] = townId;
+
+        function getAllAds() {
+
         }
-        return $http({
-            params: parameters,
-            method: 'GET',
-            url: API_PUBLIC_ENDPOINT + 'ads'
-        })
-    }
 
-    function getAllTowns (){
-        return $http({
-            method: 'GET',
-            url: API_PUBLIC_ENDPOINT + 'towns'
-        })
-    }
+        function getAllPublishedAds(startPage, townId, categoryId) {
+            var parameters = {
+                PageSize: 100,
+                StartPage: startPage || 1
+            };
+            if (categoryId) {
+                parameters['CategoryId'] = categoryId;
+            }
+            if (townId) {
+                parameters['TownId'] = townId;
+            }
+            return $http({
+                params: parameters,
+                method: 'GET',
+                url: API_PUBLIC_ENDPOINT + 'ads'
+            })
+        }
 
-    function getAllCategories(){
-        return $http({
-            method: 'GET',
-            url: API_PUBLIC_ENDPOINT + 'categories'
-        })
-    }
+        function getAllTowns() {
+            return $http({
+                method: 'GET',
+                url: API_PUBLIC_ENDPOINT + 'towns'
+            })
+        }
 
-    function loginUser(){
+        function getAllCategories() {
+            return $http({
+                method: 'GET',
+                url: API_PUBLIC_ENDPOINT + 'categories'
+            })
+        }
 
-    }
+        function loginUser() {
 
-    function registerUser(){
+        }
 
-    }
+        function registerUser() {
 
-    function createNewAd(){
+        }
 
-    }
+        function createNewAd() {
 
-    function getUserAds(){
+        }
 
-    }
+        function getUserAds() {
 
-    function deactivateUserAd(){
+        }
 
-    }
+        function deactivateUserAd() {
 
-    function publishAgainUserAd(){
+        }
 
-    }
+        function publishAgainUserAd() {
 
-    function getUserAdById(){
+        }
 
-    }
+        function getUserAdById() {
 
-    function editUserAd(){
+        }
 
-    }
+        function editUserAd() {
 
-    function deleteUserAdById(){
+        }
 
-    }
+        function deleteUserAdById() {
 
-    function changeUserPassword(){
+        }
 
-    }
+        function changeUserPassword() {
 
-    function getUserProfile(){
+        }
 
-    }
+        function getUserProfile() {
 
-    function editUserProfile(){
+        }
 
-    }
+        function editUserProfile() {
 
-    return {
-        isLoggedIn: isLoggedIn,
-        getAllAds : getAllAds,
-        getAllPublishedAds : getAllPublishedAds,
-        getAllCategories : getAllCategories,
-        getAllTowns : getAllTowns,
-        loginUser : loginUser,
-        registerUser : registerUser,
-        createNewAd : createNewAd,
-        getUserAds : getUserAds,
-        deactivateUserAd : deactivateUserAd,
-        publishAgainUserAd : publishAgainUserAd,
-        getUserAdById : getUserAdById,
-        editUserAd : editUserAd,
-        deleteUserAdById : deleteUserAdById,
-        changeUserPassword : changeUserPassword,
-        getUserProfile :getUserProfile,
-        editUserProfile : editUserProfile
-    }
-}]);
+        }
+
+        return {
+            isLoggedIn: isLoggedIn,
+            getAllAds: getAllAds,
+            getAllPublishedAds: getAllPublishedAds,
+            getAllCategories: getAllCategories,
+            getAllTowns: getAllTowns,
+            loginUser: loginUser,
+            registerUser: registerUser,
+            createNewAd: createNewAd,
+            getUserAds: getUserAds,
+            deactivateUserAd: deactivateUserAd,
+            publishAgainUserAd: publishAgainUserAd,
+            getUserAdById: getUserAdById,
+            editUserAd: editUserAd,
+            deleteUserAdById: deleteUserAdById,
+            changeUserPassword: changeUserPassword,
+            getUserProfile: getUserProfile,
+            editUserProfile: editUserProfile
+        }
+    }]);

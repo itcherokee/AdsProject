@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adsSystem').controller('adsHomeController', ['dalService', '$scope', '$log', function (adsData, $scope) {
+angular.module('adsSystem').controller('adsHomeController', ['dalService', '$scope', '$log', function (dalService, $scope, $log) {
     $scope.townId = '';
     $scope.categoryId = '';
     $scope.startPage = 1;
@@ -8,10 +8,10 @@ angular.module('adsSystem').controller('adsHomeController', ['dalService', '$sco
     var allElement = {
         'id': '',
         'name': 'All'
-    }
+    };
 
     function loadAds() {
-        adsData.getAllPublishedAds($scope.startPage, $scope.townId, $scope.categoryId)
+        dalService.getAllPublishedAds($scope.startPage, $scope.townId, $scope.categoryId)
             .success(function (data) {
                 $scope.ads = data.ads;
 
@@ -21,7 +21,7 @@ angular.module('adsSystem').controller('adsHomeController', ['dalService', '$sco
             });
     }
 
-    adsData.getAllCategories()
+    dalService.getAllCategories()
         .success(function (data) {
             var categories = {
                 selected: null,
@@ -36,7 +36,7 @@ angular.module('adsSystem').controller('adsHomeController', ['dalService', '$sco
             $log.error('Categories cannot be loaded from server!');
         });
 
-    adsData.getAllTowns()
+    dalService.getAllTowns()
         .success(function (data) {
             var towns = {
                 selected: null,

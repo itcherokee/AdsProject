@@ -8,7 +8,6 @@
 .active-link {
     background-color : yellow;
     border: 1px solid brown;
-    /*font-style: italic;*/
 }
 
 .login-register {
@@ -19,4 +18,8 @@
 
 .login-register a {
     margin-top: 10px;
+}
+
+img {
+    width: 150px;
 }
