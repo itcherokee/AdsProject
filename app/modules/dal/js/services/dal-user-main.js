@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adsSystem.dal').factory('dalMain', function($http){
+angular.module('adsSystem.dal').factory('dalUserMain', function($http){
 
 
     function isLoggedIn(){
@@ -43,21 +43,71 @@ angular.module('adsSystem.dal').factory('dalMain', function($http){
         })
     }
 
+    function loginUser(){
+
+    }
+
+    function registerUser(){
+
+    }
+
+    function createNewAd(){
+
+    }
+
+    function getUserAds(){
+
+    }
+
+    function deactivateUserAd(){
+
+    }
+
+    function publishAgainUserAd(){
+
+    }
+
+    function getUserAdById(){
+
+    }
+
+    function editUserAd(){
+
+    }
+
+    function deleteUserAdById(){
+
+    }
+
+    function changeUserPassword(){
+
+    }
+
+    function getUserProfile(){
+
+    }
+
+    function editUserProfile(){
+
+    }
+
     return {
         isLoggedIn: isLoggedIn,
         getAllAds : getAllAds,
         getAllPublishedAds : getAllPublishedAds,
         getAllCategories : getAllCategories,
         getAllTowns : getAllTowns,
-        userLogin : userLogin,
+        loginUser : loginUser,
         registerUser : registerUser,
         createNewAd : createNewAd,
         getUserAds : getUserAds,
         deactivateUserAd : deactivateUserAd,
         publishAgainUserAd : publishAgainUserAd,
         getUserAdById : getUserAdById,
-        editUserAd : EditUserAd,
+        editUserAd : editUserAd,
         deleteUserAdById : deleteUserAdById,
-        changeUserPassword : changeUserPassword
+        changeUserPassword : changeUserPassword,
+        getUserProfile :getUserProfile,
+        editUserProfile : editUserProfile
     }
 });
