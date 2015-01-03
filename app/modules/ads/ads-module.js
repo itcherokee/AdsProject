@@ -3,25 +3,27 @@
 angular.module('adsSystem.ads', []).
     config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('home', {
+            .state('root', {
 //                url: '/',
 //                controller: 'adsHomeController',
                 templateUrl: 'modules/ads/views/home-public.html'
             })
-            .state('home.ads', {
+            .state('home', {
                 url: '/',
-                controller: 'adsHomeController',
+                parent: 'root',
+                controller: 'HomeController',
                 templateUrl: 'modules/ads/views/home-public-ads.html'
             })
             .state('login', {
                 url: '/login',
-                parent: 'home',
-                controller: 'loginController',
+                parent: 'root',
+                controller: 'LoginController',
                 templateUrl: 'modules/ads/views/home-public-login.html'
             })
-            .state('home.register', {
+            .state('register', {
                 url: '/register',
-                controller: 'registerController',
+                parent: 'root',
+                controller: 'RegisterController',
                 templateUrl: 'modules/ads/views/home-public-register.html'
             });
 //            .state('user', {

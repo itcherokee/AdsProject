@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('adsSystem').controller('loginController', ['dalService', '$scope', '$log', function (dalService, $scope, $log) {
+angular.module('adsSystem').controller('LoginController', ['dalService', '$scope', '$log', function (dalService, $scope, $log) {
 
 }]);
