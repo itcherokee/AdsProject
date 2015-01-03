@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/ads/views/home-public-login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/ads/views/home-public-register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/ads/views/home-public.html" />
-      <change type="DELETED" beforePath="D:\User\Documents\GitHub\AdsProject\app\modules\ads\js\services\ads-dal.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/ads/js/controllers/ads-home-controller.js" afterPath="$PROJECT_DIR$/app/modules/ads/js/controllers/ads-home-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/libs/angular-ui-router.js" afterPath="$PROJECT_DIR$/app/libs/angular-ui-router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/dal-main.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/dal-main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/dalModule.js" afterPath="$PROJECT_DIR$/app/modules/dal/dalModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\User\Documents\GitHub\AdsProject\app\modules\ads\js\ads-module.js" afterPath="$PROJECT_DIR$/app/modules/ads/ads-module.js" />
-      <change type="MOVED" beforePath="D:\User\Documents\GitHub\AdsProject\app\modules\ads\views\home.html" afterPath="$PROJECT_DIR$/app/modules/ads/views/home-public-ads.html" />
     </list>
     <ignored path="AdsProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -596,7 +584,11 @@
       <created>1420284303958</created>
       <updated>1420284303958</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="new routing implemented to split screens and introduce nesting in order to reduce duplicate code (views)">
+      <created>1420286722137</created>
+      <updated>1420286722137</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -638,7 +630,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixed initial loading in index.html" />
     <MESSAGE value="start working on ads module" />
     <MESSAGE value="added asynchronous loading of libs and dependency loader" />
     <MESSAGE value="added script.js and angular-loader.js" />
@@ -663,7 +654,8 @@
     <MESSAGE value="working on data access layers" />
     <MESSAGE value="all user services defined" />
     <MESSAGE value="replace in main logic the new dalService" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace in main logic the new dalService" />
+    <MESSAGE value="new routing implemented to split screens and introduce nesting in order to reduce duplicate code (views)" />
+    <option name="LAST_COMMIT_MESSAGE" value="new routing implemented to split screens and introduce nesting in order to reduce duplicate code (views)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
