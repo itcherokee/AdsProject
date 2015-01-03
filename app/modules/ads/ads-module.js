@@ -13,15 +13,15 @@ angular.module('adsSystem.ads', []).
                 controller: 'adsHomeController',
                 templateUrl: 'modules/ads/views/home-public-ads.html'
             })
-            .state('login', {
+            .state('home.login', {
                 url: '/login',
-                controller: 'LoginController as login',
-                templateUrl: '/login/views/login.html'
+                controller: 'loginController',
+                templateUrl: 'modules/ads/views/home-public-login.html'
             })
-            .state('register', {
+            .state('home.register', {
                 url: '/register',
-                controller: 'RegisterController as register',
-                templateUrl: '/login/views/register.html'
+                controller: 'registerController',
+                templateUrl: 'modules/ads/views/home-public-register.html'
             });
 //            .state('user', {
 //                url: '/user',
