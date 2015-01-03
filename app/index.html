@@ -15,16 +15,17 @@
 	<!--'libs/angular-ui-router.js',-->
 	<!--'libs/ui-bootstrap-tpls-0.12.0.js',-->
 	<!--'js/app.js',-->
-	<!--'modules/ads/js/ads-module.js'-->
+	<!--'modules/public/js/public-module.js'-->
 	<!--], function () {-->
 	<!--angular.bootstrap(document, ['adsSystem']);-->
 	<!--});-->
 	<!--</script>-->
 </head>
 <body ng-app="adsSystem" class="container">
-<header id="topbar" class="page-header row text-center">
-	<h3 class=" col-md-12"><a ui-sref="home">Ads</a> - <span class="text-capitalize"
-															 ng-bind="$state.current.name"></span></h3>
+<header id="topbar" class="page-header row " data-ng-cloak>
+	<h3 class=" col-md-8 col-md-offset-2 text-center"><a data-ui-sref="home">Ads</a> - <span class="text-capitalize"
+															 data-ng-bind="$state.current.name"></span></h3>
+	<div class="col-md-2" ui-view="userLogout"></div>
 </header>
 <div ui-view class="row"></div>
 <footer class="row">
@@ -34,10 +35,10 @@
 <script src="libs/angular-ui-router.js"></script>
 <script src="libs/ui-bootstrap-tpls-0.12.0.js"></script>
 <script src="js/app.js"></script>
-<script src="modules/ads/ads-module.js"></script>
-<script src="modules/ads/js/controllers/homeController.js"></script>
-<script src="modules/ads/js/controllers/loginController.js"></script>
-<script src="modules/ads/js/controllers/registerController.js"></script>
+<script src="modules/public/public-module.js"></script>
+<script src="modules/public/js/controllers/publicHomeController.js"></script>
+<script src="modules/public/js/controllers/publicLoginController.js"></script>
+<script src="modules/public/js/controllers/publicRegisterController.js"></script>
 <script src="modules/dal/dalModule.js"></script>
 <script src="modules/dal/js/services/restService.js"></script>
 <script src="modules/dal/js/services/authenticateService.js"></script>

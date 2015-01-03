@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adsSystem').controller('LoginController', ['authenticateService', '$scope', '$log', function (authenticateService, $scope, $log) {
+angular.module('adsSystem.public').controller('PublicLoginController', ['authenticateService', '$scope', function (authenticateService, $scope) {
     $scope.login = function(){
         authenticateService.userLogin($scope.user)
             .success(function(data){

@@ -1,30 +1,37 @@
 'use strict';
 
-angular.module('adsSystem.ads', []).
+angular.module('adsSystem.user', []).
     config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('root', {
-//                url: '/',
-//                controller: 'adsHomeController',
-                templateUrl: 'modules/ads/views/home-public.html'
+            .state('user', {
+                abstract:true,
+                views: {
+                    "": {
+                        templateUrl: 'modules/user/views/user.html'
+                    },
+                    "userLogout": {
+                        controller: 'UserLogout',
+                        templateUrl: "modules/user/views/user-logout.html"
+                    }
+                }
             })
             .state('home', {
                 url: '/',
-                parent: 'root',
-                controller: 'HomeController',
-                templateUrl: 'modules/ads/views/home-public-ads.html'
+                parent: 'user',
+                controller: 'UserHomeController',
+                templateUrl: 'modules/public/views/user-home.html'
             })
             .state('login', {
                 url: '/login',
                 parent: 'root',
                 controller: 'LoginController',
-                templateUrl: 'modules/ads/views/home-public-login.html'
+                templateUrl: 'modules/public/views/user-login.html'
             })
             .state('register', {
                 url: '/register',
                 parent: 'root',
                 controller: 'RegisterController',
-                templateUrl: 'modules/ads/views/home-public-register.html'
+                templateUrl: 'modules/public/views/home-register.html'
             });
 //            .state('user', {
 //                url: '/user',

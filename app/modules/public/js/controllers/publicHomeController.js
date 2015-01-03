@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adsSystem').controller('HomeController', ['dalService', '$scope', '$log', function (dalService, $scope, $log) {
+angular.module('adsSystem.public').controller('PublicHomeController', ['dalService', '$scope', '$log', function (dalService, $scope, $log) {
     $scope.townId = '';
     $scope.categoryId = '';
     $scope.startPage = 1;

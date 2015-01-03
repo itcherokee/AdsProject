@@ -1,0 +1,54 @@
+<div class="col-md-2 login-register">
+	To publish a new ad, please login.
+	<a ui-sref="login" class="btn btn-block btn-default">Login</a>
+	<a ui-sref="register" class="btn btn-block btn-default">Register</a>
+</div>
+<div class="col-md-7">
+	<div data-ng-repeat="ad in ads | filter:{categoryId: categoryId}:isCategoryFilterStrict | filter : {townId : townId}:isTownFilterStrict"
+		 class="col-md-12">
+		<div class="row">
+			<div class="col-md-9"><h3>{{ad.title}}</h3></div>
+			<span class="col-md-3">{{ad.categoryId + '--' + ad.townId}} | {{ad.date | date:'d-MMM-yyyy'}}</span>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
+			</div>
+			<div class="col-md-8">
+				<div>{{ad.text}}</div>
+				<br/>
+				Name: <input type="text" data-ng-model="ad.ownerName"/> <br/>
+				Email: <input type="text" data-ng-model="ad.ownerEmail"/> <br/>
+				Tel.: <input type="text" data-ng-model="ad.ownerPhone"/> <br/>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-md-3">
+	<div data-accordion close-others="accordionStatus.showOneItem">
+		<div data-accordion-group is-open="accordionStatus.categoryIsOpen">
+			<span data-accordion-heading>
+				Categories <i class="pull-right glyphicon"
+							  ng-class="{'glyphicon-chevron-down': accordionStatus.categoryIsOpen, 'glyphicon-chevron-right': !accordionStatus.categoryIsOpen}"></i>
+			</span>
+			<a href="" class="btn btn-block" data-ng-repeat="category in categories.data"
+			   data-ng-class="{'active-link' : categories.selected==category }"
+			   data-ng-click="categories.selected = category;  clickCategoryHandler(category.id)">
+				{{category.name}} <!-- {{category.id}})-->
+			</a>
+		</div>
+		<div data-accordion-group is-open="accordionStatus.townIsOpen">
+			<span data-accordion-heading>
+				Towns <i class="pull-right glyphicon"
+						 ng-class="{'glyphicon-chevron-down': accordionStatus.townIsOpen, 'glyphicon-chevron-right': !accordionStatus.townIsOpen}"></i>
+			</span>
+			<a href="" class="btn btn-block" data-ng-repeat="town in towns.data | orderBy: 'name' "
+			   data-ng-class="{'active-link' : towns.selected==town }"
+			   data-ng-click="towns.selected = town;  clickTownHandler(town.id)">
+				{{town.name}}
+			</a>
+		</div>
+	</div>
+
+</div>
+

@@ -42,13 +42,6 @@ angular.module('adsSystem.dal')
             })
         }
 
-        function loginUser() {
-
-        }
-
-        function registerUser() {
-
-        }
 
         function createNewAd() {
 
@@ -96,8 +89,6 @@ angular.module('adsSystem.dal')
             getAllPublishedAds: getAllPublishedAds,
             getAllCategories: getAllCategories,
             getAllTowns: getAllTowns,
-            loginUser: loginUser,
-            registerUser: registerUser,
             createNewAd: createNewAd,
             getUserAds: getUserAds,
             deactivateUserAd: deactivateUserAd,
