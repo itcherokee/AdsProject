@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/authenticateService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/authenticateService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/dal-module.js" afterPath="$PROJECT_DIR$/app/modules/dal/dal-module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/public-module.js" afterPath="$PROJECT_DIR$/app/modules/public/public-module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/restService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/restService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/titleController.js" afterPath="$PROJECT_DIR$/app/js/controllers/titleController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -886,7 +880,11 @@
       <created>1420409559611</created>
       <updated>1420409559611</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="solved problem with page refresh and already logged in user">
+      <created>1420410551362</created>
+      <updated>1420410551362</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -948,7 +946,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="replace in main logic the new dalService" />
     <MESSAGE value="new routing implemented to split screens and introduce nesting in order to reduce duplicate code (views)" />
     <MESSAGE value="login form defined" />
     <MESSAGE value="fixing some css for login form" />
@@ -973,7 +970,8 @@
     <MESSAGE value="emiting events instead broadcasting for filters" />
     <MESSAGE value="reorganization to implement logout feature" />
     <MESSAGE value="a lot of fixed with header of application to handle changes of pages and page refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="a lot of fixed with header of application to handle changes of pages and page refresh" />
+    <MESSAGE value="solved problem with page refresh and already logged in user" />
+    <option name="LAST_COMMIT_MESSAGE" value="solved problem with page refresh and already logged in user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
