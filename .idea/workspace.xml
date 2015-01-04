@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" afterPath="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/views/public-login.html" afterPath="$PROJECT_DIR$/app/modules/public/views/public-login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -38,10 +38,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="publicHomeController.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="publicHomeController.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.626" vertical-offset="360" max-vertical-offset="1394">
+                <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1394">
                   <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
                   <folding />
                 </state>
@@ -78,6 +78,16 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="public-login.html" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/modules/public/views/public-login.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="951">
+                  <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -93,6 +103,16 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
                   <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="public.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/modules/public/views/public.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="238">
+                  <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
                   <folding />
                 </state>
               </provider>
@@ -157,7 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/modules/ads/views/ads.html" />
         <option value="$PROJECT_DIR$/app/libs/script.js" />
         <option value="$PROJECT_DIR$/app/libs/angular-loader.min.js" />
         <option value="$PROJECT_DIR$/app/modules/ads/js/services/dal-ads.js" />
@@ -208,6 +227,7 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/modules/dal/js/services/dal-main.js" />
         <option value="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" />
+        <option value="$PROJECT_DIR$/app/modules/public/views/public-login.html" />
       </list>
     </option>
   </component>
@@ -810,7 +830,11 @@
       <created>1420369558143</created>
       <updated>1420369558143</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="using adsService in PublicHomeController">
+      <created>1420370036843</created>
+      <updated>1420370036843</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -852,7 +876,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Towns made as accordion" />
     <MESSAGE value="Added All in Category filter as part of array" />
     <MESSAGE value="Added All in Towns filter as part of array" />
     <MESSAGE value="better filtering on ads (off-line)" />
@@ -877,7 +900,8 @@
     <MESSAGE value="link category services in controllers" />
     <MESSAGE value="register form responsible view" />
     <MESSAGE value="ads Service created" />
-    <option name="LAST_COMMIT_MESSAGE" value="ads Service created" />
+    <MESSAGE value="using adsService in PublicHomeController" />
+    <option name="LAST_COMMIT_MESSAGE" value="using adsService in PublicHomeController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1050,14 +1074,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/public/views/public-login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.017453799" vertical-offset="0" max-vertical-offset="974">
-          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="664">
@@ -1118,14 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/public/views/public.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="238">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1228,8 +1236,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.626" vertical-offset="360" max-vertical-offset="1394">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1394">
           <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/public/views/public.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="238">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/public/views/public-login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="951">
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
           <folding />
         </state>
       </provider>
