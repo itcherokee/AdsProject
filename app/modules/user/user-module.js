@@ -10,7 +10,7 @@ angular.module('adsSystem.user', []).
                         templateUrl: 'modules/user/views/user.html'
                     },
                     "userLogout": {
-                        controller: 'UserLogout',
+                        controller: 'UserLogoutController',
                         templateUrl: "modules/user/views/user-logout.html"
                     }
                 }

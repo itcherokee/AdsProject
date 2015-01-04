@@ -3,19 +3,25 @@
 angular.module('adsSystem.dal')
     .factory('userService', ['restService', 'API_USER_ENDPOINT', function (restService, API_USER_ENDPOINT) {
 
-        function getAllPublishedAds(startPage, townId, categoryId) {
-            var parameters = {
-                PageSize: 100,
-                StartPage: startPage || 1
+        function createNewAd(adData) {
+            var data = {
+                title: adData.title,
+                text: adData.text
             };
-            if (categoryId) {
-                parameters['CategoryId'] = categoryId;
-            }
-            if (townId) {
-                parameters['TownId'] = townId;
+
+            if (adData.imageDataUrl) {
+                data['imageDataUrl'] = adData.imageDataUrl;
             }
 
-            return restService.serverRequest(API_PUBLIC_ENDPOINT + 'ads', 'GET', parameters, undefined)
+            if (adData.categoryId) {
+                data['categoryId'] = adData.categoryId;
+            }
+
+            if (adData.townId) {
+                data['townId'] = adData.townId;
+            }
+
+            return restService.serverRequest(API_USER_ENDPOINT + 'ads', 'POST', undefined, data)
                 .success(function (data) {
                     return data;
                 })
@@ -24,59 +30,139 @@ angular.module('adsSystem.dal')
                 })
         }
 
-
-
-        function isLoggedIn() {
-            return false;
+        function getUserAds(status) {
+            return restService.serverRequest(API_USER_ENDPOINT + 'ads', 'GET', status, undefined)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
         }
 
-        function getAllAds() {
-
+        function deactivateUserAd(id) {
+            return restService.serverRequest(API_USER_ENDPOINT + 'ads/deactivate/' + id, 'PUT', undefined, undefined)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
         }
 
-        function createNewAd() {
-
+        function publishAgainUserAd(id) {
+            return restService.serverRequest(API_USER_ENDPOINT + 'ads/publishagain/' + id, 'PUT', undefined, undefined)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
         }
 
-        function getUserAds() {
-
+        function getUserAdById(id) {
+            return restService.serverRequest(API_USER_ENDPOINT + 'ads/' + id, 'GET', undefined, undefined)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
         }
 
-        function deactivateUserAd() {
+        function editUserAd(id, adData, imageStatus) {
+            var data = {
+                title: adData.title,
+                text: adData.text
+            };
 
+            switch (imageStatus) {
+                case 'delete':
+                    data['changeImage'] = true;
+                    break;
+                case 'update':
+                    data['imageDataUrl'] = adData.imageDataUrl;
+                    data['changeImage'] = true;
+                    break;
+                default:
+                    data['changeImage'] = false;
+                    break;
+            }
+
+            if (adData.categoryId) {
+                data['categoryId'] = adData.categoryId;
+            }
+
+            if (adData.townId) {
+                data['townId'] = adData.townId;
+            }
+
+            return restService.serverRequest(API_USER_ENDPOINT + 'ads/' + id, 'PUT', undefined, data)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
         }
 
-        function publishAgainUserAd() {
-
+        function deleteUserAdById(id) {
+            return restService.serverRequest(API_USER_ENDPOINT + 'ads/' + id, 'DELETE', undefined, undefined)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
         }
 
-        function getUserAdById() {
+        function changeUserPassword(passwordData) {
+            var data = {
+                oldPassword: passwordData.oldPassword,
+                newPassword: passwordData.newPassword,
+                confirmPassword: passwordData.confirmPassword
+            };
 
-        }
-
-        function editUserAd() {
-
-        }
-
-        function deleteUserAdById() {
-
-        }
-
-        function changeUserPassword() {
-
+            return restService.serverRequest(API_USER_ENDPOINT + 'changePassword', 'PUT', undefined, data)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
         }
 
         function getUserProfile() {
-
+            return restService.serverRequest(API_USER_ENDPOINT + 'profile', 'GET', undefined, undefined)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
         }
 
-        function editUserProfile() {
+        function editUserProfile(userData) {
+            var data = {
+                name: userData.name,
+                email: userData.email,
+                phoneNumber: userData.phone
+            };
 
+            if (userData.townId) {
+                data['townId'] = userData.townId;
+            }
+
+            return restService.serverRequest(API_USER_ENDPOINT + 'profile', 'PUT', undefined, data)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
         }
 
         return {
-            isLoggedIn: isLoggedIn,
-            getAllAds: getAllAds,
             createNewAd: createNewAd,
             getUserAds: getUserAds,
             deactivateUserAd: deactivateUserAd,
