@@ -1,0 +1,24 @@
+<div data-accordion data-close-others="accordionStatus.showOneItem">
+	<div data-accordion-group data-is-open="accordionStatus.categoryIsOpen">
+			<span data-accordion-heading>
+				Categories <i class="pull-right glyphicon"
+							  ng-class="{'glyphicon-chevron-down': accordionStatus.categoryIsOpen, 'glyphicon-chevron-right': !accordionStatus.categoryIsOpen}"></i>
+			</span>
+		<a href="" class="btn btn-block" data-ng-repeat="category in categories.data"
+		   data-ng-class="{'active-link' : categories.selected==category }"
+		   data-ng-click="categories.selected = category;  clickCategoryHandler(category.id)">
+			{{category.name}} <!-- {{category.id}})-->
+		</a>
+	</div>
+	<div data-accordion-group data-is-open="accordionStatus.townIsOpen">
+			<span data-accordion-heading>
+				Towns <i class="pull-right glyphicon"
+						 ng-class="{'glyphicon-chevron-down': accordionStatus.townIsOpen, 'glyphicon-chevron-right': !accordionStatus.townIsOpen}"></i>
+			</span>
+		<a href="" class="btn btn-block" data-ng-repeat="town in towns.data | orderBy: 'name' "
+		   data-ng-class="{'active-link' : towns.selected==town }"
+		   data-ng-click="towns.selected = town;  clickTownHandler(town.id)">
+			{{town.name}}
+		</a>
+	</div>
+</div>

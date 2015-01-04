@@ -1,78 +1,37 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserHomeController', ['$scope', 'townService', 'categoryService', 'adsService',
-            function ($scope, townService, categoryService, adsService) {
-                $scope.townId = '';
-                $scope.categoryId = '';
-                $scope.startPage = 1;
+    .controller('UserHomeController', ['$scope', 'adsService', function ($scope, adsService) {
+        var selections = {
+            townId: undefined,
+            categoryId: undefined,
+            startPage: 1
+        };
 
-                var allElement = {
-                    'id': '',
-                    'name': 'All'
-                };
+        function loadAds(selections) {
+            var startPage = selections.startPage,
+                townId = selections.townId,
+                categoryId = selections.categoryId;
 
-                function loadAds() {
-                    adsService.getAllPublishedAds($scope.startPage, $scope.townId, $scope.categoryId)
-                        .success(function (data) {
-                            $scope.ads = data.ads;
-                        })
-                        .error(function (error) {
-                            console.log('Ads can not be loaded from server!');
-                        });
-                }
+            adsService.getAllPublishedAds(startPage, townId, categoryId)
+                .success(function (data) {
+                    $scope.ads = data.ads;
+                })
+                .error(function (error) {
+                    console.log('Ads can not be loaded from server!');
+                });
+        }
 
-                categoryService.getAllCategories()
-                    .success(function (data) {
-                        var categories = {
-                            selected: null,
-                            data: data
-                        };
+        $scope.$on("categorySelectionChanged", function (event, categoryId) {
+            selections.categoryId = categoryId;
+            loadAds(selections);
+        });
 
-                        categories.data.unshift(allElement);
-                        categories.selected = categories.data[0];
-                        $scope.categories = categories;
-                    })
-                    .error(function (error) {
-                        console.log('Categories cannot be loaded from server!');
-                    });
+        $scope.$on("townSelectionChanged", function (event, townId) {
+            selections.townId = townId;
+            loadAds(selections);
+        });
 
-                townService.getAllTowns()
-                    .success(function (data) {
-                        var towns = {
-                            selected: null,
-                            data: data
-                        };
-
-                        towns.data.unshift(allElement);
-                        towns.selected = towns.data[0];
-                        $scope.towns = towns;
-                    })
-                    .error(function (error) {
-                        console.log('Towns cannot be loaded from server!');
-                    });
-
-                $scope.clickCategoryHandler = function clickCategoryHandler(categoryId) {
-                    $scope.categoryId = categoryId;
-                    $scope.isCategoryFilterStrict = categoryId !== '';
-//        $scope.startPage = 1;
-//        loadAds();
-                };
-
-                $scope.clickTownHandler = function clickTownHandler(townId) {
-                    $scope.townId = townId;
-                    $scope.isTownFilterStrict = townId !== '';
-//        $scope.startPage = 1;
-//
-//        loadAds();
-                };
-
-                $scope.accordionStatus = {
-                    showOneItem: true,
-                    categoryIsOpen: false,
-                    townIsOpen: false
-                };
-
-                loadAds();
+        loadAds(selections);
 
     }]);

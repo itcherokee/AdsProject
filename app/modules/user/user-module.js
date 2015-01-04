@@ -1,13 +1,21 @@
 'use strict';
 
-angular.module('adsSystem.user', []).
-    config(function ($stateProvider) {
+angular.module('adsSystem.user', [])
+    .config(function ($stateProvider) {
         $stateProvider
             .state('user', {
                 abstract:true,
                 views: {
                     "": {
                         templateUrl: 'modules/user/views/user.html'
+                    },
+                    "leftMenu": {
+                        controller: 'UserLeftMenuController',
+                        templateUrl: "modules/user/views/user-menu-left.html"
+                    },
+                    "rightMenu": {
+                        controller: 'UserRightMenuController',
+                        templateUrl: "modules/user/views/user-menu-right.html"
                     },
                     "userLogout": {
                         controller: 'UserLogoutController',
@@ -49,4 +57,5 @@ angular.module('adsSystem.user', []).
 //                templateUrl: '/partials/view2.html'
 //            });
 //        $urlRouterProvider.otherwise('home');
+
     });

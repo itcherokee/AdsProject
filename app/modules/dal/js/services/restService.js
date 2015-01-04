@@ -29,7 +29,6 @@ angular.module('adsSystem.dal').factory('restService', ['$http', function ($http
             .success(function (data) {
                 if (data.access_token) {
                     accessToken = data.access_token;
-
                 }
             })
             .error(function (data, status, headers, config) {
