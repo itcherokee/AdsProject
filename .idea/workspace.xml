@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userLogoutController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/js/controllers/publicLoginController.js" afterPath="$PROJECT_DIR$/app/modules/public/js/controllers/publicLoginController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/user-module.js" afterPath="$PROJECT_DIR$/app/modules/user/user-module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -656,7 +649,11 @@
       <created>1420370727847</created>
       <updated>1420370727847</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="set up userService routines">
+      <created>1420380960143</created>
+      <updated>1420380960143</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -698,7 +695,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="better filtering on ads (off-line)" />
     <MESSAGE value="fixed filtering - strict" />
     <MESSAGE value="some fixes on bootstrap" />
     <MESSAGE value="sorting on Towns filter applied" />
@@ -723,7 +719,8 @@
     <MESSAGE value="using adsService in PublicHomeController" />
     <MESSAGE value="fixed login responsive design" />
     <MESSAGE value="created userService" />
-    <option name="LAST_COMMIT_MESSAGE" value="created userService" />
+    <MESSAGE value="set up userService routines" />
+    <option name="LAST_COMMIT_MESSAGE" value="set up userService routines" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
