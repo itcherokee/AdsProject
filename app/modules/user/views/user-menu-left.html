@@ -1,24 +1,24 @@
-<div data-accordion data-close-others="accordionStatus.showOneItem">
-	<div data-accordion-group data-is-open="accordionStatus.categoryIsOpen">
-			<span data-accordion-heading>
-				Navigation <i class="pull-right glyphicon"
-							  ng-class="{'glyphicon-chevron-down': accordionStatus.categoryIsOpen, 'glyphicon-chevron-right': !accordionStatus.categoryIsOpen}"></i>
-			</span>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Navigation</h3>
+	</div>
+	<div class="panel-body">
 		<a href="" class="btn btn-block" data-ng-repeat="mainItem in mainMenuItems"
 		   data-ng-class="{'active-link' : mainMenuSelected == mainItem }"
 		   data-ng-click="mainMenuSelected = mainItem;  clickMainMenuHandler(mainItem.callback)">
-			{{category.name}} <!-- {{category.id}})-->
+			{{mainItem.title}} <!-- {{category.id}})-->
 		</a>
 	</div>
-	<div data-accordion-group data-is-open="accordionStatus.townIsOpen" data-ng-show="accordionStatus.townIsOpen">
-			<span data-accordion-heading>
-				My Ads <i class="pull-right glyphicon"
-						  ng-class="{'glyphicon-chevron-down': accordionStatus.townIsOpen, 'glyphicon-chevron-right': !accordionStatus.townIsOpen}"></i>
-			</span>
-		<a href="" class="btn btn-block" data-ng-repeat="town in towns.data | orderBy: 'name' "
-		   data-ng-class="{'active-link' : towns.selected==town }"
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">My Ads</h3>
+	</div>
+	<div class="panel-body">
+		<a href="" class="btn btn-block" data-ng-repeat="myAdItem in myAdsMenuItems"
+		   data-ng-class="{'active-link' : myAdItem.selected==town }"
 		   data-ng-click="towns.selected = town;  clickTownHandler(town.id)">
-			{{town.name}}
+			{{myAdItem.title}}
 		</a>
 	</div>
 </div>
