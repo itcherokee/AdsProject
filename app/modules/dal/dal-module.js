@@ -9,6 +9,7 @@ angular.module('adsSystem.dal', []).
     .value('API_ADMIN_ENDPOINT', 'http://softuni-ads.azurewebsites.net/api/admin')
 
 
+
 //    .run(function ($http) {
 //        $http.defaults.headers.post.content = 'Basic YmVlcDpib29w'
 //    })

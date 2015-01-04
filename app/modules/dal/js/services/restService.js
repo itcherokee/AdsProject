@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('adsSystem.dal').factory('restService', ['$http', function ($http) {
-    var accessToken = undefined;
+    var accessToken = sessionStorage.accessToken || undefined;
 
     function httpRequest(url, method, parameters, data) {
         var contentType = method === 'POST' ? 'application/x-www-form-urlencoded' : 'application/json',

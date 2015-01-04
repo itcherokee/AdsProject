@@ -25,5 +25,5 @@ angular.module('adsSystem.public', []).
                 controller: 'PublicRegisterController',
                 templateUrl: 'modules/public/views/public-register.html'
             });
-        $urlRouterProvider.otherwise('userHome');
+        $urlRouterProvider.otherwise('home');
     });

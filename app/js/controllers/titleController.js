@@ -5,6 +5,10 @@ angular.module('adsSystem')
         function ($rootScope, $scope, $state, authenticateService) {
             $scope.currentPage = 'Home';
 
+            if (sessionStorage.user) {
+                $scope.username = sessionStorage.user;
+            }
+
             $scope.$on("PageChanged", function (event, pageName) {
                 $scope.currentPage = pageName;
             });
@@ -18,10 +22,10 @@ angular.module('adsSystem')
                 authenticateService.userLogout()
                     .success(function () {
                         $scope.username = undefined;
-                        sessionStorage.removeItem('User');
-                        sessionStorage.removeItem('IsAdmin');
-                        sessionStorage.removeItem('AccessToken');
-                        $state.go('userHome');
+                        sessionStorage.removeItem('user');
+                        sessionStorage.removeItem('isAdmin');
+                        sessionStorage.removeItem('accessToken');
+                        $state.go('home');
                     })
                     .error(function (data) {
                         //TODO: show error

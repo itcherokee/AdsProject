@@ -13,9 +13,9 @@ angular.module('adsSystem.dal')
             var data = JSON.stringify(userData);
             return restService.serverRequest(API_USER_ENDPOINT + 'login', 'POST', undefined, data)
                 .success(function(data){
-                    sessionStorage['User'] = data.username;
-                    sessionStorage['IsAdmin'] = isAdmin;
-                    sessionStorage['AccessToken'] = data.access_token;
+                    sessionStorage['user'] = data.username;
+                    sessionStorage['isAdmin'] = isAdmin;
+                    sessionStorage['accessToken'] = data.access_token;
                     isLoggedIn = true;
                     if (data.isAdmin){
                         isAdmin = true;
