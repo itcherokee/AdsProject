@@ -36,7 +36,12 @@ angular.module('adsSystem.dal').factory('restService', ['$http', function ($http
             })
     }
 
+    function clearAccessToken(){
+        accessToken = undefined;
+    }
+
     return {
-        serverRequest: serverRequest
+        serverRequest: serverRequest,
+        clearAccessToken : clearAccessToken
     }
 }]);

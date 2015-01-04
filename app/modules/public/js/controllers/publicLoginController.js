@@ -5,6 +5,7 @@ angular.module('adsSystem.public')
         $scope.login = function () {
             authenticateService.userLogin($scope.user)
                 .success(function (data) {
+
                     alert('logged in!!!');
                     sessionStorage['User'] = data.username;
                     $state.go('userHome');
