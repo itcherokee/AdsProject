@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('adsSystem.public')
-    .controller('PublicHomeController', ['$scope', 'townService', 'categoryService', 'adsService',
-        function ($scope, townService, categoryService, adsService) {
+    .controller('PublicHomeController', ['$rootScope', '$scope', 'townService', 'categoryService', 'adsService',
+        function ($rootScope, $scope, townService, categoryService, adsService) {
+            $rootScope.$broadcast("PageChanged", 'Home');
             $scope.townId = '';
             $scope.categoryId = '';
             $scope.startPage = 1;

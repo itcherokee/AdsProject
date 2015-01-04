@@ -22,10 +22,8 @@
 	<!--</script>-->
 </head>
 <body ng-app="adsSystem" class="container">
-<header id="topbar" class="page-header row " data-ng-cloak>
-	<h3 class=" col-md-8 col-md-offset-2 text-center"><a data-ui-sref="home">Ads</a> - <span class="text-capitalize"
-															 data-ng-bind="$state.current.name"></span></h3>
-	<div class="col-md-2" ui-view="userLogout"></div>
+<header class="row page-header" data-ng-cloak>
+	<div data-ng-include="'views/title.html'" data-ng-controller="TitleController" ></div>
 </header>
 <div ui-view class="row"></div>
 <footer class="row">
@@ -42,7 +40,7 @@
 <script src="modules/public/public-module.js"></script>
 <script src="modules/user/user-module.js"></script>
 <!--Root Controllers-->
-<script src="js/controllers/userLogoutController.js"></script>
+<script src="js/controllers/titleController.js"></script>
 <!--Public module controllers-->
 <script src="modules/public/js/controllers/publicHomeController.js"></script>
 <script src="modules/public/js/controllers/publicLoginController.js"></script>

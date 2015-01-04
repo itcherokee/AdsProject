@@ -24,6 +24,7 @@ angular.module('adsSystem.user', [])
                         templateUrl: "modules/user/views/user-menu-left.html"
                     }
                 }
+
             }).state('userPublish', {
                 url: '/user/ads/publish',
                 parent: 'user',
@@ -35,10 +36,6 @@ angular.module('adsSystem.user', [])
                     "leftMenu": {
                         controller: 'UserLeftMenuController',
                         templateUrl: "modules/user/views/user-menu-left.html"
-                    },
-                    "rightMenu": {
-                        controller: 'UserRightMenuController',
-                        templateUrl: "modules/user/views/user-menu-right.html"
                     }
                 }
             });

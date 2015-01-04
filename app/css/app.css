@@ -37,3 +37,7 @@ img {
 .invisible-element {
     visibility: hidden;
 }
+
+header h3 {
+    margin: 0;
+}

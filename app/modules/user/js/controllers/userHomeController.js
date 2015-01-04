@@ -1,39 +1,42 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserHomeController', ['$scope', 'adsService', function ($scope, adsService) {
-        var selections = {
-            townId: undefined,
-            categoryId: undefined,
-            startPage: 1
-        };
+    .controller('UserHomeController', ['$rootScope', '$scope', 'adsService',
+        function ($rootScope, $scope, adsService) {
+            $rootScope.$broadcast("PageChanged", 'Home');
 
-        function loadAds(selections) {
-            var startPage = selections.startPage,
-                townId = selections.townId,
-                categoryId = selections.categoryId;
+            var selections = {
+                townId: undefined,
+                categoryId: undefined,
+                startPage: 1
+            };
 
-            adsService.getAllPublishedAds(startPage, townId, categoryId)
-                .success(function (data) {
-                    $scope.ads = data.ads;
-                })
-                .error(function (error) {
-                    console.log('Ads can not be loaded from server!');
-                });
-        }
+            function loadAds(selections) {
+                var startPage = selections.startPage,
+                    townId = selections.townId,
+                    categoryId = selections.categoryId;
 
-        $scope.$on("categorySelectionChanged", function (event, categoryId) {
-            selections.categoryId = categoryId;
-            event.stopPropagation();
+                adsService.getAllPublishedAds(startPage, townId, categoryId)
+                    .success(function (data) {
+                        $scope.ads = data.ads;
+                    })
+                    .error(function (error) {
+                        console.log('Ads can not be loaded from server!');
+                    });
+            }
+
+            $scope.$on("categorySelectionChanged", function (event, categoryId) {
+                selections.categoryId = categoryId;
+                event.stopPropagation();
+                loadAds(selections);
+            });
+
+            $scope.$on("townSelectionChanged", function (event, townId) {
+                selections.townId = townId;
+                event.stopPropagation();
+                loadAds(selections);
+            });
+
             loadAds(selections);
-        });
 
-        $scope.$on("townSelectionChanged", function (event, townId) {
-            selections.townId = townId;
-            event.stopPropagation();
-            loadAds(selections);
-        });
-
-        loadAds(selections);
-
-    }]);
+        }]);

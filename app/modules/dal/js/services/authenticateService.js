@@ -5,10 +5,22 @@ angular.module('adsSystem.dal')
         var isAdmin = false,
             isLoggedIn = false;
 
+        //TODO: It is good to introduce check for logged-in user
+        // here (including check of sessionStorage in case of page refresh,
+        // instead doing that by TitleController
+
         function userLogin (userData){
             var data = JSON.stringify(userData);
             return restService.serverRequest(API_USER_ENDPOINT + 'login', 'POST', undefined, data)
                 .success(function(data){
+                    sessionStorage['User'] = data.username;
+                    sessionStorage['IsAdmin'] = isAdmin;
+                    sessionStorage['AccessToken'] = data.access_token;
+                    isLoggedIn = true;
+                    if (data.isAdmin){
+                        isAdmin = true;
+                    }
+
                     return data;
                 })
                 .error(function(error){
@@ -20,11 +32,7 @@ angular.module('adsSystem.dal')
             var data = JSON.stringify(userData);
             return restService.serverRequest(API_USER_ENDPOINT + 'register', 'POST', undefined, data)
                 .success(function(data){
-                    isLoggedIn = true;
-                    if (data.isAdmin){
-                        isAdmin = true;
-                    }
-                    return data;
+                   return data;
                 })
                 .error(function(error){
                     return error;
