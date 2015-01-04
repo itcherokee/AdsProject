@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/views/public-home.html" afterPath="$PROJECT_DIR$/app/modules/public/views/public-home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/views/public-register.html" afterPath="$PROJECT_DIR$/app/modules/public/views/public-register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" afterPath="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/js/controllers/publicRegisterController.js" afterPath="$PROJECT_DIR$/app/modules/public/js/controllers/publicRegisterController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/restService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/restService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/categoryService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/townService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/townService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/user-module.js" afterPath="$PROJECT_DIR$/app/modules/user/user-module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\User\Documents\GitHub\AdsProject\app\modules\dal\dalModule.js" afterPath="$PROJECT_DIR$/app/modules/dal/dal-module.js" />
     </list>
     <ignored path="AdsProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,11 +59,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="townService.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="townService.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/townService.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.085" vertical-offset="0" max-vertical-offset="1000">
-                  <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="8" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="categoryService.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/categoryService.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.068" vertical-offset="0" max-vertical-offset="1000">
+                  <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -90,7 +92,7 @@
           <file leaf-file-name="dal-main.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/dal-main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
+                <state vertical-scroll-proportion="0.0" vertical-offset="836" max-vertical-offset="1836">
                   <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
                   <folding />
                 </state>
@@ -156,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/js/services/dal.js" />
         <option value="$PROJECT_DIR$/app/modules/ads/ads.html" />
         <option value="$PROJECT_DIR$/app/views/home.html" />
         <option value="$PROJECT_DIR$/app/modules/ads/views/ads.html" />
@@ -202,11 +203,12 @@
         <option value="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/modules/dal/js/services/townService.js" />
         <option value="$PROJECT_DIR$/app/modules/user/user-module.js" />
         <option value="$PROJECT_DIR$/app/modules/dal/dal-module.js" />
         <option value="$PROJECT_DIR$/app/modules/dal/js/services/restService.js" />
         <option value="$PROJECT_DIR$/app/modules/public/views/public-register.html" />
+        <option value="$PROJECT_DIR$/app/modules/dal/js/services/townService.js" />
+        <option value="$PROJECT_DIR$/app/modules/dal/js/services/categoryService.js" />
       </list>
     </option>
   </component>
@@ -789,7 +791,11 @@
       <created>1420329452574</created>
       <updated>1420329452574</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="fixed register form">
+      <created>1420336343374</created>
+      <updated>1420336343374</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -831,7 +837,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fetch and visualisation of categories &amp; towns" />
     <MESSAGE value="added category handler" />
     <MESSAGE value="fixed Category All anchor" />
     <MESSAGE value="Todo" />
@@ -856,7 +861,8 @@
     <MESSAGE value="fic errors in authenticate service" />
     <MESSAGE value="some major reorganization on directory structure" />
     <MESSAGE value="fixed public views" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed public views" />
+    <MESSAGE value="fixed register form" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed register form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1149,14 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/dal-main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1836">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/dal/dal-module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
@@ -1193,8 +1191,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/townService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.085" vertical-offset="0" max-vertical-offset="1000">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/dal-main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1836">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/categoryService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.068" vertical-offset="0" max-vertical-offset="1000">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
           <folding />
         </state>
       </provider>
