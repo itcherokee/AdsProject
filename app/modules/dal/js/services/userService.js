@@ -1,7 +1,31 @@
 'use strict';
 
 angular.module('adsSystem.dal')
-    .factory('dalService', ['$http', 'API_PUBLIC_ENDPOINT', function ($http, API_PUBLIC_ENDPOINT) {
+    .factory('userService', ['restService', 'API_USER_ENDPOINT', function (restService, API_USER_ENDPOINT) {
+
+        function getAllPublishedAds(startPage, townId, categoryId) {
+            var parameters = {
+                PageSize: 100,
+                StartPage: startPage || 1
+            };
+            if (categoryId) {
+                parameters['CategoryId'] = categoryId;
+            }
+            if (townId) {
+                parameters['TownId'] = townId;
+            }
+
+            return restService.serverRequest(API_PUBLIC_ENDPOINT + 'ads', 'GET', parameters, undefined)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
+        }
+
+
+
         function isLoggedIn() {
             return false;
         }
