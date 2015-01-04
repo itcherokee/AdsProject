@@ -33,3 +33,7 @@ img {
 .form-title h3 {
     margin:0;
 }
+
+.invisible-element {
+    visibility: hidden;
+}
