@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem.public')
-    .controller('PublicHomeController', ['dalService', '$scope', 'townService', 'categoryService',
-        function (dalService, $scope, townService, categoryService) {
+    .controller('PublicHomeController', ['$scope', 'townService', 'categoryService', 'adsService',
+        function ($scope, townService, categoryService, adsService) {
             $scope.townId = '';
             $scope.categoryId = '';
             $scope.startPage = 1;
@@ -13,10 +13,9 @@ angular.module('adsSystem.public')
             };
 
             function loadAds() {
-                dalService.getAllPublishedAds($scope.startPage, $scope.townId, $scope.categoryId)
+                adsService.getAllPublishedAds($scope.startPage, $scope.townId, $scope.categoryId)
                     .success(function (data) {
                         $scope.ads = data.ads;
-
                     })
                     .error(function (error) {
                         console.log('Ads can not be loaded from server!');
