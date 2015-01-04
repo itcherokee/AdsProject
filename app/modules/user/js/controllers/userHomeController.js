@@ -24,11 +24,13 @@ angular.module('adsSystem.user')
 
         $scope.$on("categorySelectionChanged", function (event, categoryId) {
             selections.categoryId = categoryId;
+            event.stopPropagation();
             loadAds(selections);
         });
 
         $scope.$on("townSelectionChanged", function (event, townId) {
             selections.townId = townId;
+            event.stopPropagation();
             loadAds(selections);
         });
 

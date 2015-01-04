@@ -8,15 +8,24 @@ angular.module('adsSystem.user', [])
                 views: {
                     "": {
                         templateUrl: 'modules/user/views/user.html'
-                    },
-                    "userLogout": {
-                        controller: 'UserLogoutController',
-                        templateUrl: "modules/user/views/user-logout.html"
                     }
                 }
             })
             .state('userHome', {
                 url: '/user/home',
+                parent: 'user',
+                views: {
+                    "": {
+                        controller: 'UserHomeController',
+                        templateUrl: 'modules/user/views/user-home.html'
+                    },
+                    "leftMenu": {
+                        controller: 'UserLeftMenuController',
+                        templateUrl: "modules/user/views/user-menu-left.html"
+                    }
+                }
+            }).state('userPublish', {
+                url: '/user/ads/publish',
                 parent: 'user',
                 views: {
                     "": {
@@ -33,18 +42,31 @@ angular.module('adsSystem.user', [])
                     }
                 }
             });
-//            .state('login', {
-//                url: '/login',
-//                parent: 'user',
-//                controller: 'LoginController',
-//                templateUrl: 'modules/public/views/user-login.html'
-//            })
-//            .state('register', {
-//                url: '/register',
-//                parent: 'user',
-//                controller: 'RegisterController',
-//                templateUrl: 'modules/public/views/home-register.html'
-//            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //            .state('user', {
 //                url: '/user',
 //                controller: 'UserController as user',

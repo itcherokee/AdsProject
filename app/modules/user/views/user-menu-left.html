@@ -1,1 +1,24 @@
-Holla
+<div data-accordion data-close-others="accordionStatus.showOneItem">
+	<div data-accordion-group data-is-open="accordionStatus.categoryIsOpen">
+			<span data-accordion-heading>
+				Navigation <i class="pull-right glyphicon"
+							  ng-class="{'glyphicon-chevron-down': accordionStatus.categoryIsOpen, 'glyphicon-chevron-right': !accordionStatus.categoryIsOpen}"></i>
+			</span>
+		<a href="" class="btn btn-block" data-ng-repeat="mainItem in mainMenuItems"
+		   data-ng-class="{'active-link' : mainMenuSelected == mainItem }"
+		   data-ng-click="mainMenuSelected = mainItem;  clickMainMenuHandler(mainItem.callback)">
+			{{category.name}} <!-- {{category.id}})-->
+		</a>
+	</div>
+	<div data-accordion-group data-is-open="accordionStatus.townIsOpen" data-ng-show="accordionStatus.townIsOpen">
+			<span data-accordion-heading>
+				My Ads <i class="pull-right glyphicon"
+						  ng-class="{'glyphicon-chevron-down': accordionStatus.townIsOpen, 'glyphicon-chevron-right': !accordionStatus.townIsOpen}"></i>
+			</span>
+		<a href="" class="btn btn-block" data-ng-repeat="town in towns.data | orderBy: 'name' "
+		   data-ng-class="{'active-link' : towns.selected==town }"
+		   data-ng-click="towns.selected = town;  clickTownHandler(town.id)">
+			{{town.name}}
+		</a>
+	</div>
+</div>

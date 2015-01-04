@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserRightMenuController', ['$rootScope', '$scope', '$state', 'townService', 'categoryService',
-        function ($rootScope, $scope, $state, townService, categoryService) {
+    .controller('UserRightMenuController', ['$rootScope', '$scope', 'townService', 'categoryService',
+        function ($rootScope, $scope, townService, categoryService) {
             var allElement = {
                 'id': '',
                 'name': 'All'
@@ -39,19 +39,11 @@ angular.module('adsSystem.user')
                 });
 
             $scope.clickCategoryHandler = function clickCategoryHandler(categoryId) {
-                $rootScope.$broadcast("categorySelectionChanged", categoryId);
-//                $scope.categoryId = categoryId;
-//                $scope.isCategoryFilterStrict = categoryId !== '';
-//                $scope.startPage = 1;
-//                loadAds();
+                $scope.$emit("categorySelectionChanged", categoryId);
             };
 
             $scope.clickTownHandler = function clickTownHandler(townId) {
-                $rootScope.$broadcast("townSelectionChanged", townId);
-//                $scope.townId = townId;
-//                $scope.isTownFilterStrict = townId !== '';
-//                $scope.startPage = 1;
-//                loadAds();
+                $scope.$emit("townSelectionChanged", townId);
             };
 
             $scope.accordionStatus = {
