@@ -9,14 +9,6 @@ angular.module('adsSystem.user', [])
                     "": {
                         templateUrl: 'modules/user/views/user.html'
                     },
-                    "leftMenu": {
-                        controller: 'UserLeftMenuController',
-                        templateUrl: "modules/user/views/user-menu-left.html"
-                    },
-                    "rightMenu": {
-                        controller: 'UserRightMenuController',
-                        templateUrl: "modules/user/views/user-menu-right.html"
-                    },
                     "userLogout": {
                         controller: 'UserLogoutController',
                         templateUrl: "modules/user/views/user-logout.html"
@@ -26,8 +18,20 @@ angular.module('adsSystem.user', [])
             .state('userHome', {
                 url: '/user/home',
                 parent: 'user',
-                controller: 'UserHomeController',
-                templateUrl: 'modules/user/views/user-home.html'
+                views: {
+                    "": {
+                        controller: 'UserHomeController',
+                        templateUrl: 'modules/user/views/user-home.html'
+                    },
+                    "leftMenu": {
+                        controller: 'UserLeftMenuController',
+                        templateUrl: "modules/user/views/user-menu-left.html"
+                    },
+                    "rightMenu": {
+                        controller: 'UserRightMenuController',
+                        templateUrl: "modules/user/views/user-menu-right.html"
+                    }
+                }
             });
 //            .state('login', {
 //                url: '/login',
