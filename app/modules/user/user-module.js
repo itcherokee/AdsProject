@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('adsSystem.user', []).
-    config(function ($stateProvider, $urlRouterProvider) {
+    config(function ($stateProvider) {
         $stateProvider
             .state('user', {
                 abstract:true,
@@ -15,24 +15,24 @@ angular.module('adsSystem.user', []).
                     }
                 }
             })
-            .state('home', {
-                url: '/',
+            .state('userHome', {
+                url: '/user/home',
                 parent: 'user',
                 controller: 'UserHomeController',
-                templateUrl: 'modules/public/views/user-home.html'
-            })
-            .state('login', {
-                url: '/login',
-                parent: 'root',
-                controller: 'LoginController',
-                templateUrl: 'modules/public/views/user-login.html'
-            })
-            .state('register', {
-                url: '/register',
-                parent: 'root',
-                controller: 'RegisterController',
-                templateUrl: 'modules/public/views/home-register.html'
+                templateUrl: 'modules/user/views/user-home.html'
             });
+//            .state('login', {
+//                url: '/login',
+//                parent: 'user',
+//                controller: 'LoginController',
+//                templateUrl: 'modules/public/views/user-login.html'
+//            })
+//            .state('register', {
+//                url: '/register',
+//                parent: 'user',
+//                controller: 'RegisterController',
+//                templateUrl: 'modules/public/views/home-register.html'
+//            });
 //            .state('user', {
 //                url: '/user',
 //                controller: 'UserController as user',
@@ -48,5 +48,5 @@ angular.module('adsSystem.user', []).
 //                },
 //                templateUrl: '/partials/view2.html'
 //            });
-        $urlRouterProvider.otherwise('home');
+//        $urlRouterProvider.otherwise('home');
     });

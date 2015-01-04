@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('adsSystem.dal')
-    .factory('townService', ['dalService', function (dalService) {
+    .factory('townService', ['restService', 'API_PUBLIC_ENDPOINT', function (restService, API_PUBLIC_ENDPOINT) {
         function getAllTowns (){
-           return dalService.getAllTowns()
+            return restService.serverRequest(API_PUBLIC_ENDPOINT + 'towns', 'GET', undefined, undefined)
                 .success(function(data){
                     return data;
                 })
                 .error(function(error){
-                    console.log('Could not fetch towns from server.')
+                    return error;
                 })
         }
 

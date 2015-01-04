@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adsSystem.public').controller('PublicHomeController', ['dalService', '$scope', '$log', function (dalService, $scope, $log) {
+angular.module('adsSystem.public').controller('PublicHomeController', ['dalService', '$scope', 'townService', function (dalService, $scope, townService) {
     $scope.townId = '';
     $scope.categoryId = '';
     $scope.startPage = 1;
@@ -17,7 +17,7 @@ angular.module('adsSystem.public').controller('PublicHomeController', ['dalServi
 
             })
             .error(function (error) {
-                $log.error('Ads can not be loaded from server!');
+                console.log('Ads can not be loaded from server!');
             });
     }
 
@@ -33,10 +33,10 @@ angular.module('adsSystem.public').controller('PublicHomeController', ['dalServi
             $scope.categories = categories;
         })
         .error(function (error) {
-            $log.error('Categories cannot be loaded from server!');
+            console.log('Categories cannot be loaded from server!');
         });
 
-    dalService.getAllTowns()
+    townService.getAllTowns()
         .success(function (data) {
             var towns = {
                 selected: null,
@@ -48,7 +48,7 @@ angular.module('adsSystem.public').controller('PublicHomeController', ['dalServi
             $scope.towns = towns;
         })
         .error(function (error) {
-            $log.error('Towns cannot be loaded from server!');
+            console.log('Towns cannot be loaded from server!');
         });
 
     $scope.clickCategoryHandler = function clickCategoryHandler(categoryId) {

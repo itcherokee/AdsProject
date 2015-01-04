@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('adsSystem.dal').factory('restService', ['$http', 'API_USER_ENDPOINT', function ($http, API_USER_ENDPOINT) {
+angular.module('adsSystem.dal').factory('restService', ['$http', function ($http) {
     var accessToken = undefined;
 
     function httpRequest(url, method, parameters, data) {
         var contentType = method === 'POST' ? 'application/x-www-form-urlencoded' : 'application/json',
             requestHeaders = {
-                'Content-Type': contentType
+//                'Content-Type': contentType
             },
             requestParams = parameters || undefined,
             requestData = data || undefined;
@@ -16,7 +16,7 @@ angular.module('adsSystem.dal').factory('restService', ['$http', 'API_USER_ENDPO
         }
 
         return $http({
-//            headers: requestHeaders,
+            headers: requestHeaders,
             params: requestParams,
             data: requestData,
             method: method,
@@ -32,7 +32,7 @@ angular.module('adsSystem.dal').factory('restService', ['$http', 'API_USER_ENDPO
 
                 }
             })
-            .error(function (error) {
+            .error(function (data, status, headers, config) {
                 //TODO: log rest error
             })
     }
