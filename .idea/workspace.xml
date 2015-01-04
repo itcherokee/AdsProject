@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" afterPath="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -42,8 +40,8 @@
           <file leaf-file-name="publicHomeController.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2816265" vertical-offset="0" max-vertical-offset="1411">
-                  <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+                <state vertical-scroll-proportion="0.20481928" vertical-offset="0" max-vertical-offset="1411">
+                  <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -799,7 +797,11 @@
       <created>1420336493120</created>
       <updated>1420336493120</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="link category services in controllers">
+      <created>1420337223984</created>
+      <updated>1420337223984</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -841,7 +843,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixed Category All anchor" />
     <MESSAGE value="Todo" />
     <MESSAGE value="Categories made as accordion" />
     <MESSAGE value="Towns made as accordion" />
@@ -866,7 +867,8 @@
     <MESSAGE value="fixed public views" />
     <MESSAGE value="fixed register form" />
     <MESSAGE value="created categories service" />
-    <option name="LAST_COMMIT_MESSAGE" value="created categories service" />
+    <MESSAGE value="link category services in controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="link category services in controllers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1211,8 +1213,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2816265" vertical-offset="0" max-vertical-offset="1411">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.20481928" vertical-offset="0" max-vertical-offset="1411">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
