@@ -3,9 +3,9 @@
 		<h3 class="panel-title">Navigation</h3>
 	</div>
 	<div class="panel-body">
-		<a href="" class="btn btn-block" data-ng-repeat="mainItem in mainMenuItems"
-		   data-ng-class="{'active-link' : mainMenuSelected == mainItem }"
-		   data-ng-click="mainMenuSelected = mainItem;  clickMainMenuHandler(mainItem)">
+		<a href="" class="btn btn-block" data-ng-repeat="mainItem in mainMenuItems.items"
+		   data-ng-class="{'active-link' : mainMenuItems.selected == mainItem }"
+		   data-ng-click="mainMenuItems.selected = mainItem;  clickMainMenuHandler(mainItem)">
 			{{mainItem.title}} <!-- {{category.id}})-->
 		</a>
 	</div>

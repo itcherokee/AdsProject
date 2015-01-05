@@ -22,9 +22,7 @@ angular.module('adsSystem')
                 authenticateService.userLogout()
                     .success(function () {
                         $scope.username = undefined;
-                        sessionStorage.removeItem('user');
-                        sessionStorage.removeItem('isAdmin');
-                        sessionStorage.removeItem('accessToken');
+                        sessionStorage.clear();
                         $state.go('home');
                     })
                     .error(function (data) {

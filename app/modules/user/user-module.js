@@ -4,27 +4,14 @@ angular.module('adsSystem.user', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('user', {
-                abstract:true,
-                views: {
-                    "": {
-                        templateUrl: 'modules/user/views/user.html'
-                    }
-                }
+                abstract: true,
+                templateUrl: 'modules/user/views/user.html'
             })
             .state('userHome', {
                 url: '/user/home',
                 parent: 'user',
-                views: {
-                    "": {
-                        controller: 'UserHomeController',
-                        templateUrl: 'modules/user/views/user-home.html'
-                    },
-                    "leftMenu": {
-                        controller: 'UserLeftMenuController',
-                        templateUrl: "modules/user/views/user-menu-left.html"
-                    }
-                }
-
+                controller: 'UserHomeController',
+                templateUrl: 'modules/user/views/user-home.html'
             })
             .state('userMyAds', {
                 url: '/user/ads',
@@ -68,29 +55,6 @@ angular.module('adsSystem.user', [])
                     }
                 }
             });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //            .state('user', {
