@@ -30,8 +30,14 @@ angular.module('adsSystem.dal')
                 })
         }
 
-        function getUserAds(status) {
-            return restService.serverRequest(API_USER_ENDPOINT + 'ads', 'GET', status, undefined)
+        function getUserAds(status, startPage, pageSize) {
+            var parameters = {
+                PageSize: pageSize || 2,
+                StartPage: startPage || 1,
+                status: status
+            };
+
+            return restService.serverRequest(API_USER_ENDPOINT + 'ads', 'GET', parameters, undefined)
                 .success(function (data) {
                     return data;
                 })

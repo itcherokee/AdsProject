@@ -1,24 +1,32 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserMyAdsController', ['$rootScope', '$scope', 'adsService',
-        function ($rootScope, $scope, adsService) {
-            $rootScope.$broadcast("PageChanged", 'Home');
+    .controller('UserMyAdsController', ['$rootScope', '$scope', 'userService',
+        function ($rootScope, $scope, userService) {
+            $rootScope.$broadcast("PageChanged", 'My Ads');
 
             var selections = {
-                townId: undefined,
-                categoryId: undefined,
-                startPage: 1
+                startPage: 1,
+                pageSize: 2,
+                totalAds: undefined,
+                numPages: undefined
+            };
+            $scope.selections = selections;
+
+            $scope.pageChanged = function(){
+                loadUserAds(selections);
             };
 
-            function loadAds(selections) {
+            function loadUserAds(selections) {
                 var startPage = selections.startPage,
-                    townId = selections.townId,
-                    categoryId = selections.categoryId;
+                    pageSize = selections.pageSize,
+                    status;
 
-                adsService.getAllPublishedAds(startPage, townId, categoryId)
+                adsService.get.getUserAds(status, startPage, pageSize)
                     .success(function (data) {
                         $scope.ads = data.ads;
+                        $scope.selections.totalAds = data.numItems;
+                        $scope.selections.numPages = data.numPages;
                     })
                     .error(function (error) {
                         console.log('Ads can not be loaded from server!');
@@ -37,6 +45,6 @@ angular.module('adsSystem.user')
                 loadAds(selections);
             });
 
-            loadAds(selections);
+            loadUserAds(selections);
 
         }]);

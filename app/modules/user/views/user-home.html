@@ -50,8 +50,8 @@
 		</div>
 
 		<div class="text-center">
-			<pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm"
-						boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+			<pagination total-items="selections.totalAds" ng-model="selections.startPage" max-size="5" items-per-page="selections.pageSize" class="pagination-sm"
+						boundary-links="true" rotate="false" num-pages="numPages" ng-change="pageChanged()"></pagination>
 		</div>
 
 	</div>

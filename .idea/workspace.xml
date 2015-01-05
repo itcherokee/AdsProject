@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/adsService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/adsService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/views/public-login.html" afterPath="$PROJECT_DIR$/app/modules/public/views/public-login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/views/public.html" afterPath="$PROJECT_DIR$/app/modules/public/views/public.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-home.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/user-module.js" afterPath="$PROJECT_DIR$/app/modules/user/user-module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -31,14 +30,14 @@
     <favorites_list name="AdsProject" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
+    <splitter split-orientation="vertical" split-proportion="0.8472763">
       <split-first>
         <leaf>
-          <file leaf-file-name="userLeftMenuController.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="userLeftMenuController.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1615">
-                  <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.44418052" vertical-offset="408" max-vertical-offset="1683">
+                  <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
@@ -47,39 +46,39 @@
           <file leaf-file-name="user-home.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-home.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-5.923077" vertical-offset="798" max-vertical-offset="1564">
-                  <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+                <state vertical-scroll-proportion="-8.076923" vertical-offset="691" max-vertical-offset="1564">
+                  <caret line="53" column="104" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="104" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="userMyAdsController.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-                  <caret line="3" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="12" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="userPublishNewAdController.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-                  <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="adsService.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="adsService.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/adsService.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.9113402" vertical-offset="0" max-vertical-offset="612">
-                  <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+                  <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="8" selection-end-column="14" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="userService.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+                  <caret line="32" column="55" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="55" />
+                  <folding>
+                    <element signature="e#194#922#0" expanded="false" />
+                    <element signature="e#1486#1805#0" expanded="false" />
+                    <element signature="e#1847#2168#0" expanded="false" />
+                    <element signature="e#2205#2513#0" expanded="false" />
+                    <element signature="e#2568#3614#0" expanded="false" />
+                    <element signature="e#3654#3965#0" expanded="false" />
+                    <element signature="e#4017#4538#0" expanded="false" />
+                    <element signature="e#4574#4880#0" expanded="false" />
+                    <element signature="e#4925#5487#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -88,11 +87,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="userHomeController.js" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js">
+          <file leaf-file-name="userMyAdsController.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7098121" vertical-offset="0" max-vertical-offset="816">
-                  <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="935">
+                  <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="user.html" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/modules/user/views/user.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="1.7708334" vertical-offset="0" max-vertical-offset="578">
+                  <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -130,7 +139,6 @@
         <option value="$PROJECT_DIR$/app/modules/public/views/public-register.html" />
         <option value="$PROJECT_DIR$/app/modules/dal/js/services/dal-main.js" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userLogoutController.js" />
-        <option value="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" />
         <option value="$PROJECT_DIR$/app/modules/user/views/partials/rightMenu.html" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-left-menu.html" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-menu-right.html" />
@@ -148,7 +156,6 @@
         <option value="$PROJECT_DIR$/app/modules/user/views/user-myads.html" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-profile.html" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-publish.html" />
-        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userPublishController.js" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/UserEditProfileController.js" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js" />
@@ -156,14 +163,16 @@
         <option value="$PROJECT_DIR$/app/modules/user/views/user-menu-left.html" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user.html" />
         <option value="$PROJECT_DIR$/app/js/controllers/titleController.js" />
-        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js" />
         <option value="$PROJECT_DIR$/app/modules/user/user-module.js" />
         <option value="$PROJECT_DIR$/app/modules/public/views/public.html" />
         <option value="$PROJECT_DIR$/app/modules/public/views/public-login.html" />
         <option value="$PROJECT_DIR$/app/css/app.css" />
         <option value="$PROJECT_DIR$/app/modules/dal/js/services/adsService.js" />
-        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-home.html" />
+        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" />
+        <option value="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" />
+        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js" />
+        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js" />
       </list>
     </option>
   </component>
@@ -785,7 +794,11 @@
       <created>1420459527274</created>
       <updated>1420459527274</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="fixed ads control display">
+      <created>1420492452545</created>
+      <updated>1420492452545</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -818,7 +831,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976654" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976654" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.117492095" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19915701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -847,7 +860,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="register form created&#10;" />
     <MESSAGE value="register form ng-model applied" />
     <MESSAGE value="combine login, register and logout into authenticate service&#10;" />
     <MESSAGE value="fic errors in authenticate service" />
@@ -872,7 +884,8 @@
     <MESSAGE value="changes in left user menu html and styling" />
     <MESSAGE value="fixing states for user" />
     <MESSAGE value="fixed states of left user menu handling also refresh of page" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed states of left user menu handling also refresh of page" />
+    <MESSAGE value="fixed ads control display" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed ads control display" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1026,24 +1039,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-          <folding>
-            <element signature="e#194#922#0" expanded="false" />
-            <element signature="e#960#1259#0" expanded="false" />
-            <element signature="e#1299#1618#0" expanded="false" />
-            <element signature="e#1660#1981#0" expanded="false" />
-            <element signature="e#2018#2326#0" expanded="false" />
-            <element signature="e#154#5775#0" expanded="false" />
-            <element signature="e#3467#3778#0" expanded="false" />
-            <element signature="e#3830#4351#0" expanded="false" />
-            <element signature="e#4387#4693#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1203,14 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/views/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17453799" vertical-offset="0" max-vertical-offset="974">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userRightMenuController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.422" vertical-offset="3" max-vertical-offset="1003">
@@ -1251,26 +1238,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
           <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <caret line="3" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1283,26 +1254,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js">
+    <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7098121" vertical-offset="0" max-vertical-offset="816">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        <state vertical-scroll-proportion="-8.076923" vertical-offset="691" max-vertical-offset="1564">
+          <caret line="53" column="104" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="104" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-home.html">
+    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.923077" vertical-offset="798" max-vertical-offset="1564">
-          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/adsService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9113402" vertical-offset="0" max-vertical-offset="612">
-          <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="935">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/user/views/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7708334" vertical-offset="0" max-vertical-offset="578">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <caret line="32" column="55" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="55" />
+          <folding>
+            <element signature="e#194#922#0" expanded="false" />
+            <element signature="e#1486#1805#0" expanded="false" />
+            <element signature="e#1847#2168#0" expanded="false" />
+            <element signature="e#2205#2513#0" expanded="false" />
+            <element signature="e#2568#3614#0" expanded="false" />
+            <element signature="e#3654#3965#0" expanded="false" />
+            <element signature="e#4017#4538#0" expanded="false" />
+            <element signature="e#4574#4880#0" expanded="false" />
+            <element signature="e#4925#5487#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44418052" vertical-offset="408" max-vertical-offset="1683">
+          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
           <folding />
         </state>
       </provider>

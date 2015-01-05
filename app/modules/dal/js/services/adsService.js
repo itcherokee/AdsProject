@@ -2,9 +2,9 @@
 
 angular.module('adsSystem.dal')
     .factory('adsService', ['restService', 'API_PUBLIC_ENDPOINT', function (restService, API_PUBLIC_ENDPOINT) {
-        function getAllPublishedAds(startPage, townId, categoryId) {
+        function getAllPublishedAds(startPage, townId, categoryId, pageSize) {
             var parameters = {
-                PageSize: 2,
+                PageSize: pageSize || 2,
                 StartPage: startPage || 1
             };
             if (categoryId) {

@@ -8,18 +8,28 @@ angular.module('adsSystem.user')
             var selections = {
                 townId: undefined,
                 categoryId: undefined,
-                startPage: 1
+                startPage: 1,
+                pageSize: 2,
+                totalAds: undefined,
+                numPages: undefined
+            };
+            $scope.selections = selections;
+
+            $scope.pageChanged = function(){
+                loadAds(selections);
             };
 
             function loadAds(selections) {
                 var startPage = selections.startPage,
+                    pageSize = selections.pageSize,
                     townId = selections.townId,
                     categoryId = selections.categoryId;
 
-                adsService.getAllPublishedAds(startPage, townId, categoryId)
+                adsService.getAllPublishedAds(startPage, townId, categoryId, pageSize)
                     .success(function (data) {
                         $scope.ads = data.ads;
-                        $scope
+                        $scope.selections.totalAds = data.numItems;
+                        $scope.selections.numPages = data.numPages;
                     })
                     .error(function (error) {
                         console.log('Ads can not be loaded from server!');
