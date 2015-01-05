@@ -9,9 +9,16 @@ angular.module('adsSystem.user')
                 startPage: 1,
                 pageSize: 2,
                 totalAds: undefined,
-                numPages: undefined
+                numPages: undefined,
+                status: 'All'
             };
+
             $scope.selections = selections;
+
+            $scope.on('userMyAdsStatusSelected', function(event, status){
+                $scope.selections.status = status;
+                loadUserAds(selections);
+            });
 
             $scope.pageChanged = function(){
                 loadUserAds(selections);
@@ -20,7 +27,7 @@ angular.module('adsSystem.user')
             function loadUserAds(selections) {
                 var startPage = selections.startPage,
                     pageSize = selections.pageSize,
-                    status;
+                    status = selections.status;
 
                 adsService.get.getUserAds(status, startPage, pageSize)
                     .success(function (data) {

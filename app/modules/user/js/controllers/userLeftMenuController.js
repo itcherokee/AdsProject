@@ -44,24 +44,36 @@ angular.module('adsSystem.user')
                             id: 0,
                             title: 'All',
                             state: function () {
-                                $rootScope
+                                $rootScope.$broadcast('userMyAdsStatusSelected', 'All');
                             }
                         },
                         {
                             id: 1,
-                            title: 'Published'
+                            title: 'Published',
+                            state: function () {
+                                $rootScope.$broadcast('userMyAdsStatusSelected', 'Published');
+                            }
                         },
                         {
                             id: 2,
-                            title: 'Waiting Approval'
+                            title: 'Waiting Approval',
+                            state: function () {
+                                $rootScope.$broadcast('userMyAdsStatusSelected', 'Waiting Approval');
+                            }
                         },
                         {
                             id: 3,
-                            title: 'Inactive'
+                            title: 'Inactive',
+                            state: function () {
+                                $rootScope.$broadcast('userMyAdsStatusSelected', 'Inactive');
+                            }
                         },
                         {
                             id: 4,
-                            title: 'Rejected'
+                            title: 'Rejected',
+                            state: function () {
+                                $rootScope.$broadcast('userMyAdsStatusSelected', 'Rejected');
+                            }
                         }
                     ]};
 
