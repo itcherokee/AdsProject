@@ -19,6 +19,7 @@ angular.module('adsSystem.user')
                 adsService.getAllPublishedAds(startPage, townId, categoryId)
                     .success(function (data) {
                         $scope.ads = data.ads;
+                        $scope
                     })
                     .error(function (error) {
                         console.log('Ads can not be loaded from server!');

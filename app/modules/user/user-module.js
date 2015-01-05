@@ -16,44 +16,20 @@ angular.module('adsSystem.user', [])
             .state('userMyAds', {
                 url: '/user/ads',
                 parent: 'user',
-                views: {
-                    "": {
-                        controller: 'UserMyAdsController',
-                        templateUrl: 'modules/user/views/user-myads.html'
-                    },
-                    "leftMenu": {
-                        controller: 'UserLeftMenuController',
-                        templateUrl: "modules/user/views/user-menu-left.html"
-                    }
-                }
+                controller: 'UserMyAdsController',
+                templateUrl: 'modules/user/views/user-myads.html'
             })
             .state('userPublish', {
                 url: '/user/ads/publish',
                 parent: 'user',
-                views: {
-                    "": {
-                        controller: 'UserPublishNewAdController',
-                        templateUrl: 'modules/user/views/user-publish.html'
-                    },
-                    "leftMenu": {
-                        controller: 'UserLeftMenuController',
-                        templateUrl: "modules/user/views/user-menu-left.html"
-                    }
-                }
+                controller: 'UserPublishNewAdController',
+                templateUrl: 'modules/user/views/user-publish.html'
             })
             .state('editProfile', {
                 url: '/user/profile',
                 parent: 'user',
-                views: {
-                    "": {
-                        controller: 'UserEditProfileController',
-                        templateUrl: 'modules/user/views/user-profile.html'
-                    },
-                    "leftMenu": {
-                        controller: 'UserLeftMenuController',
-                        templateUrl: "modules/user/views/user-menu-left.html"
-                    }
-                }
+                controller: 'UserEditProfileController',
+                templateUrl: 'modules/user/views/user-profile.html'
             });
 
 
@@ -74,4 +50,5 @@ angular.module('adsSystem.user', [])
 //            });
 //        $urlRouterProvider.otherwise('home');
 
-    });
+    })
+    .run();

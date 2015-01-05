@@ -1,24 +1,61 @@
 <div class="col-md-9">
-	<div data-ng-repeat="ad in ads"
-		 class="col-md-12">
-		<div class="row">
-			{{'Category: ' + ad.categoryId + '| Town: ' + ad.townId}}
-			<div class="col-md-9"><h3>{{ad.title}}</h3></div>
-			<span class="col-md-3">{{ad.date | date:'d-MMM-yyyy'}}</span>
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
+	<div class="form-horizontal">
+		<div data-ng-repeat="ad in ads"
+			 class="col-md-12 form-group form-control my-form-control">
+			<div class="row">
+				<!--{{'Category: ' + ad.categoryId + '| Town: ' + ad.townId}}-->
+				<div class="col-md-9"><h4>{{ad.title}}</h4></div>
+				<span class="col-md-3 text-right">{{ad.date | date:'d-MMM-yyyy'}}</span>
 			</div>
-			<div class="col-md-8">
-				<div>{{ad.text}}</div>
-				<br/>
-				Name: <input type="text" data-ng-model="ad.ownerName"/> <br/>
-				Email: <input type="text" data-ng-model="ad.ownerEmail"/> <br/>
-				Tel.: <input type="text" data-ng-model="ad.ownerPhone"/> <br/>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="picture-frame form-control my-form-control">
+						<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="form-horizontal">
+						<div class="form-group">
+							<div class="col-sm-12 ">
+								<div class="form-control my-form-control" data-ng-bind="ad.text"></div>
+							</div>
+						</div>
+					</div>
+					<div class="form-horizontal">
+						<div class="form-group">
+							<label for="ownerName" class="col-sm-2 control-label ">Name:</label>
+
+							<div class="col-sm-10">
+								<span class="form-control" data-ng-bind="ad.ownerName" id="ownerName"></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="ownerEmail" class="col-sm-2 control-label ">Email:</label>
+
+							<div class="col-sm-10">
+								<a class="form-control" href="mailto://{{ad.ownerEmail}}"
+								   id="ownerEmail">{{ad.ownerEmail}}</a>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="ownerPhone" class="col-sm-2 control-label">Tel:</label>
+
+							<div class="col-sm-10">
+								<span class="form-control" data-ng-bind="ad.ownerPhone" id="ownerPhone"></span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		<div class="text-center">
+			<pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm"
+						boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+		</div>
+
 	</div>
+
 </div>
 <div class="col-md-3" data-ng-controller="UserRightMenuController">
 	<div data-accordion data-close-others="accordionStatus.showOneItem">

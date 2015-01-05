@@ -20,8 +20,12 @@
     margin-top: 10px;
 }
 
-img {
-    width: 150px;
+.picture-frame {
+    padding: 25px;
+}
+
+.picture-frame img {
+    width: 100%;
 }
 
 .form-title {
@@ -40,4 +44,19 @@ img {
 
 header h3 {
     margin: 0;
+}
+
+.error-message {
+    color: red;
+}
+input.ng-dirty.ng-invalid {
+    border-color: red;
+}
+
+.borderAll {
+    border: 1px solid black;
+}
+
+.my-form-control {
+    height: auto;
 }
