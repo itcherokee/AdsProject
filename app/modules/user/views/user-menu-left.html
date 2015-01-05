@@ -5,12 +5,12 @@
 	<div class="panel-body">
 		<a href="" class="btn btn-block" data-ng-repeat="mainItem in mainMenuItems"
 		   data-ng-class="{'active-link' : mainMenuSelected == mainItem }"
-		   data-ng-click="mainMenuSelected = mainItem;  clickMainMenuHandler(mainItem.callback)">
+		   data-ng-click="mainMenuSelected = mainItem;  clickMainMenuHandler(mainItem)">
 			{{mainItem.title}} <!-- {{category.id}})-->
 		</a>
 	</div>
 </div>
-<div class="panel panel-default">
+<div class="panel panel-default" data-ng-show="myAdsMenu.enabled" >
 	<div class="panel-heading">
 		<h3 class="panel-title">My Ads</h3>
 	</div>

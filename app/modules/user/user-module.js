@@ -25,13 +25,42 @@ angular.module('adsSystem.user', [])
                     }
                 }
 
-            }).state('userPublish', {
+            })
+            .state('userMyAds', {
+                url: '/user/ads',
+                parent: 'user',
+                views: {
+                    "": {
+                        controller: 'UserMyAdsController',
+                        templateUrl: 'modules/user/views/user-myads.html'
+                    },
+                    "leftMenu": {
+                        controller: 'UserLeftMenuController',
+                        templateUrl: "modules/user/views/user-menu-left.html"
+                    }
+                }
+            })
+            .state('userPublish', {
                 url: '/user/ads/publish',
                 parent: 'user',
                 views: {
                     "": {
-                        controller: 'UserHomeController',
-                        templateUrl: 'modules/user/views/user-home.html'
+                        controller: 'UserPublishNewAdController',
+                        templateUrl: 'modules/user/views/user-publish.html'
+                    },
+                    "leftMenu": {
+                        controller: 'UserLeftMenuController',
+                        templateUrl: "modules/user/views/user-menu-left.html"
+                    }
+                }
+            })
+            .state('editProfile', {
+                url: '/user/profile',
+                parent: 'user',
+                views: {
+                    "": {
+                        controller: 'UserEditProfileController',
+                        templateUrl: 'modules/user/views/user-profile.html'
                     },
                     "leftMenu": {
                         controller: 'UserLeftMenuController',
