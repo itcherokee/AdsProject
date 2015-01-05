@@ -44,7 +44,7 @@ angular.module('adsSystem.user')
                             id: 0,
                             title: 'All',
                             state: function () {
-                                $rootScope.$broadcast('userMyAdsStatusSelected', 'All');
+                                $rootScope.$broadcast('userMyAdsStatusSelected', undefined);
                             }
                         },
                         {
@@ -58,7 +58,7 @@ angular.module('adsSystem.user')
                             id: 2,
                             title: 'Waiting Approval',
                             state: function () {
-                                $rootScope.$broadcast('userMyAdsStatusSelected', 'Waiting Approval');
+                                $rootScope.$broadcast('userMyAdsStatusSelected', 'WaitingApproval');
                             }
                         },
                         {
@@ -100,6 +100,7 @@ angular.module('adsSystem.user')
 
             $scope.clickMyAdsMenuHandler = function (item) {
                 sessionStorage['userMyAdsMenuItemId'] = item.id;
+                item.state()
             };
 
         }])

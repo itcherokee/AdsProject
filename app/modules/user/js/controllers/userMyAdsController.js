@@ -10,14 +10,15 @@ angular.module('adsSystem.user')
                 pageSize: 2,
                 totalAds: undefined,
                 numPages: undefined,
-                status: 'All'
+                status: undefined
             };
 
             $scope.selections = selections;
 
-            $scope.on('userMyAdsStatusSelected', function(event, status){
+            $scope.$on('userMyAdsStatusSelected', function(event, status){
+                alert('Status changed to ' + status);
                 $scope.selections.status = status;
-                loadUserAds(selections);
+                loadUserAds($scope.selections);
             });
 
             $scope.pageChanged = function(){
@@ -29,7 +30,7 @@ angular.module('adsSystem.user')
                     pageSize = selections.pageSize,
                     status = selections.status;
 
-                adsService.get.getUserAds(status, startPage, pageSize)
+                userService.getUserAds(status, startPage, pageSize)
                     .success(function (data) {
                         $scope.ads = data.ads;
                         $scope.selections.totalAds = data.numItems;
@@ -39,18 +40,6 @@ angular.module('adsSystem.user')
                         console.log('Ads can not be loaded from server!');
                     });
             }
-
-            $scope.$on("categorySelectionChanged", function (event, categoryId) {
-                selections.categoryId = categoryId;
-                event.stopPropagation();
-                loadAds(selections);
-            });
-
-            $scope.$on("townSelectionChanged", function (event, townId) {
-                selections.townId = townId;
-                event.stopPropagation();
-                loadAds(selections);
-            });
 
             loadUserAds(selections);
 
