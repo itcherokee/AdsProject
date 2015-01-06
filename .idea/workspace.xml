@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-myads.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-myads.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="" />
     <ignored path="AdsProject.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -915,7 +912,11 @@
       <created>1420503636448</created>
       <updated>1420503636448</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="added all buttons to view for MyAds">
+      <created>1420503950272</created>
+      <updated>1420503950272</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -977,7 +978,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixed register form" />
     <MESSAGE value="created categories service" />
     <MESSAGE value="link category services in controllers" />
     <MESSAGE value="register form responsible view" />
@@ -1002,7 +1002,8 @@
     <MESSAGE value="fixed filtering based on MyAds menu selection of status" />
     <MESSAGE value="partial MyAds ads view finalized" />
     <MESSAGE value="applied stupid bootstrap theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="applied stupid bootstrap theme" />
+    <MESSAGE value="added all buttons to view for MyAds" />
+    <option name="LAST_COMMIT_MESSAGE" value="added all buttons to view for MyAds" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
