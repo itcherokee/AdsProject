@@ -1,3 +1,60 @@
 <div class="col-md-12">
-	My Publish new ad content
+	<form class="form-horizontal">
+		<div class="col-md-8 text-center">
+			<div class="form-group">
+				<label for="ads-title" class="col-sm-2 control-label">Title:</label>
+
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="ads-title" name="ads-title" data-ng-model="ad.title"
+						   data-ng-required/>
+				</div>
+				<div class="picture-frame form-control my-form-control">
+					<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="ads-text" class="col-sm-2 control-label">Text</label>
+
+				<div class="col-sm-10">
+					<textarea class="form-control" name="ads-text" id="ads-text" rows="4" data-ng-model="ad.text"
+							  data-ng-required></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="ads-image" class="col-sm-2 control-label">Image:</label>
+
+				<div class="col-sm-8">
+					<input type="text" name="ads-image" class="form-control" id="ads-image" readonly/>
+				</div>
+				<div class="col-sm-2">
+					<button class="form-control btn btn-block">Browse ...</button>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="ads-category" class="col-sm-2 control-label">Category:</label>
+				<select data-ng-options="category.id as category.name for category in categories" name="category"
+						id="ads-category"
+						class="form-control" data-ng-model="ad.category">
+					<option value="">Select category</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="ads-town" class="col-sm-2 control-label">Town:</label>
+				<select data-ng-options="town.id as town.name for town in towns" name="ads-town"
+						id="ads-town"
+						class="form-control" data-ng-model="ad.town">
+					<option value="">Select town</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="col-md-4 text-center">
+			<div class="form-control">
+
+
+				<button class="form-control btn btn-block btn-default">Change image</button>
+				<button class="form-control btn btn-block btn-default">Delete image</button>
+			</div>
+		</div>
+	</form>
 </div>

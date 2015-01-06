@@ -3,7 +3,7 @@
 angular.module('adsSystem.user')
     .controller('UserPublishNewAdController', ['$rootScope', '$scope', 'adsService',
         function ($rootScope, $scope, adsService) {
-            $rootScope.$broadcast("PageChanged", 'Home');
+            $rootScope.$broadcast("PageChanged", 'Publish New Ad');
 
             var selections = {
                 townId: undefined,
