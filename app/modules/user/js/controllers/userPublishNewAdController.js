@@ -1,22 +1,32 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserPublishNewAdController', ['$rootScope', '$scope', 'adsService',
-        function ($rootScope, $scope, adsService) {
+    .controller('UserPublishNewAdController', ['$rootScope', '$scope', 'userService',
+        function ($rootScope, $scope, userService) {
             $rootScope.$broadcast("PageChanged", 'Publish New Ad');
 
-            var selections = {
-                townId: undefined,
-                categoryId: undefined,
-                startPage: 1
+            var newAd = {
+                    title: '',
+                    text: '',
+                    imageDataUrl: '',
+                    categoryId: '',
+                    townId: ''
+                },
+                imagePath = '';
+
+            $scope.ad = newAd;
+            $scope.imagePath = imagePath;
+
+            $scope.browseForImage = function () {
+
             };
 
-            function loadAds(selections) {
+            function publishAd(data) {
                 var startPage = selections.startPage,
                     townId = selections.townId,
                     categoryId = selections.categoryId;
 
-                adsService.getAllPublishedAds(startPage, townId, categoryId)
+                userService.getAllPublishedAds(startPage, townId, categoryId)
                     .success(function (data) {
                         $scope.ads = data.ads;
                     })
@@ -37,6 +47,5 @@ angular.module('adsSystem.user')
                 loadAds(selections);
             });
 
-            loadAds(selections);
 
         }]);

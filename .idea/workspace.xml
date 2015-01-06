@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-publish.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-publish.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -60,26 +59,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="userService.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-                  <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#194#922#0" expanded="false" />
-                    <element signature="e#1486#1805#0" expanded="false" />
-                    <element signature="e#1847#2168#0" expanded="false" />
-                    <element signature="e#2205#2513#0" expanded="false" />
-                    <element signature="e#2568#3614#0" expanded="false" />
-                    <element signature="e#3654#3965#0" expanded="false" />
-                    <element signature="e#4017#4538#0" expanded="false" />
-                    <element signature="e#4574#4880#0" expanded="false" />
-                    <element signature="e#4925#5487#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="user-myads-edit.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html">
               <provider selected="true" editor-type-id="text-editor">
@@ -110,11 +89,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="userPublishNewAdController.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="userPublishNewAdController.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.088174276" vertical-offset="0" max-vertical-offset="964">
-                  <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+                <state vertical-scroll-proportion="0.3526971" vertical-offset="0" max-vertical-offset="964">
+                  <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -124,10 +103,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="userMyAdsController.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="userMyAdsController.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.306" vertical-offset="0" max-vertical-offset="1000">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
                   <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                   <folding />
                 </state>
@@ -144,12 +123,32 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="user-publish.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="user-publish.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-publish.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="1105">
-                  <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+                <state vertical-scroll-proportion="0.45993757" vertical-offset="0" max-vertical-offset="1105">
+                  <caret line="26" column="55" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="55" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="userService.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
+                  <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="21" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#981#1446#0" expanded="false" />
+                    <element signature="e#1486#1805#0" expanded="false" />
+                    <element signature="e#1847#2168#0" expanded="false" />
+                    <element signature="e#2205#2513#0" expanded="false" />
+                    <element signature="e#2568#3614#0" expanded="false" />
+                    <element signature="e#3654#3965#0" expanded="false" />
+                    <element signature="e#4017#4538#0" expanded="false" />
+                    <element signature="e#4574#4880#0" expanded="false" />
+                    <element signature="e#4925#5487#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -218,8 +217,8 @@
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-myads.html" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" />
-        <option value="$PROJECT_DIR$/app/modules/user/views/user-publish.html" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js" />
+        <option value="$PROJECT_DIR$/app/modules/user/views/user-publish.html" />
       </list>
     </option>
   </component>
@@ -951,7 +950,11 @@
       <created>1420556552115</created>
       <updated>1420556552115</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="new ad form completed">
+      <created>1420566189846</created>
+      <updated>1420566189846</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1013,7 +1016,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="link category services in controllers" />
     <MESSAGE value="register form responsible view" />
     <MESSAGE value="ads Service created" />
     <MESSAGE value="using adsService in PublicHomeController" />
@@ -1038,7 +1040,8 @@
     <MESSAGE value="applied stupid bootstrap theme" />
     <MESSAGE value="added all buttons to view for MyAds" />
     <MESSAGE value="ads edit form completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="ads edit form completed" />
+    <MESSAGE value="new ad form completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="new ad form completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1426,12 +1429,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1088">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="57" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="21" selection-end-column="13" />
           <folding>
-            <element signature="e#194#922#0" expanded="false" />
+            <element signature="e#981#1446#0" expanded="false" />
             <element signature="e#1486#1805#0" expanded="false" />
             <element signature="e#1847#2168#0" expanded="false" />
             <element signature="e#2205#2513#0" expanded="false" />
@@ -1444,34 +1463,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html">
+    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1088">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="57" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.3526971" vertical-offset="0" max-vertical-offset="964">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-publish.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="1105">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.306" vertical-offset="0" max-vertical-offset="1000">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.088174276" vertical-offset="0" max-vertical-offset="964">
-          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.45993757" vertical-offset="0" max-vertical-offset="1105">
+          <caret line="26" column="55" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="55" />
           <folding />
         </state>
       </provider>
