@@ -16,7 +16,6 @@ angular.module('adsSystem.user')
             $scope.selections = selections;
 
             $scope.$on('userMyAdsStatusSelected', function(event, status){
-                alert('Status changed to ' + status);
                 $scope.selections.status = status;
                 loadUserAds($scope.selections);
             });
