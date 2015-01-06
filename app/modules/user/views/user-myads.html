@@ -45,9 +45,9 @@
 				<label for="ad-status" class="text-center">Status:</label>
 				<span class="form-control" data-ng-bind="ad.status" id="ad-status"></span>
 				<button class="form-control btn btn-block btn-default" data-ng-show="ad.status == 'Published' || ad.status == 'WaitingApproval'">Deactivate</button>
-				<button class="form-control btn btn-block btn-default" data-ng-show="ad.status == 'Published' || ad.status == 'WaitingApproval'">Deactivate</button>
-				<button class="form-control btn btn-block btn-default" data-ng-show="ad.status == 'Published' || ad.status == 'WaitingApproval'">Deactivate</button>
-				<button class="form-control btn btn-block btn-default" data-ng-show="ad.status == 'Published' || ad.status == 'WaitingApproval'">Deactivate</button>
+				<button class="form-control btn btn-block btn-default" data-ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'">Edit</button>
+				<button class="form-control btn btn-block btn-default" data-ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'">Publish Again</button>
+				<button class="form-control btn btn-block btn-default" data-ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'">Delete</button>
 			</div>
 		</div>
 

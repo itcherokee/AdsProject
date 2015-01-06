@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-myads.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-myads.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -90,11 +88,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="user-myads.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="user-myads.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7264368" vertical-offset="48" max-vertical-offset="969">
-                  <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.70689654" vertical-offset="48" max-vertical-offset="969">
+                  <caret line="48" column="135" selection-start-line="48" selection-start-column="135" selection-end-line="48" selection-end-column="135" />
+                  <caret line="49" column="135" selection-start-line="49" selection-start-column="135" selection-end-line="49" selection-end-column="135" />
                   <folding>
                     <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
                     <element signature="tag#div#0;tag#div#1;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
@@ -117,7 +116,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="userMyAdsController.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="userMyAdsController.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="4.2352943" vertical-offset="18" max-vertical-offset="850">
@@ -191,8 +190,8 @@
         <option value="$PROJECT_DIR$/app/modules/public/js/controllers/publicRegisterController.js" />
         <option value="$PROJECT_DIR$/app/css/app.css" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/modules/user/views/user-myads.html" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js" />
+        <option value="$PROJECT_DIR$/app/modules/user/views/user-myads.html" />
       </list>
     </option>
   </component>
@@ -912,7 +911,11 @@
       <created>1420502940214</created>
       <updated>1420502940214</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="applied stupid bootstrap theme">
+      <created>1420503636448</created>
+      <updated>1420503636448</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -974,7 +977,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixed public views" />
     <MESSAGE value="fixed register form" />
     <MESSAGE value="created categories service" />
     <MESSAGE value="link category services in controllers" />
@@ -999,7 +1001,8 @@
     <MESSAGE value="added broadcasting event for the change  in selection of MyAds menu" />
     <MESSAGE value="fixed filtering based on MyAds menu selection of status" />
     <MESSAGE value="partial MyAds ads view finalized" />
-    <option name="LAST_COMMIT_MESSAGE" value="partial MyAds ads view finalized" />
+    <MESSAGE value="applied stupid bootstrap theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="applied stupid bootstrap theme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1418,22 +1421,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7264368" vertical-offset="48" max-vertical-offset="969">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.2352943" vertical-offset="18" max-vertical-offset="850">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70689654" vertical-offset="48" max-vertical-offset="969">
+          <caret line="48" column="135" selection-start-line="48" selection-start-column="135" selection-end-line="48" selection-end-column="135" />
+          <caret line="49" column="135" selection-start-line="49" selection-start-column="135" selection-end-line="49" selection-end-column="135" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
