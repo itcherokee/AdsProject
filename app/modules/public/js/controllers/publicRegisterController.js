@@ -17,8 +17,8 @@ angular.module('adsSystem.public')
             $scope.register = function () {
                 authenticateService.userRegister($scope.user)
                     .success(function (data) {
-                        //TODO: show successful login and request to login
-                        $state.go('home');
+                        $rootScope.$broadcast("UserLoggedIn", data.username);
+                        $state.go('userHome');
                     })
                     .error(function (error) {
                         //TODO:  show error

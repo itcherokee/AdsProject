@@ -60,3 +60,7 @@ input.ng-dirty.ng-invalid {
 .my-form-control {
     height: auto;
 }
+
+.right-border {
+    border-right: inherit;
+}
