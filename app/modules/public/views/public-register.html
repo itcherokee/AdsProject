@@ -1,56 +1,58 @@
-<div class="col-md-10 col-md-offset-1 login-register">
+<div class="col-md-10 col-md-offset-1">
 	<form name="registerForm" data-ng-submit="register()">
-		<div class="col-md-12 form-title">
-			<h3 class="text-center">User Registration</h3>
-		</div>
-		<div class="col-md-12">
-			<div class="col-md-6 form-group">
-				<label for="username">Username:</label>
-				<input type="text" class="form-control" id="username" placeholder="Enter desired username..."
-					   data-ng-model="user.username">
+		<fieldset class="well">
+			<div class="col-md-12 form-title">
+				<h3 class="text-center">User Registration</h3>
 			</div>
-			<div class="col-md-6 form-group invisible-element hidden-sm hidden-xs" >
-				<label for="fake">Username:</label>
-				<input type="text" class="form-control" id="fake" placeholder="Enter fake...">
+			<div class="col-md-12">
+				<div class="col-md-6 form-group">
+					<label for="username">Username:</label>
+					<input type="text" class="form-control" id="username" placeholder="Enter desired username..."
+						   data-ng-model="user.username">
+				</div>
+				<div class="col-md-6 form-group invisible-element hidden-sm hidden-xs" >
+					<label for="fake">Username:</label>
+					<input type="text" class="form-control" id="fake" placeholder="Enter fake...">
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="password">Password:</label>
+					<input type="password" class="form-control" id="password" placeholder="Enter password..."
+						   data-ng-model="user.password">
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="confirm-password">Confirm password:</label>
+					<input type="password" class="form-control" id="confirm-password" placeholder="Confirm password..."
+						   data-ng-model="user.confirmPassword">
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter your name..."
+						   data-ng-model="user.name">
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="email">Email:</label>
+					<input type="email" class="form-control" id="email" placeholder="Enter your e-mail..."
+						   data-ng-model="user.email">
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="phone">Phone:</label>
+					<input type="text" class="form-control" id="phone" placeholder="Enter your phone number..."
+						   data-ng-model="user.phone">
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="town">Town:</label>
+					<select data-ng-options="town.id as town.name for town in towns" name="town" id="town"
+							class="form-control" data-ng-model="user.town">
+						<option value="">Select town</option>
+					</select>
+				</div>
+				<div class="col-md-6 form-group">
+					<input type="submit" value="Register" class="btn btn-default col-md-6 col-md-offset-3"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<a ui-sref="login" class="col-md-6 col-md-offset-3">Login here</a>
+				</div>
 			</div>
-			<div class="col-md-6 form-group">
-				<label for="password">Password:</label>
-				<input type="password" class="form-control" id="password" placeholder="Enter password..."
-					   data-ng-model="user.password">
-			</div>
-			<div class="col-md-6 form-group">
-				<label for="confirm-password">Confirm password:</label>
-				<input type="password" class="form-control" id="confirm-password" placeholder="Confirm password..."
-					   data-ng-model="user.confirmPassword">
-			</div>
-			<div class="col-md-6 form-group">
-				<label for="name">Name:</label>
-				<input type="text" class="form-control" id="name" placeholder="Enter your name..."
-					   data-ng-model="user.name">
-			</div>
-			<div class="col-md-6 form-group">
-				<label for="email">Email:</label>
-				<input type="email" class="form-control" id="email" placeholder="Enter your e-mail..."
-					   data-ng-model="user.email">
-			</div>
-			<div class="col-md-6 form-group">
-				<label for="phone">Phone:</label>
-				<input type="text" class="form-control" id="phone" placeholder="Enter your phone number..."
-					   data-ng-model="user.phone">
-			</div>
-			<div class="col-md-6 form-group">
-				<label for="town">Town:</label>
-				<select data-ng-options="town.id as town.name for town in towns" name="town" id="town"
-						class="form-control" data-ng-model="user.town">
-					<option value="">Select town</option>
-				</select>
-			</div>
-			<div class="col-md-6 form-group">
-				<input type="submit" value="Register" class="btn btn-default col-md-6 col-md-offset-3"/>
-			</div>
-			<div class="col-md-6 form-group">
-				<a ui-sref="login" class="col-md-6 col-md-offset-3">Login here</a>
-			</div>
-		</div>
+		</fieldset>
 	</form>
 </div>
