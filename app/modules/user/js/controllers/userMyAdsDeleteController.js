@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserMyAdsController', ['$rootScope', '$scope', '$state', 'userService',
-        function ($rootScope, $scope, $state, userService) {
+    .controller('UserMyAdsController', ['$rootScope', '$scope', '$state', 'userService', '$stateParams',
+        function ($rootScope, $scope, $state, userService, $stateParams) {
             $rootScope.$broadcast("PageChanged", 'Delete Ad');
 
             // Event handler for deleting selected Ad

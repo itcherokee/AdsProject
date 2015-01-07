@@ -35,7 +35,7 @@ angular.module('adsSystem.user', [])
                 url: '/user/ads/{id:[0-9]+}',
                 parent: 'user',
                 controller: 'UserMyAdsDeleteController',
-                templateUrl: 'modules/user/views/user-profile.html'
+                templateUrl: 'modules/user/views/user-myads-delete.html'
             });
 
 
