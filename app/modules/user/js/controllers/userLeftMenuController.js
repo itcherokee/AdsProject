@@ -89,11 +89,14 @@ angular.module('adsSystem.user')
             $scope.myAdsMenuItems.selected = myAdsMenuItems.items[parseInt(sessionStorage['userMyAdsMenuItemId'], 10)] || myAdsMenuItems.items[0];
 
             function getMyAdsItemByStatus(statusName) {
+                var item = undefined;
                 angular.forEach(myAdsMenuItems.items, function (value, key, obj) {
-                    if (obj.status === statusName) {
-                        return obj;
+                    if (value.status === statusName) {
+                        item = value;
                     }
                 });
+
+                return item;
             }
 
             $scope.clickMainMenuHandler = function (item) {
@@ -120,7 +123,7 @@ angular.module('adsSystem.user')
                 item.state()
             };
 
-            function restoreMyAdsMenuSelection(status){
+            function restoreMyAdsMenuSelection(status) {
                 var selectedMyAdsMenuItem = getMyAdsItemByStatus(status);
                 $scope.myAdsMenuItems.selected = myAdsMenuItems.items[selectedMyAdsMenuItem.id];
                 $scope.clickMyAdsMenuHandler(myAdsMenuItems.items[selectedMyAdsMenuItem.id]);
@@ -134,7 +137,7 @@ angular.module('adsSystem.user')
             $scope.$on('userAdDeleted', function (event) {
                 var status = undefined;
 
-                if (sessionStorage['userMyAdsMenuItemStatus']){
+                if (sessionStorage['userMyAdsMenuItemStatus']) {
                     status = sessionStorage.getItem('userMyAdsMenuItemStatus');
                 }
 
@@ -149,5 +152,8 @@ angular.module('adsSystem.user')
                 restoreMyAdsMenuSelection(status);
             });
 
-        }])
-;
+            $scope.$on('userAdRePublished', function (event, status) {
+                restoreMyAdsMenuSelection(status);
+            });
+
+        }]);

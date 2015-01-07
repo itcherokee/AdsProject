@@ -69,6 +69,7 @@ angular.module('adsSystem.dal')
                 })
         }
 
+        // tested
         function getUserAdById(id) {
             return restService.serverRequest(API_USER_ENDPOINT + 'ads/' + id, 'GET', undefined, undefined)
                 .success(function (data) {
@@ -115,6 +116,7 @@ angular.module('adsSystem.dal')
                 })
         }
 
+        // tested
         function deleteUserAdById(id) {
             return restService.serverRequest(API_USER_ENDPOINT + 'ads/' + id, 'DELETE', undefined, undefined)
                 .success(function (data) {

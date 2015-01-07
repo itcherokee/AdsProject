@@ -50,10 +50,13 @@
 				<button class="form-control btn btn-block btn-default"
 						data-ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'"
 						>Edit</button>
-				<button class="form-control btn btn-block btn-default" data-ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'">Publish Again</button>
+				<button class="form-control btn btn-block btn-default"
+						data-ng-show="ad.status === 'Inactive'"
+						data-ng-click="publishAgainAd(ad)">Publish Again</button>
 				<button class="form-control btn btn-block btn-default"
 						data-ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'"
-						ui-sref="userDeleteAd({ id: ad.id })">Delete</button>
+						ui-sref="userDeleteAd({ id: ad.id })"
+						>Delete</button>
 			</div>
 		</div>
 

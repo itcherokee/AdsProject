@@ -26,15 +26,29 @@ angular.module('adsSystem.user')
 
             // Event handler for deactivating selected Ad
             $scope.deactivateAd = function (ad) {
+                var $that = $(this.ad)[0];
                 userService.deactivateUserAd(ad.id)
                     .success(function (data) {
-                        $rootScope.$broadcast('userAdDeactivated', ad.status);
+                        $rootScope.$broadcast('userAdDeactivated', $that.status);
                         loadUserAds($scope.selections);
                     })
                     .error(function (error) {
                         //TODO: notify in case of error on deactivation Ad
                     });
 
+            };
+
+            //Event for republishing Ad again
+            $scope.publishAgainAd= function(ad){
+                var $that = $(this.ad)[0];
+                userService.publishAgainUserAd(ad.id)
+                    .success(function (data) {
+                        $rootScope.$broadcast('userAdRePublished', $that.status);
+                        loadUserAds($scope.selections);
+                    })
+                    .error(function (error) {
+                        //TODO: notify in case of error on re-publishing Ad
+                    });
             };
 
             function loadUserAds(selections) {
