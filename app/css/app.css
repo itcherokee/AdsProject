@@ -64,3 +64,26 @@ input.ng-dirty.ng-invalid {
 .right-border {
     border-right: inherit;
 }
+
+.box {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.image-box {
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+    /*border-color: #ccc;*/
+    /*border-radius: 5px;*/
+    /*padding: 10px;*/
+    /*height: 100%;*/
+    margin: 10px;
+}
+
+.image-box img {
+    width: 100%;
+
+}

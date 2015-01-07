@@ -103,5 +103,9 @@ angular.module('adsSystem.user')
                 item.state()
             };
 
+            $scope.$on('userNewAdPublished', function(event){
+                $scope.clickMainMenuHandler(myAdsMenuItems[1]);
+            })
+
         }])
 ;

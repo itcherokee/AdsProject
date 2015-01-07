@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserPublishNewAdController', ['$rootScope', '$scope', 'userService',
-        function ($rootScope, $scope, userService) {
+    .controller('UserPublishNewAdController', ['$rootScope', '$scope', 'userService', 'townService', 'categoryService', '$state',
+        function ($rootScope, $scope, userService, townService, categoryService, $state) {
             $rootScope.$broadcast("PageChanged", 'Publish New Ad');
 
             var newAd = {
@@ -16,36 +16,36 @@ angular.module('adsSystem.user')
 
             $scope.ad = newAd;
             $scope.imagePath = imagePath;
+            $scope.categories = categoryService.getAllCategories();
+            $scope.towns = townService.getAllTowns();
 
-            $scope.browseForImage = function () {
+            $scope.publishAd = function(data) {
 
-            };
-
-            function publishAd(data) {
-                var startPage = selections.startPage,
-                    townId = selections.townId,
-                    categoryId = selections.categoryId;
-
-                userService.getAllPublishedAds(startPage, townId, categoryId)
+                userService.createNewAd(data)
                     .success(function (data) {
-                        $scope.ads = data.ads;
+                        //TODO: notify about successful publishment of new Ad
+                        $rootScope.$broadcast('userNewAdPublished');
+                        $state.go('userHome');
                     })
                     .error(function (error) {
-                        console.log('Ads can not be loaded from server!');
+                        //TODO: notify about error
                     });
             }
 
-            $scope.$on("categorySelectionChanged", function (event, categoryId) {
-                selections.categoryId = categoryId;
-                event.stopPropagation();
-                loadAds(selections);
-            });
-
-            $scope.$on("townSelectionChanged", function (event, townId) {
-                selections.townId = townId;
-                event.stopPropagation();
-                loadAds(selections);
-            });
+            $scope.fileSelected = function (fileInputField) {
+                delete $scope.ad.imageDataUrl;
+                var file = fileInputField.files[0];
+                if (file.type.match(/image\/.*/)) {
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        $scope.ad.imageDataUrl = reader.result;
+                        $(".image-box").html("<img src='" + reader.result + "'>");
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    $(".image-box").html("<p>File type not supported!</p>");
+                }
+            };
 
 
         }]);
