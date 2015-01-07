@@ -89,6 +89,7 @@ angular.module('adsSystem.user')
                     myAdsMenuItems.enabled = true;
                     sessionStorage['userMyAdsMenuItems-Enabled'] = true;
                     sessionStorage['userMyAdsMenuItemId'] = 0;
+
                 } else {
                     myAdsMenuItems.enabled = false;
                     sessionStorage.removeItem('userMyAdsMenuItems-Enabled');
@@ -104,8 +105,9 @@ angular.module('adsSystem.user')
             };
 
             $scope.$on('userNewAdPublished', function(event){
-                $scope.clickMainMenuHandler(myAdsMenuItems[1]);
-            })
+                $scope.mainMenuItems.selected = mainMenuItems.items[1];
+                $scope.clickMainMenuHandler(mainMenuItems.items[1]);
+            });
 
         }])
 ;

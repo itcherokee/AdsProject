@@ -16,8 +16,23 @@ angular.module('adsSystem.user')
 
             $scope.ad = newAd;
             $scope.imagePath = imagePath;
-            $scope.categories = categoryService.getAllCategories();
-            $scope.towns = townService.getAllTowns();
+            townService.getAllTowns()
+                .success(function (data) {
+                    $scope.towns = data;
+                })
+                .error(function (error) {
+                    //TODO: probably error notification ?!?!
+                    console.log('Towns cannot be loaded from server!');
+                });
+
+            categoryService.getAllCategories()
+                .success(function (data) {
+                    $scope.categories = data;
+                })
+                .error(function (error) {
+                    //TODO: probably error notification ?!?!
+                    console.log('Categories cannot be loaded from server!');
+                });
 
             $scope.publishAd = function(data) {
 
@@ -25,7 +40,7 @@ angular.module('adsSystem.user')
                     .success(function (data) {
                         //TODO: notify about successful publishment of new Ad
                         $rootScope.$broadcast('userNewAdPublished');
-                        $state.go('userHome');
+                        $state.go('userMyAds');
                     })
                     .error(function (error) {
                         //TODO: notify about error

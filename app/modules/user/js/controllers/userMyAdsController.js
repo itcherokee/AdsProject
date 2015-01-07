@@ -24,6 +24,8 @@ angular.module('adsSystem.user')
                 loadUserAds(selections);
             };
 
+            // Event handler
+
             function loadUserAds(selections) {
                 var startPage = selections.startPage,
                     pageSize = selections.pageSize,

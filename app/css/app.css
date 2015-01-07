@@ -1,3 +1,6 @@
+body {
+    /*background-color: #2D2D2D;*/
+}
 
 /*fix for ui-bootstrap*/
 .nav, .pagination, .carousel, .panel-title a {
