@@ -3,6 +3,7 @@
 angular.module('adsSystem.dal')
     .factory('userService', ['restService', 'API_USER_ENDPOINT', function (restService, API_USER_ENDPOINT) {
 
+        // tested
         function createNewAd(adData) {
             var data = {
                 title: adData.title,
@@ -30,6 +31,7 @@ angular.module('adsSystem.dal')
                 })
         }
 
+        // tested
         function getUserAds(status, startPage, pageSize) {
             var parameters = {
                 PageSize: pageSize || 2,
@@ -46,6 +48,7 @@ angular.module('adsSystem.dal')
                 })
         }
 
+        // tested
         function deactivateUserAd(id) {
             return restService.serverRequest(API_USER_ENDPOINT + 'ads/deactivate/' + id, 'PUT', undefined, undefined)
                 .success(function (data) {

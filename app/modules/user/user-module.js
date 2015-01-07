@@ -30,6 +30,12 @@ angular.module('adsSystem.user', [])
                 parent: 'user',
                 controller: 'UserEditProfileController',
                 templateUrl: 'modules/user/views/user-profile.html'
+            })
+            .state('userDeleteAd', {
+                url: '/user/ads/{id:[0-9]+}',
+                parent: 'user',
+                controller: 'UserMyAdsDeleteController',
+                templateUrl: 'modules/user/views/user-profile.html'
             });
 
 

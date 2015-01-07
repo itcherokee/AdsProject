@@ -15,16 +15,26 @@ angular.module('adsSystem.user')
 
             $scope.selections = selections;
 
-            $scope.$on('userMyAdsStatusSelected', function(event, status){
+            $scope.$on('userMyAdsStatusSelected', function (event, status) {
                 $scope.selections.status = status;
                 loadUserAds($scope.selections);
             });
 
-            $scope.pageChanged = function(){
+            $scope.pageChanged = function () {
                 loadUserAds(selections);
             };
 
-            // Event handler
+            // Event handler for deactivating selected Ad
+            $scope.deactivateAd = function (ad) {
+                userService.deactivateUserAd(ad.id)
+                    .success(function (data) {
+                        loadUserAds($scope.selections);
+                    })
+                    .error(function (error) {
+                        //TODO: notify in case of error on deactivation Ad
+                    });
+
+            };
 
             function loadUserAds(selections) {
                 var startPage = selections.startPage,
