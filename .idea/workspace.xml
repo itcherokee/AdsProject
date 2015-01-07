@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/views/public-login.html" afterPath="$PROJECT_DIR$/app/modules/public/views/public-login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -24,7 +25,7 @@
     <favorites_list name="AdsProject" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.55003184">
+    <splitter split-orientation="horizontal" split-proportion="0.7673677">
       <split-first>
         <leaf>
           <file leaf-file-name="userLeftMenuController.js" pinned="false" current="false" current-in-tab="false">
@@ -70,11 +71,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="user-myads-edit.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="user-myads-edit.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.728145" vertical-offset="507" max-vertical-offset="1445">
-                  <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+                <state vertical-scroll-proportion="-39.23077" vertical-offset="0" max-vertical-offset="1445">
+                  <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -115,6 +116,16 @@
                     <element signature="e#4664#4970#0" expanded="false" />
                     <element signature="e#5015#5577#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="public-login.html" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/modules/public/views/public-login.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.42361864" vertical-offset="0" max-vertical-offset="923">
+                  <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -183,11 +194,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.css" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/css/app.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.53019446" vertical-offset="944" max-vertical-offset="1921">
-                  <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
+                <state vertical-scroll-proportion="0.9206704" vertical-offset="995" max-vertical-offset="1921">
+                  <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -244,7 +255,6 @@
         <option value="$PROJECT_DIR$/app/modules/public/js/controllers/publicRegisterController.js" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-publish.html" />
-        <option value="$PROJECT_DIR$/app/modules/public/views/public-login.html" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-myads-delete.html" />
         <option value="$PROJECT_DIR$/app/css/bootstrap-theme.css" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsDeleteController.js" />
@@ -259,6 +269,7 @@
         <option value="$PROJECT_DIR$/app/modules/user/views/user-myads.html" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" />
         <option value="$PROJECT_DIR$/app/css/app.css" />
+        <option value="$PROJECT_DIR$/app/modules/public/views/public-login.html" />
       </list>
     </option>
   </component>
@@ -1008,7 +1019,11 @@
       <created>1420654784890</created>
       <updated>1420654784890</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="fixing login form - validation">
+      <created>1420665231853</created>
+      <updated>1420665231853</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1070,7 +1085,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="solved problem with page refresh and already logged in user" />
     <MESSAGE value="changes in left user menu html and styling" />
     <MESSAGE value="fixing states for user" />
     <MESSAGE value="fixed states of left user menu handling also refresh of page" />
@@ -1095,7 +1109,8 @@
     <MESSAGE value="a lot of fixes on new ad form" />
     <MESSAGE value="ad form is now responsive 100%" />
     <MESSAGE value="initial version of edit form created" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial version of edit form created" />
+    <MESSAGE value="fixing login form - validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing login form - validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1464,14 +1479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/public/views/public-login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46448088" vertical-offset="0" max-vertical-offset="915">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/views/user.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.035751842" vertical-offset="0" max-vertical-offset="951">
@@ -1525,16 +1532,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.728145" vertical-offset="507" max-vertical-offset="1445">
-          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+        <state vertical-scroll-proportion="-39.23077" vertical-offset="0" max-vertical-offset="1445">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53019446" vertical-offset="944" max-vertical-offset="1921">
-          <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.9206704" vertical-offset="995" max-vertical-offset="1921">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/public/views/public-login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42361864" vertical-offset="0" max-vertical-offset="923">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
           <folding />
         </state>
       </provider>
