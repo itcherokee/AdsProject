@@ -102,6 +102,6 @@ input.ng-dirty.ng-invalid {
 .error-message {
     color: red;
 }
-input.ng-dirty.ng-invalid {
+.error {
     border-color: red;
 }
