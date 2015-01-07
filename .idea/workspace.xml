@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsDeleteController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsDeleteController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -141,8 +139,8 @@
           <file leaf-file-name="userMyAdsDeleteController.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsDeleteController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.52200615" vertical-offset="0" max-vertical-offset="977">
-                  <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.3306039" vertical-offset="0" max-vertical-offset="977">
+                  <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
                   <folding />
                 </state>
               </provider>
@@ -979,7 +977,11 @@
       <created>1420630531336</created>
       <updated>1420630531336</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="delete ad controller finalised">
+      <created>1420630888381</created>
+      <updated>1420630888381</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1041,7 +1043,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="modification of authenticateService to keep loggedIn status and isAdmin status" />
     <MESSAGE value="working on events" />
     <MESSAGE value="fixed routing for user templates" />
     <MESSAGE value="emiting events instead broadcasting for filters" />
@@ -1066,7 +1067,8 @@
     <MESSAGE value="assign state to delete ad button" />
     <MESSAGE value="userMyAdsDelete form finalized" />
     <MESSAGE value="added form titles to Delete Ad and Add New Ad" />
-    <option name="LAST_COMMIT_MESSAGE" value="added form titles to Delete Ad and Add New Ad" />
+    <MESSAGE value="delete ad controller finalised" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete ad controller finalised" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1504,8 +1506,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsDeleteController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52200615" vertical-offset="0" max-vertical-offset="977">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3306039" vertical-offset="0" max-vertical-offset="977">
+          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
           <folding />
         </state>
       </provider>
