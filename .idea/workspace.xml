@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsEditController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/user-module.js" afterPath="$PROJECT_DIR$/app/modules/user/user-module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-myads-new.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-myads-new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-myads.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-myads.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -1011,7 +1004,11 @@
       <created>1420652595859</created>
       <updated>1420652595859</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="initial version of edit form created">
+      <created>1420654784890</created>
+      <updated>1420654784890</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1073,7 +1070,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="a lot of fixed with header of application to handle changes of pages and page refresh" />
     <MESSAGE value="solved problem with page refresh and already logged in user" />
     <MESSAGE value="changes in left user menu html and styling" />
     <MESSAGE value="fixing states for user" />
@@ -1098,7 +1094,8 @@
     <MESSAGE value="fixed event args exchange and filtering refresh when status of Ad changes (Inactive, Waiting Approval, etc. )" />
     <MESSAGE value="a lot of fixes on new ad form" />
     <MESSAGE value="ad form is now responsive 100%" />
-    <option name="LAST_COMMIT_MESSAGE" value="ad form is now responsive 100%" />
+    <MESSAGE value="initial version of edit form created" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial version of edit form created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
