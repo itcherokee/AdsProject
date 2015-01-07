@@ -23,7 +23,7 @@ angular.module('adsSystem.user', [])
                 url: '/user/ads/publish',
                 parent: 'user',
                 controller: 'UserPublishNewAdController',
-                templateUrl: 'modules/user/views/user-publish.html'
+                templateUrl: 'modules/user/views/user-myads-new.html'
             })
             .state('editProfile', {
                 url: '/user/profile',

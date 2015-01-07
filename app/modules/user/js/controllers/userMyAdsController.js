@@ -28,6 +28,7 @@ angular.module('adsSystem.user')
             $scope.deactivateAd = function (ad) {
                 userService.deactivateUserAd(ad.id)
                     .success(function (data) {
+                        $rootScope.$broadcast('userAdDeactivated', ad.status);
                         loadUserAds($scope.selections);
                     })
                     .error(function (error) {

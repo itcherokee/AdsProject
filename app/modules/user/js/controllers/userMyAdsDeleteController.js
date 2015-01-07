@@ -13,12 +13,11 @@ angular.module('adsSystem.user')
                     //TODO: notify in case not able to fetch the selected Ad and redirect to userMyAds
                 });
 
-
-
             // Event handler for deleting selected Ad
             $scope.deleteAd = function () {
                 userService.deleteUserAdById($scope.ad.id)
                     .success(function (data) {
+                        $rootScope.$broadcast('userAdDeleted');
                         $state.go('userMyAds');
                     })
                     .error(function (error) {
@@ -26,7 +25,4 @@ angular.module('adsSystem.user')
                     });
 
             };
-
-
-
         }]);
