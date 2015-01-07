@@ -16,8 +16,8 @@ angular.module('adsSystem.user')
 
 
             // Event handler for deleting selected Ad
-            $scope.deleteAd = function (ad) {
-                userService.deleteUserAdById(ad.id)
+            $scope.deleteAd = function () {
+                userService.deleteUserAdById($scope.ad.id)
                     .success(function (data) {
                         $state.go('userMyAds');
                     })
