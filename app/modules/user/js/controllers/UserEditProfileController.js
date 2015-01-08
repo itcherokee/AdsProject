@@ -3,7 +3,7 @@
 angular.module('adsSystem.user')
     .controller('UserEditProfileController', ['$rootScope', '$scope', 'adsService',
         function ($rootScope, $scope, adsService) {
-            $rootScope.$broadcast("PageChanged", 'Home');
+            $rootScope.$broadcast("PageChanged", 'Edit Ad');
 
             var selections = {
                 townId: undefined,
