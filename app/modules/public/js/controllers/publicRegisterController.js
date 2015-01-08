@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem.public')
-    .controller('PublicRegisterController', ['$rootScope', '$scope', 'townService', 'authenticateService', '$state',
-        function ($rootScope, $scope, townService, authenticateService, $state) {
+    .controller('PublicRegisterController', ['$rootScope', '$scope', 'townService', 'authenticateService', '$state', 'infoService',
+        function ($rootScope, $scope, townService, authenticateService, $state, infoService) {
             $rootScope.$broadcast("PageChanged", 'Registration');
 
             $scope.towns = [];
@@ -11,17 +11,23 @@ angular.module('adsSystem.public')
                     $scope.towns = data;
                 })
                 .error(function (error) {
-                    console.log('Towns cannot be loaded from server!');
+                    infoService.error('Towns cannot be loaded from server!');
                 });
 
             $scope.register = function () {
-                authenticateService.userRegister($scope.user)
-                    .success(function (data) {
-                        $rootScope.$broadcast("UserLoggedIn", data.username);
-                        $state.go('userHome');
-                    })
-                    .error(function (error) {
-                        //TODO:  show error
-                    })
+                if ($scope.registerForm.$valid) {
+                    authenticateService.userRegister($scope.user)
+                        .success(function (data) {
+                            $rootScope.$broadcast("UserLoggedIn", data.username);
+                            infoService.success('User account created. Successful login.');
+                            $state.go('userHome');
+                        })
+                        .error(function (error) {
+                            infoService.error('Invalid registration.');
+                            $scope.user = {};
+                        })
+                } else {
+                    infoService.error('All fields marked in red are mandatory!');
+                }
             }
         }]);
