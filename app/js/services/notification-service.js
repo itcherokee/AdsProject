@@ -20,8 +20,16 @@ angular.module('adsSystem').factory('infoService', [function () {
         noty(notyData);
     }
 
+    function warning(message) {
+        notyData.type = 'warning';
+        notyData.text = message;
+        notyData.timeout = 2000;
+        noty(notyData);
+    }
+
     return {
         success: success,
-        error: error
+        error: error,
+        warning : warning
     }
 }]);
