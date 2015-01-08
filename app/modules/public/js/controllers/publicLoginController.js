@@ -13,7 +13,8 @@ angular.module('adsSystem.public')
                             $state.go('userHome');
                         })
                         .error(function (error) {
-                            infoService.error('Invalid login.');
+                            infoService.error('Invalid login. Wrong username and/or password.');
+                            $scope.submitted = false;
                             $scope.user = {};
                         });
                 } else {

@@ -1,5 +1,5 @@
 <div class="col-md-10 col-md-offset-1">
-	<form name="registerForm" novalidate novalidate data-ng-submit="submitted=true; login()">
+	<form name="registerForm" novalidate novalidate data-ng-submit="submitted=true; register()">
 		<fieldset class="well">
 			<div class="col-md-12 form-title">
 				<h3 class="text-center">User Registration</h3>
@@ -18,14 +18,16 @@
 				<div class="col-md-6 form-group">
 					<label for="password">Password:</label>
 					<input type="password" class="form-control" id="password" placeholder="Enter password..."
-						   data-ng-model="user.password" name="password" required
-						   ng-class="{true: 'error'}[submitted && registerForm.password.$invalid]">
+						   data-ng-model="user.password" name="password" required data-ng-minLength="2"
+						   ng-class="{true: 'error'}[submitted && (registerForm.password.$invalid
+						  	 || (registerForm.password.$modelValue != registerForm.confirmPassword.$modelValue))]">
 				</div>
 				<div class="col-md-6 form-group">
-					<label for="confirm-password">Confirm password:</label>
+					<label for="confirmPassword">Confirm password:</label>
 					<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password..."
-						   data-ng-model="user.confirmPassword" name="confirmPassword" required
-						   ng-class="{true: 'error'}[submitted && registerForm.confirmPassword.$invalid]">
+						   data-ng-model="user.confirmPassword" name="confirmPassword" required data-ng-minLength="2"
+						   ng-class="{true: 'error'}[submitted && (registerForm.confirmPassword.$invalid
+						   || (registerForm.password.$modelValue != registerForm.confirmPassword.$modelValue))]">
 				</div>
 				<div class="col-md-6 form-group">
 					<label for="name">Name:</label>

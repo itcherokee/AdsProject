@@ -103,7 +103,7 @@ input.ng-dirty.ng-invalid {
     color: red;
 }
 .error {
-    border-color: red;
+    /*border-color: red;*/
     background-color: lightpink;
 }
 

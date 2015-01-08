@@ -16,16 +16,24 @@ angular.module('adsSystem.public')
 
             $scope.register = function () {
                 if ($scope.registerForm.$valid) {
-                    authenticateService.userRegister($scope.user)
-                        .success(function (data) {
-                            $rootScope.$broadcast("UserLoggedIn", data.username);
-                            infoService.success('User account created. Successful login.');
-                            $state.go('userHome');
-                        })
-                        .error(function (error) {
-                            infoService.error('Unsuccessful registration. Try again.');
-                            $scope.user = {};
-                        })
+                    if ($scope.registerForm.password.$modelValue !== $scope.registerForm.confirmPassword.$modelValue) {
+                        infoService.error('Passwords do not match!!');
+                    } else {
+                        authenticateService.userRegister($scope.user)
+                            .success(function (data) {
+                                $rootScope.$broadcast("UserLoggedIn", data.username);
+                                infoService.success('User account created. Successful login.');
+                                $state.go('userHome');
+                            })
+                            .error(function (error) {
+                                var serverErrMsg = error.modelState[Object.keys(error.modelState)][0];
+                                infoService.error('Unsuccessful registration. ' + serverErrMsg + ' Try again.');
+                                $scope.submitted = false;
+                                $scope.user = {};
+                            })
+                    }
+                } else if ($scope.registerForm.$error.minlength) {
+                    infoService.error('Password must be at least 2 characters!');
                 } else {
                     infoService.error('All fields marked in red are mandatory!');
                 }
