@@ -1,5 +1,5 @@
 <div class="col-md-10 col-md-offset-1">
-	<form name="registerForm" data-ng-submit="register()">
+	<form name="registerForm" novalidate>
 		<fieldset class="well">
 			<div class="col-md-12 form-title">
 				<h3 class="text-center">User Registration</h3>
@@ -10,7 +10,7 @@
 					<input type="text" class="form-control" id="username" placeholder="Enter desired username..."
 						   data-ng-model="user.username">
 				</div>
-				<div class="col-md-6 form-group invisible-element hidden-sm hidden-xs" >
+				<div class="col-md-6 form-group invisible-element hidden-sm hidden-xs">
 					<label for="fake">Username:</label>
 					<input type="text" class="form-control" id="fake" placeholder="Enter fake...">
 				</div>
@@ -46,13 +46,22 @@
 						<option value="">Select town</option>
 					</select>
 				</div>
-				<div class="col-md-6 form-group">
-					<input type="submit" value="Register" class="btn btn-default col-md-6 col-md-offset-3"/>
+			</div>
+			<div class="form-group col-sm-12">
+				<div class="col-sm-6 side-padding-30">
+					<a class="btn btn-primary form-control " data-ng-click="submitted=true; login()">Login</a>
 				</div>
-				<div class="col-md-6 form-group">
-					<a ui-sref="login" class="col-md-6 col-md-offset-3">Login here</a>
+				<div class="col-sm-6 side-padding-30">
+					<a ui-sref="register" class="btn btn-default form-control ">Register</a>
 				</div>
 			</div>
+			<!--<div class="col-md-6 form-group">-->
+			<!--<input type="submit" value="Register" class="btn btn-default col-md-6 col-md-offset-3"/>-->
+			<!--</div>-->
+			<!--<div class="col-md-6 form-group">-->
+			<!--<a ui-sref="login" class="col-md-6 col-md-offset-3">Login here</a>-->
+			<!--</div>-->
+			<!--</div>-->
 		</fieldset>
 	</form>
 </div>

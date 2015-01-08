@@ -106,6 +106,10 @@ input.ng-dirty.ng-invalid {
     border-color: red;
 }
 
-.button-login {
+.side-margin {
     margin: 0 10px;
+}
+
+.side-padding-30 {
+    padding: 0 30px;
 }
