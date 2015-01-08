@@ -1,5 +1,5 @@
 <div class="col-md-10 col-md-offset-1">
-	<form name="registerForm" novalidate>
+	<form name="registerForm" novalidate novalidate data-ng-submit="submitted=true; login()">
 		<fieldset class="well">
 			<div class="col-md-12 form-title">
 				<h3 class="text-center">User Registration</h3>
@@ -8,7 +8,8 @@
 				<div class="col-md-6 form-group">
 					<label for="username">Username:</label>
 					<input type="text" class="form-control" id="username" placeholder="Enter desired username..."
-						   data-ng-model="user.username">
+						   data-ng-model="user.username" name="username" required
+						   ng-class="{true: 'error'}[submitted && registerForm.username.$invalid]">
 				</div>
 				<div class="col-md-6 form-group invisible-element hidden-sm hidden-xs">
 					<label for="fake">Username:</label>
@@ -17,27 +18,32 @@
 				<div class="col-md-6 form-group">
 					<label for="password">Password:</label>
 					<input type="password" class="form-control" id="password" placeholder="Enter password..."
-						   data-ng-model="user.password">
+						   data-ng-model="user.password" name="password" required
+						   ng-class="{true: 'error'}[submitted && registerForm.password.$invalid]">
 				</div>
 				<div class="col-md-6 form-group">
 					<label for="confirm-password">Confirm password:</label>
-					<input type="password" class="form-control" id="confirm-password" placeholder="Confirm password..."
-						   data-ng-model="user.confirmPassword">
+					<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password..."
+						   data-ng-model="user.confirmPassword" name="confirmPassword" required
+						   ng-class="{true: 'error'}[submitted && registerForm.confirmPassword.$invalid]">
 				</div>
 				<div class="col-md-6 form-group">
 					<label for="name">Name:</label>
 					<input type="text" class="form-control" id="name" placeholder="Enter your name..."
-						   data-ng-model="user.name">
+						   data-ng-model="user.name" name="name" required
+						   ng-class="{true: 'error'}[submitted && registerForm.name.$invalid]">
 				</div>
 				<div class="col-md-6 form-group">
 					<label for="email">Email:</label>
 					<input type="email" class="form-control" id="email" placeholder="Enter your e-mail..."
-						   data-ng-model="user.email">
+						   data-ng-model="user.email" name="email" required
+						   ng-class="{true: 'error'}[submitted && registerForm.email.$invalid]">
 				</div>
 				<div class="col-md-6 form-group">
 					<label for="phone">Phone:</label>
 					<input type="text" class="form-control" id="phone" placeholder="Enter your phone number..."
-						   data-ng-model="user.phone">
+						   data-ng-model="user.phone" name="phone" required
+						   ng-class="{true: 'error'}[submitted && registerForm.phone.$invalid]">
 				</div>
 				<div class="col-md-6 form-group">
 					<label for="town">Town:</label>
@@ -49,7 +55,7 @@
 			</div>
 			<div class="form-group col-sm-12">
 				<div class="col-sm-6 side-padding-30">
-					<a class="btn btn-primary form-control " data-ng-click="submitted=true; register()">Register</a>
+					<input type="submit" class="btn btn-primary form-control" value="Register"/>
 				</div>
 				<div class="col-sm-6 side-padding-30">
 					<a ui-sref="login" class="btn btn-default form-control ">Login</a>

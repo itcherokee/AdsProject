@@ -104,6 +104,7 @@ input.ng-dirty.ng-invalid {
 }
 .error {
     border-color: red;
+    background-color: lightpink;
 }
 
 .side-margin {

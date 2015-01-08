@@ -5,7 +5,7 @@ angular.module('adsSystem.public')
         function ($rootScope, $scope, authenticateService, $state, infoService) {
             $rootScope.$broadcast("PageChanged", 'Login');
             $scope.login = function () {
-                if ($scope.loginForm.valid) {
+                if ($scope.loginForm.$valid) {
                     authenticateService.userLogin($scope.user)
                         .success(function (data) {
                             $rootScope.$broadcast("UserLoggedIn", data.username);

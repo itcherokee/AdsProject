@@ -11,7 +11,7 @@ angular.module('adsSystem.public')
                     $scope.towns = data;
                 })
                 .error(function (error) {
-                    infoService.error('Towns cannot be loaded from server!');
+                    infoService.warning('Towns cannot be loaded from server!');
                 });
 
             $scope.register = function () {
@@ -23,7 +23,7 @@ angular.module('adsSystem.public')
                             $state.go('userHome');
                         })
                         .error(function (error) {
-                            infoService.error('Invalid registration.');
+                            infoService.error('Unsuccessful registration. Try again.');
                             $scope.user = {};
                         })
                 } else {

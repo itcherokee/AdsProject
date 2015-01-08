@@ -2,8 +2,7 @@
 
 angular.module('adsSystem').factory('infoService', [function () {
     var notyData = {
-        layout: 'topCenter',
-        closeWith: ['click']
+        layout: 'topCenter'
     };
 
     function success(message) {
