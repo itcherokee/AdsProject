@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem')
-    .controller('TitleController', ['$rootScope', '$scope', '$state', 'authenticateService',
-        function ($rootScope, $scope, $state, authenticateService) {
+    .controller('TitleController', ['$rootScope', '$scope', '$state', 'authenticateService', 'infoService',
+        function ($rootScope, $scope, $state, authenticateService, infoService) {
             $scope.currentPage = 'Home';
 
             if (sessionStorage.user) {
@@ -23,10 +23,11 @@ angular.module('adsSystem')
                     .success(function () {
                         $scope.username = undefined;
                         sessionStorage.clear();
+                        infoService.success('You have been successfully logged-off.')
                         $state.go('home');
                     })
                     .error(function (data) {
-                        //TODO: show error
+                        infoService.success('There was a problem to log you off. Try again later or just close the browser.')
                     });
             }
         }]);
