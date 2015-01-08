@@ -1,3 +1,83 @@
 <div class="col-md-12">
-	My Edit Profile content
+	<form novalidate>
+		<div data-ng-form="profileForm" class="col-md-6">
+			<fieldset class="well">
+				<div class="col-md-12 form-title">
+					<h3 class="text-center">Edit Profile</h3>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="text" class="form-control" id="name" placeholder="Enter your name..."
+							   data-ng-model="user.name" name="name" required
+							   ng-class="{true: 'error'}[submitted && profileForm.name.$invalid]">
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="email" class="form-control" id="email" placeholder="Enter your e-mail..."
+							   data-ng-model="user.email" name="email" required
+							   ng-class="{true: 'error'}[submitted && profileForm.email.$invalid]">
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone:</label>
+						<input type="text" class="form-control" id="phone" placeholder="Enter your phone number..."
+							   data-ng-model="user.phone" name="phone" required
+							   ng-class="{true: 'error'}[submitted && profileForm.phone.$invalid]">
+					</div>
+					<div class="form-group">
+						<label for="town">Town:</label>
+						<select data-ng-options="town.id as town.name for town in towns" name="town" id="town"
+								class="form-control" data-ng-model="user.town">
+							<option value="">Select town</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-6 side-padding-15">
+						<input type="button" class="btn btn-primary form-control" value="Update"/>
+					</div>
+					<div class="col-sm-6 side-padding-15">
+						<a ui-sref="userHome" class="btn btn-default form-control ">Cancel</a>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div data-ng-form="passwordForm" class="col-md-6">
+			<fieldset class="well">
+				<div class="col-md-12 form-title">
+					<h3 class="text-center">Change Password</h3>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="oldPassword">Old Password:</label>
+						<input type="password" class="form-control" id="oldPassword" placeholder="Enter password..."
+							   data-ng-model="user.pass.password" name="oldPassword" required data-ng-minLength="2"
+							   ng-class="{true: 'error'}[submitted && passwordForm.oldPassword.$invalid]">
+					</div>
+					<div class="form-group">
+						<label for="newPassword">New Password:</label>
+						<input type="password" class="form-control" id="newPassword" placeholder="Enter password..."
+							   data-ng-model="user.pass.password" name="newPassword" required data-ng-minLength="2"
+							   ng-class="{true: 'error'}[submitted && (passwordForm.newPassword.$invalid
+						  	 || (passwordForm.newPassword.$modelValue != passwordForm.confirmPassword.$modelValue))]">
+					</div>
+					<div class="form-group">
+						<label for="confirmPassword">Confirm new password:</label>
+						<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password..."
+							   data-ng-model="user.pass.confirmPassword" name="confirmPassword" required data-ng-minLength="2"
+							   ng-class="{true: 'error'}[submitted && (passwordForm.confirmPassword.$invalid
+						   || (passwordForm.newPassword.$modelValue != passwordForm.confirmPassword.$modelValue))]">
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<div class="col-sm-6 side-padding-15">
+						<input type="button" class="btn btn-primary form-control" value="Change"/>
+					</div>
+					<div class="col-sm-6 side-padding-15">
+						<a ui-sref="userHome" class="btn btn-default form-control ">Cancel</a>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+	</form>
 </div>

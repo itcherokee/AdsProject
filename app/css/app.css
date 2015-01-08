@@ -112,6 +112,10 @@ input.ng-dirty.ng-invalid {
     margin: 0 10px;
 }
 
+.side-padding-15 {
+    padding: 0 15px;
+}
+
 .side-padding-30 {
     padding: 0 30px;
 }
