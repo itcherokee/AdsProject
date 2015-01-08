@@ -13,6 +13,8 @@ angular.module('adsSystem.user')
                 totalAds: undefined,
                 numPages: undefined
             };
+
+            $scope.adsLoaded = false;
             $scope.selections = selections;
 
             $scope.pageChanged = function(){
@@ -28,6 +30,7 @@ angular.module('adsSystem.user')
                 adsService.getAllPublishedAds(startPage, townId, categoryId, pageSize)
                     .success(function (data) {
                         $scope.ads = data.ads;
+                        $scope.adsLoaded = true;
                         $scope.selections.totalAds = data.numItems;
                         $scope.selections.numPages = data.numPages;
                     })

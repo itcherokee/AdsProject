@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserRightMenuController', ['$rootScope', '$scope', 'categoryService', 'townService',
+    .controller('PublicRightMenuController', ['$rootScope', '$scope', 'categoryService', 'townService',
         function ($rootScope, $scope, categoryService, townService) {
             var allElement = {
                 'id': '',
