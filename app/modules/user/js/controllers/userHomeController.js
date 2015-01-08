@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserHomeController', ['$rootScope', '$scope', 'adsService',
-        function ($rootScope, $scope, adsService) {
+    .controller('UserHomeController', ['$rootScope', '$scope', 'adsService', 'infoService',
+        function ($rootScope, $scope, adsService, infoService) {
             $rootScope.$broadcast("PageChanged", 'Home');
 
             var selections = {
@@ -35,7 +35,7 @@ angular.module('adsSystem.user')
                         $scope.selections.numPages = data.numPages;
                     })
                     .error(function (error) {
-                        console.log('Ads can not be loaded from server!');
+                        infoService.error('Ads can not be loaded from server!');
                     });
             }
 
