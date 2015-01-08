@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-myads.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-myads.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -31,8 +28,8 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.034" vertical-offset="0" max-vertical-offset="1000">
-              <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.238" vertical-offset="0" max-vertical-offset="1000">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -982,7 +979,11 @@
       <created>1420734946353</created>
       <updated>1420734946353</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="small fixes in user view : allignment of buttons">
+      <created>1420736406708</created>
+      <updated>1420736406708</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1044,7 +1045,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="some fixes on new ad controller&#10;" />
     <MESSAGE value="redirect to HomeMyAds screen after new Ad publishing fixed&#10;" />
     <MESSAGE value="assign state to delete ad button" />
     <MESSAGE value="userMyAdsDelete form finalized" />
@@ -1069,7 +1069,8 @@
     <MESSAGE value="fixed public home view and controller" />
     <MESSAGE value="set autofocus on login and register forms" />
     <MESSAGE value="some fixes on public home controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="some fixes on public home controller" />
+    <MESSAGE value="small fixes in user view : allignment of buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="small fixes in user view : allignment of buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1484,8 +1485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034" vertical-offset="0" max-vertical-offset="1000">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.238" vertical-offset="0" max-vertical-offset="1000">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding />
         </state>
       </provider>
