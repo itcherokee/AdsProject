@@ -59,6 +59,7 @@ angular.module('adsSystem.dal')
                 })
         }
 
+        // tested
         function publishAgainUserAd(id) {
             return restService.serverRequest(API_USER_ENDPOINT + 'ads/publishagain/' + id, 'PUT', undefined, undefined)
                 .success(function (data) {
