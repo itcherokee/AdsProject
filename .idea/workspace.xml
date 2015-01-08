@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/views/public-login.html" afterPath="$PROJECT_DIR$/app/modules/public/views/public-login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/views/public-register.html" afterPath="$PROJECT_DIR$/app/modules/public/views/public-register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" afterPath="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -27,14 +26,14 @@
     <favorites_list name="AdsProject" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5105162">
+    <splitter split-orientation="horizontal" split-proportion="0.4601657">
       <split-first>
         <leaf>
           <file leaf-file-name="userHomeController.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.833" vertical-offset="0" max-vertical-offset="1037">
-                  <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+                <state vertical-scroll-proportion="0.034447823" vertical-offset="34" max-vertical-offset="1037">
+                  <caret line="4" column="64" selection-start-line="3" selection-start-column="38" selection-end-line="4" selection-end-column="64" />
                   <folding />
                 </state>
               </provider>
@@ -76,11 +75,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="publicHomeController.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="publicHomeController.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2176">
-                  <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+                <state vertical-scroll-proportion="0.153" vertical-offset="0" max-vertical-offset="1020">
+                  <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -96,10 +95,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="public-register.html" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="public-register.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/public/views/public-register.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.17689906" vertical-offset="0" max-vertical-offset="1241">
+                <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1241">
                   <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
                   <folding />
                 </state>
@@ -167,11 +166,11 @@
         <option value="$PROJECT_DIR$/app/modules/user/user-module.js" />
         <option value="$PROJECT_DIR$/app/modules/public/js/controllers/publicRightMenuController.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" />
         <option value="$PROJECT_DIR$/app/modules/public/views/public-home.html" />
-        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" />
         <option value="$PROJECT_DIR$/app/modules/public/views/public-login.html" />
         <option value="$PROJECT_DIR$/app/modules/public/views/public-register.html" />
+        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js" />
+        <option value="$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js" />
       </list>
     </option>
   </component>
@@ -1016,7 +1015,11 @@
       <created>1420734434263</created>
       <updated>1420734434263</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="set autofocus on login and register forms">
+      <created>1420734708863</created>
+      <updated>1420734708863</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1078,7 +1081,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="new ad form completed" />
     <MESSAGE value="working on new ad controller&#10;" />
     <MESSAGE value="some fixes on new ad controller&#10;" />
     <MESSAGE value="redirect to HomeMyAds screen after new Ad publishing fixed&#10;" />
@@ -1103,7 +1105,8 @@
     <MESSAGE value="use infoService into TitleController for handling log-off messages" />
     <MESSAGE value="fixed error of not binding correct categoryId and townId to newly created Ad (newAd view)" />
     <MESSAGE value="fixed public home view and controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed public home view and controller" />
+    <MESSAGE value="set autofocus on login and register forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="set autofocus on login and register forms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1472,22 +1475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2176">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.833" vertical-offset="0" max-vertical-offset="1037">
-          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="1496">
@@ -1516,8 +1503,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/public/views/public-register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17689906" vertical-offset="0" max-vertical-offset="1241">
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1241">
           <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.034447823" vertical-offset="34" max-vertical-offset="1037">
+          <caret line="4" column="64" selection-start-line="3" selection-start-column="38" selection-end-line="4" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicHomeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.153" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding />
         </state>
       </provider>
