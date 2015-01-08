@@ -108,10 +108,15 @@ input.ng-dirty.ng-invalid {
     background-color: lightpink;
 }
 
-.side-margin {
+.side-margin-10 {
     margin: 0 10px;
 }
 
 .side-padding-30 {
     padding: 0 30px;
+}
+
+.status-box {
+    background-color: lightgray;
+    text-align: center;
 }

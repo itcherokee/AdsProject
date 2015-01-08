@@ -52,5 +52,4 @@ angular.module('adsSystem.user')
             });
 
             loadAds(selections);
-
         }]);
