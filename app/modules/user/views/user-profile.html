@@ -53,20 +53,20 @@
 					<div class="form-group">
 						<label for="oldPassword">Old password:</label>
 						<input type="password" class="form-control" id="oldPassword" placeholder="Enter current password..."
-							   data-ng-model="user.pass.password" name="oldPassword" required data-ng-minLength="2"
+							   data-ng-model="pass.oldPassword" name="oldPassword" required
 							   ng-class="{true: 'error'}[passSubmitted && passwordForm.oldPassword.$invalid]">
 					</div>
 					<div class="form-group">
 						<label for="newPassword">New Password:</label>
 						<input type="password" class="form-control" id="newPassword" placeholder="Enter new password..."
-							   data-ng-model="user.pass.newPassword" name="newPassword" required data-ng-minLength="2"
+							   data-ng-model="pass.newPassword" name="newPassword" required data-ng-minLength="2"
 							   ng-class="{true: 'error'}[passSubmitted && (passwordForm.newPassword.$invalid
 						  	 || (passwordForm.newPassword.$modelValue != passwordForm.confirmPassword.$modelValue))]">
 					</div>
 					<div class="form-group">
 						<label for="confirmPassword">Confirm new password:</label>
 						<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm new password..."
-							   data-ng-model="user.pass.confirmPassword" name="confirmPassword" required data-ng-minLength="2"
+							   data-ng-model="pass.confirmPassword" name="confirmPassword" required data-ng-minLength="2"
 							   ng-class="{true: 'error'}[passSubmitted && (passwordForm.confirmPassword.$invalid
 						   || (passwordForm.newPassword.$modelValue != passwordForm.confirmPassword.$modelValue))]">
 					</div>

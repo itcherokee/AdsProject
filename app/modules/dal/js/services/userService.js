@@ -155,7 +155,7 @@ angular.module('adsSystem.dal')
                 })
         }
 
-
+        // tested
         function editUserProfile(userData) {
             var data = {
                 name: userData.name,
