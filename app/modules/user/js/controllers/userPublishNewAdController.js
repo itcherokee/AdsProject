@@ -54,7 +54,7 @@ angular.module('adsSystem.user')
                     var reader = new FileReader();
                     reader.onload = function () {
                         $scope.ad.imageDataUrl = reader.result;
-                        $(".image-box").html("<img src='" + reader.result + "'>");
+                        $(".image-box img").attr("src", reader.result);
                     };
                     reader.readAsDataURL(file);
                 } else {
