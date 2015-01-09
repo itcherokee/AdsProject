@@ -129,3 +129,8 @@ input.ng-dirty.ng-invalid {
     visibility: hidden;
     position: absolute;
 }
+
+.no-overlay {
+    overflow: hidden;
+    display: inline;
+}

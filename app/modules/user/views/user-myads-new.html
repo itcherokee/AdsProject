@@ -1,40 +1,37 @@
-<div class="col-md-9 col-md-offset-1 ">
-	<form class="form-horizontal well" name="adform" flow-init="{target:'upload_image.json'}" >
+<div class="col-md-10 col-md-offset-1">
+	<form class="form-horizontal well" name="newAdForm" flow-init="{singleFile:true}"  novalidate data-ng-submit="submitted=true; publishAd(ad)">
 		<fieldset flow-file-added="fileSelected($file)">
 			<div class="col-sm-12 form-title">
 				<h3 class="text-center">Publish New Ad</h3>
 			</div>
-			<!--<legend class="panel-heading text-center">Publish New Ad</legend>-->
 			<div class="col-sm-12">
-				<div class="col-sm-8">
+				<div class="col-sm-9">
 
 					<div class="form-group">
-						<label for="ads-title" class="col-sm-2 control-label">Title:</label>
+						<label for="title" class="col-sm-2 control-label">Title:</label>
 
 						<div class="col-sm-10">
-							<input type="text" class="form-control input-md" id="ads-title" name="adstitle"
-								   data-ng-model="ad.title" placeholder="Enter title for ad..."
-								   data-ng-required="true"/>
+							<input type="text" class="form-control input-md" id="title" name="title"
+								   data-ng-model="ad.title" placeholder="Enter title for ad..." required autofocus
+								   ng-class="{true: 'error'}[submitted && newAdForm.title.$invalid]"/>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="ads-text" class="col-sm-2 control-label">Text:</label>
+						<label for="text" class="col-sm-2 control-label">Text:</label>
 
 						<div class="col-sm-10">
-							<textarea class="form-control" name="adstext" id="ads-text" rows="4" data-ng-model="ad.text"
-									  placeholder="Some information..." data-ng-required></textarea>
+							<textarea class="form-control" name="text" id="text" rows="4" data-ng-model="ad.text"
+									  placeholder="Some information..." required
+									  ng-class="{true: 'error'}[submitted && newAdForm.text.$invalid]"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="ads-image" class="col-sm-2 control-label">Image:</label>
 
 						<div class="col-sm-10">
-
-							<!--<input type="file" id="ads-image" class="input-file"-->
-							<!--onchange="angular.element(this).scope().fileSelected(this)"/>-->
 							<div id="ads-image">
 								<div class="input-group">
-									<span class="form-control" data-ng-bind="$flow.files[0].relativePath"></span>
+									<span class="form-control no-overlay" data-ng-bind="$flow.files[0].relativePath"></span>
 									<span class="input-group-btn">
 										<span class="btn btn-default" flow-btn >
 											Browse
@@ -69,21 +66,20 @@
 					</div>
 				</div>
 
-				<div class="col-sm-4" data-ng-show="true">
-					<div class="form-group">
-						<!--<div class="image-box form-control my-form-control col-sm-12 col-center">-->
-						<!--<img src="img/noimage.png" alt=""/>-->
-						<!--</div>-->
-						<div class="image-box img-thumbnail col-sm-12 col-center">
-							<img flow-img="$flow.files[0]" src="img/noimage.png" alt=""/>
+				<div class="col-sm-3">
+					<div class="form-group text-center">
+						<div class="image-box img-thumbnail col-sm-12 ">
+							<img flow-img="$flow.files[0]" src="img/noimage.png" alt="" class="col-center"/>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-10 text-center">
-				<div class="form-group">
-					<a ng-click="publishAd(ad)" class="btn btn-primary">Publish</a>
-					<a ui-sref="userMyAds" class="btn btn-default">Cancel</a>
+			<div class="form-group col-sm-12">
+				<div class="col-sm-6 side-padding-30">
+					<input type="submit" class="btn btn-primary form-control" value="Publish"/>
+				</div>
+				<div class="col-sm-6 side-padding-30">
+					<a ui-sref="userMyAds" class="btn btn-default form-control ">Cancel</a>
 				</div>
 			</div>
 		</fieldset>
