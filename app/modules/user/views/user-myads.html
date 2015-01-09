@@ -41,7 +41,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-2 ">
+			<div class="col-sm-2 ">
 				<p class="text-center">
 					<label for="ad-status" >Status:</label>
 					<span class="form-control status-box" data-ng-bind="ad.status" id="ad-status"></span>
@@ -55,11 +55,11 @@
 							data-ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'"
 							ui-sref="userEditAd({ id: ad.id })">Edit
 					</button>
-					<button class="form-control btn  btn-default"
+					<button class="form-control btn btn-default"
 							data-ng-show="ad.status === 'Inactive'"
-							data-ng-click="publishAgainAd(ad)">Publish Again
+							data-ng-click="publishAgainAd(ad)">Publish
 					</button>
-					<button class="form-control btn  btn-default"
+					<button class="form-control btn btn-default"
 							data-ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'"
 							ui-sref="userDeleteAd({ id: ad.id })">Delete
 					</button>

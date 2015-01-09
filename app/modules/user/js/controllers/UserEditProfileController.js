@@ -1,42 +1,43 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserEditProfileController', ['$rootScope', '$scope', 'adsService',
-        function ($rootScope, $scope, adsService) {
+    .controller('UserEditProfileController',
+    ['$rootScope', '$scope', '$state', 'userService', '$stateParams', 'infoService', 'townService',
+        function ($rootScope, $scope, $state, userService, $stateParams, infoService, townService) {
             $rootScope.$broadcast("PageChanged", 'Edit Ad');
 
-            var selections = {
-                townId: undefined,
-                categoryId: undefined,
-                startPage: 1
+            $scope.cancelProfileEdit = function () {
+                $rootScope.$broadcast('userProfileChanged');
+                $state.go('userHome');
             };
 
-            function loadAds(selections) {
-                var startPage = selections.startPage,
-                    townId = selections.townId,
-                    categoryId = selections.categoryId;
-
-                adsService.getAllPublishedAds(startPage, townId, categoryId)
+            $scope.updateProfile = function () {
+                userService.editUserProfile($scope.profile)
                     .success(function (data) {
-                        $scope.ads = data.ads;
+                        infoService.success('Profile successfully updated.');
                     })
                     .error(function (error) {
-                        console.log('Ads can not be loaded from server!');
+                        infoService.error('There was some error and profile was not updated..');
                     });
-            }
+            };
 
-            $scope.$on("categorySelectionChanged", function (event, categoryId) {
-                selections.categoryId = categoryId;
-                event.stopPropagation();
-                loadAds(selections);
-            });
+            $scope.changePassword = function () {
 
-            $scope.$on("townSelectionChanged", function (event, townId) {
-                selections.townId = townId;
-                event.stopPropagation();
-                loadAds(selections);
-            });
+            };
 
-            loadAds(selections);
+            townService.getAllTowns()
+                .success(function (data) {
+                    $scope.towns = data;
+                })
+                .error(function (error) {
+                    infoService.warning('Unable to fetch from server the towns.');
+                });
 
+            userService.getUserProfile()
+                .success(function (data) {
+                    $scope.profile = data;
+                })
+                .error(function (error) {
+                    infoService.error('Unable to fetch from server the requested User Profile.');
+                });
         }]);

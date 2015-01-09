@@ -144,6 +144,7 @@ angular.module('adsSystem.dal')
                 })
         }
 
+        // tested
         function getUserProfile() {
             return restService.serverRequest(API_USER_ENDPOINT + 'profile', 'GET', undefined, undefined)
                 .success(function (data) {
@@ -154,11 +155,12 @@ angular.module('adsSystem.dal')
                 })
         }
 
+
         function editUserProfile(userData) {
             var data = {
                 name: userData.name,
                 email: userData.email,
-                phoneNumber: userData.phone
+                phoneNumber: userData.phoneNumber
             };
 
             if (userData.townId) {

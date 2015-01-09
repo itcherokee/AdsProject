@@ -9,36 +9,37 @@
 					<div class="form-group">
 						<label for="name">Name:</label>
 						<input type="text" class="form-control" id="name" placeholder="Enter your name..."
-							   data-ng-model="user.profile.name" name="name" required
-							   ng-class="{true: 'error'}[submitted && profileForm.name.$invalid]">
+							   data-ng-model="profile.name" name="name" required
+							   ng-class="{true: 'error'}[profileSubmitted && profileForm.name.$invalid]">
 					</div>
 					<div class="form-group">
 						<label for="email">Email:</label>
 						<input type="email" class="form-control" id="email" placeholder="Enter your e-mail..."
-							   data-ng-model="user.profile.email" name="email" required
-							   ng-class="{true: 'error'}[submitted && profileForm.email.$invalid]">
+							   data-ng-model="profile.email" name="email" required
+							   ng-class="{true: 'error'}[profileSubmitted && profileForm.email.$invalid]">
 					</div>
 					<div class="form-group">
 						<label for="phone">Phone:</label>
 						<input type="text" class="form-control" id="phone" placeholder="Enter your phone number..."
-							   data-ng-model="user.profile.phoneNumber" name="phone" required
-							   ng-class="{true: 'error'}[submitted && profileForm.phone.$invalid]">
+							   data-ng-model="profile.phoneNumber" name="phone" required
+							   ng-class="{true: 'error'}[profileSubmitted && profileForm.phone.$invalid]">
 					</div>
 					<div class="form-group">
 						<label for="town">Town:</label>
-						<select data-ng-options="town.id as town.name for town in towns" name="town" id="town"
-								class="form-control" data-ng-model="user.profile.town">
-							<option value="">Select town</option>
+						<select data-ng-options="town.id as town.name for town in towns| orderBy:'name'" name="town" id="town"
+								class="form-control" data-ng-model="profile.townId">
+							<!--<option value="">Select town</option>-->
 						</select>
 					</div>
 				</div>
 				<div class="form-group col-sm-12">
 					<div class="col-sm-6 side-padding-15">
 						<input type="button" class="btn btn-primary form-control" value="Update"
-							   data-ng-click="submitted=true; updateProfile()"/>
+							   data-ng-click="profileSubmitted=true; updateProfile()"/>
 					</div>
 					<div class="col-sm-6 side-padding-15">
-						<a ui-sref="userHome" class="btn btn-default form-control ">Cancel</a>
+						<input type="button" class="btn btn-default form-control" value="Cancel"
+							   data-ng-click="cancelProfileEdit()"/>
 					</div>
 				</div>
 			</fieldset>
@@ -53,30 +54,32 @@
 						<label for="oldPassword">Old password:</label>
 						<input type="password" class="form-control" id="oldPassword" placeholder="Enter current password..."
 							   data-ng-model="user.pass.password" name="oldPassword" required data-ng-minLength="2"
-							   ng-class="{true: 'error'}[submitted && passwordForm.oldPassword.$invalid]">
+							   ng-class="{true: 'error'}[passSubmitted && passwordForm.oldPassword.$invalid]">
 					</div>
 					<div class="form-group">
 						<label for="newPassword">New Password:</label>
 						<input type="password" class="form-control" id="newPassword" placeholder="Enter new password..."
-							   data-ng-model="user.pass.password" name="newPassword" required data-ng-minLength="2"
-							   ng-class="{true: 'error'}[submitted && (passwordForm.newPassword.$invalid
+							   data-ng-model="user.pass.newPassword" name="newPassword" required data-ng-minLength="2"
+							   ng-class="{true: 'error'}[passSubmitted && (passwordForm.newPassword.$invalid
 						  	 || (passwordForm.newPassword.$modelValue != passwordForm.confirmPassword.$modelValue))]">
 					</div>
 					<div class="form-group">
 						<label for="confirmPassword">Confirm new password:</label>
 						<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm new password..."
 							   data-ng-model="user.pass.confirmPassword" name="confirmPassword" required data-ng-minLength="2"
-							   ng-class="{true: 'error'}[submitted && (passwordForm.confirmPassword.$invalid
+							   ng-class="{true: 'error'}[passSubmitted && (passwordForm.confirmPassword.$invalid
 						   || (passwordForm.newPassword.$modelValue != passwordForm.confirmPassword.$modelValue))]">
 					</div>
 				</div>
 				<div class="form-group col-sm-12">
 					<div class="col-sm-6 side-padding-15">
 						<input type="button" class="btn btn-primary form-control" value="Change"
-								data-ng-click="submitted=true; changePassword()"/>
+								data-ng-click="passSubmitted=true; changePassword()"/>
 					</div>
 					<div class="col-sm-6 side-padding-15">
-						<a ui-sref="userHome" class="btn btn-default form-control ">Cancel</a>
+						<input type="button" class="btn btn-default form-control" value="Cancel"
+							   data-ng-click="cancelProfileEdit()"/>
+						<!--<a ui-sref="userHome" class="btn btn-default form-control ">Cancel</a>-->
 					</div>
 				</div>
 			</fieldset>
