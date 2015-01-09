@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/UserEditProfileController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/UserEditProfileController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-profile.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -75,10 +73,10 @@
           <file leaf-file-name="UserEditProfileController.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/UserEditProfileController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.47175142" vertical-offset="312" max-vertical-offset="1020">
-                  <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+                <state vertical-scroll-proportion="0.6158192" vertical-offset="108" max-vertical-offset="1020">
+                  <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
                   <folding>
-                    <element signature="e#1310#2327#0" expanded="false" />
+                    <element signature="e#1391#2408#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -94,30 +92,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/js/app.js">
+          <file leaf-file-name="userHomeController.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-                  <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+                  <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="userService.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1027" max-vertical-offset="2108">
-                  <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#1017#1482#0" expanded="false" />
-                    <element signature="e#1540#1859#0" expanded="false" />
-                    <element signature="e#1919#2240#0" expanded="false" />
-                    <element signature="e#2295#2603#0" expanded="false" />
-                    <element signature="e#3762#4073#0" expanded="false" />
-                    <element signature="e#4700#5006#0" expanded="false" />
-                    <element signature="e#5069#5637#0" expanded="false" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -135,8 +115,8 @@
           <file leaf-file-name="publicRegisterController.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicRegisterController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="782">
-                  <caret line="38" column="17" selection-start-line="34" selection-start-column="18" selection-end-line="38" selection-end-column="17" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+                  <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="38" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
@@ -220,8 +200,8 @@
         <option value="$PROJECT_DIR$/app/modules/user/user-module.js" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-myads.html" />
         <option value="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" />
-        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/UserEditProfileController.js" />
         <option value="$PROJECT_DIR$/app/modules/user/views/user-profile.html" />
+        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/UserEditProfileController.js" />
       </list>
     </option>
   </component>
@@ -1112,7 +1092,11 @@
       <created>1420786941639</created>
       <updated>1420786941639</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="fixed password change validation in edit profile">
+      <created>1420787963573</created>
+      <updated>1420787963573</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1174,7 +1158,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="delete ad controller finalised" />
     <MESSAGE value="fixed events handling in LeftMenuController - rised by Ads operations" />
     <MESSAGE value="fixed event args exchange and filtering refresh when status of Ad changes (Inactive, Waiting Approval, etc. )" />
     <MESSAGE value="a lot of fixes on new ad form" />
@@ -1199,7 +1182,8 @@
     <MESSAGE value="edit profile and password form done - responsible, validation" />
     <MESSAGE value="edit Ad form title set" />
     <MESSAGE value="small fix in userServices (phone -&gt; phoneNumber)" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fix in userServices (phone -&gt; phoneNumber)" />
+    <MESSAGE value="fixed password change validation in edit profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed password change validation in edit profile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1451,14 +1435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.901" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicRightMenuController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.102" vertical-offset="0" max-vertical-offset="1003">
@@ -1559,22 +1535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1027" max-vertical-offset="2108">
-          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-          <folding>
-            <element signature="e#1017#1482#0" expanded="false" />
-            <element signature="e#1540#1859#0" expanded="false" />
-            <element signature="e#1919#2240#0" expanded="false" />
-            <element signature="e#2295#2603#0" expanded="false" />
-            <element signature="e#3762#4073#0" expanded="false" />
-            <element signature="e#4700#5006#0" expanded="false" />
-            <element signature="e#5069#5637#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads-new.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.031894933" vertical-offset="578" max-vertical-offset="1411">
@@ -1599,14 +1559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicRegisterController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="782">
-          <caret line="38" column="17" selection-start-line="34" selection-start-column="18" selection-end-line="38" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0391304" vertical-offset="917" max-vertical-offset="1581">
@@ -1615,12 +1567,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/public/js/controllers/publicRegisterController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="38" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2832117" vertical-offset="153" max-vertical-offset="2108">
+          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding>
+            <element signature="e#1017#1482#0" expanded="false" />
+            <element signature="e#1540#1859#0" expanded="false" />
+            <element signature="e#1919#2240#0" expanded="false" />
+            <element signature="e#2295#2603#0" expanded="false" />
+            <element signature="e#3762#4073#0" expanded="false" />
+            <element signature="e#4700#5006#0" expanded="false" />
+            <element signature="e#5069#5637#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userHomeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/UserEditProfileController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47175142" vertical-offset="312" max-vertical-offset="1020">
-          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.6158192" vertical-offset="108" max-vertical-offset="1020">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
           <folding>
-            <element signature="e#1310#2327#0" expanded="false" />
+            <element signature="e#1391#2408#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -29,7 +29,7 @@ angular.module('adsSystem.user')
                             infoService.error('There was some error and profile was not updated..');
                         });
                 } else {
-
+                    infoService.error('All fields marked in red are mandatory!');
                 }
             };
 
