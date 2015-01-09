@@ -124,3 +124,8 @@ input.ng-dirty.ng-invalid {
     background-color: lightgray;
     text-align: center;
 }
+
+.button-invisible {
+    visibility: hidden;
+    position: absolute;
+}

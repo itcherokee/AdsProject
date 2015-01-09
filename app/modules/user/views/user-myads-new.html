@@ -2,7 +2,7 @@
 	<form class="form-horizontal well" name="adform">
 		<fieldset>
 			<div class="col-sm-12 form-title">
-			<h3 class="text-center">Publish New Ad</h3>
+				<h3 class="text-center">Publish New Ad</h3>
 			</div>
 			<!--<legend class="panel-heading text-center">Publish New Ad</legend>-->
 			<div class="col-sm-12">
@@ -15,7 +15,8 @@
 							<input type="text" class="form-control input-md" id="ads-title" name="adstitle"
 								   data-ng-model="ad.title" placeholder="Enter title for ad..."
 								   data-ng-required="true"/>
-							<span class="error-message" ng-show="adform.adstitle.$dirty && adform.adstitle.$error.required">Title is mandatory.</span>
+							<span class="error-message"
+								  ng-show="adform.adstitle.$dirty && adform.adstitle.$error.required">Title is mandatory.</span>
 						</div>
 					</div>
 					<div class="form-group">
@@ -24,15 +25,22 @@
 						<div class="col-sm-10">
 							<textarea class="form-control" name="adstext" id="ads-text" rows="4" data-ng-model="ad.text"
 									  placeholder="Some information..." data-ng-required></textarea>
-							<span class="error-message" ng-show="adform.adstext.$dirty && adform.adstext.$error.required">Text is mandatory.</span>
+							<span class="error-message"
+								  ng-show="adform.adstext.$dirty && adform.adstext.$error.required">Text is mandatory.</span>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="ads-image" class="col-sm-2 control-label">Image:</label>
 
-						<div class="col-sm-10">
-							<input type="file" id="ads-image" class="input-file"
-								   onchange="angular.element(this).scope().fileSelected(this)"/>
+						<div class="col-sm-10" flow-init="{singleFile:true}"
+							 flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]">
+							<!--<input type="file" id="ads-image" class="input-file"-->
+							<!--onchange="angular.element(this).scope().fileSelected(this)"/>-->
+
+							<span class="btn btn-default" ng-show="!$flow.files.length" flow-btn="" id="ads-image">
+								Browse
+								<input type="file" class="button-invisible">
+							</span>
 						</div>
 					</div>
 					<div class="form-group">
@@ -62,7 +70,7 @@
 
 				<div class="col-sm-4" data-ng-show="true">
 					<div class="form-group">
-						<div class="image-box col-sm-12 col-center">
+						<div class="image-box form-control my-form-control col-sm-12 col-center">
 							<img src="img/noimage.png" alt=""/>
 						</div>
 					</div>
