@@ -1,6 +1,6 @@
-<div class="col-md-8 col-md-offset-2">
-	<div class="form-horizontal">
-		<div class="col-md-12 form-group form-control my-form-control">
+<div class="col-md-9 col-md-offset-1">
+	<form class="form-horizontal well" name="deleteForm">
+		<fieldset>
 			<div class="col-sm-12 form-title">
 				<h3 class="text-center">Confirm Deleting Ad?</h3>
 			</div>
@@ -9,34 +9,34 @@
 					<div class="col-md-9"><h4>{{ad.title}}</h4></div>
 					<span class="col-md-3 text-right">{{ad.date | date:'d-MMM-yyyy'}}</span>
 				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<div class="picture-frame form-control my-form-control">
-							<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="picture-frame form-control my-form-control">
+						<img data-ng-src="{{ad.imageDataUrl}}" src="" alt=""/>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="form-horizontal">
+						<div class="form-group">
+							<div class="col-sm-12 ">
+								<div class="form-control my-form-control" data-ng-bind="ad.text"></div>
+							</div>
 						</div>
 					</div>
-					<div class="col-md-9">
-						<div class="form-horizontal">
-							<div class="form-group">
-								<div class="col-sm-12 ">
-									<div class="form-control my-form-control" data-ng-bind="ad.text"></div>
-								</div>
+					<div class="form-horizontal">
+						<div class="form-group">
+							<label for="ad-category" class="col-sm-3 control-label ">Category:</label>
+
+							<div class="col-sm-9">
+								<span class="form-control" data-ng-bind="ad.categoryName" id="ad-category"></span>
 							</div>
 						</div>
-						<div class="form-horizontal">
-							<div class="form-group">
-								<label for="ad-category" class="col-sm-3 control-label ">Category:</label>
+						<div class="form-group">
+							<label for="ad-town" class="col-sm-3 control-label ">Town:</label>
 
-								<div class="col-sm-9">
-									<span class="form-control" data-ng-bind="ad.categoryName" id="ad-category"></span>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="ad-town" class="col-sm-3 control-label ">Town:</label>
-
-								<div class="col-sm-9">
-									<span class="form-control" data-ng-bind="ad.townName" id="ad-town"></span>
-								</div>
+							<div class="col-sm-9">
+								<span class="form-control" data-ng-bind="ad.townName" id="ad-town"></span>
 							</div>
 						</div>
 					</div>
@@ -46,7 +46,6 @@
 				<a ng-click="deleteAd()" class="btn btn-primary col-md-3 col-md-offset-3">Delete</a>
 				<a ui-sref="userMyAds" class="btn btn-default col-md-3 col-md-offset-1">Cancel</a>
 			</div>
-		</div>
-
-	</div>
+		</fieldset>
+	</form>
 </div>
