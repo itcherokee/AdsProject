@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserMyAdsController', ['$rootScope', '$scope', 'userService',
-        function ($rootScope, $scope, userService) {
+    .controller('UserMyAdsController', ['$rootScope', '$scope', 'userService', '$state',
+        function ($rootScope, $scope, userService, $state) {
             $rootScope.$broadcast("PageChanged", 'My Ads');
 
             var selections = {
@@ -49,6 +49,12 @@ angular.module('adsSystem.user')
                     .error(function (error) {
                         //TODO: notify in case of error on re-publishing Ad
                     });
+            };
+
+            //Event for editing Ad
+            $scope.userEditAd= function(ad){
+                $rootScope.$broadcast('userEditAdStarted');
+                $state.go('userEditAd', {ad: $scope.ad});
             };
 
             function loadUserAds(selections) {

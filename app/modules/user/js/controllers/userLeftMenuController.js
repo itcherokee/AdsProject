@@ -139,6 +139,14 @@ angular.module('adsSystem.user')
                 $scope.clickMainMenuHandler(mainMenuItems.items[0]);
             });
 
+            $scope.$on('userEditAdStarted', function(event){
+                $scope.mainMenuItems.selected = undefined;
+                myAdsMenuItems.enabled = false;
+                sessionStorage.removeItem('userMyAdsMenuItems-Enabled');
+                sessionStorage.removeItem('userMyAdsMenuItemId');
+                sessionStorage.removeItem('userMyAdsMenuItemStatus');
+            });
+
             $scope.$on('userAdDeleted', function (event) {
                 var status = undefined;
 
