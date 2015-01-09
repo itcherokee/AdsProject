@@ -42,7 +42,7 @@
 
 						<div class="col-sm-10">
 							<select data-ng-options="category.id as category.name for category in categories  | orderBy:'name'"
-									name="category" id="ads-category" class="form-control " data-ng-model="ad.category">
+									name="category" id="ads-category" class="form-control " data-ng-model="ad.categoryId">
 								<option value="">Select category</option>
 							</select>
 						</div>
@@ -54,7 +54,7 @@
 							<select data-ng-options="town.id as town.name for town in towns | orderBy:'name'"
 									name="ads-town"
 									id="ads-town"
-									class="form-control" data-ng-model="ad.town">
+									class="form-control" data-ng-model="ad.townId">
 								<option value="">Select town</option>
 							</select>
 						</div>

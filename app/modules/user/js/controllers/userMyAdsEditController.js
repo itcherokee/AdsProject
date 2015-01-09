@@ -2,11 +2,9 @@
 
 angular.module('adsSystem.user')
     .controller('UserMyAdsEditController',
-                ['$rootScope', '$scope', '$state', 'userService', '$stateParams', 'townService', 'categoryService',
-        function ($rootScope, $scope, $state, userService, $stateParams, townService, categoryService) {
+                ['$rootScope', '$scope', '$state', 'userService', '$stateParams', 'townService', 'categoryService', 'infoService',
+        function ($rootScope, $scope, $state, userService, $stateParams, townService, categoryService, infoService) {
             $rootScope.$broadcast("PageChanged", 'Delete Ad');
-
-
 
             townService.getAllTowns()
                 .success(function (data) {
@@ -29,14 +27,15 @@ angular.module('adsSystem.user')
                     $scope.ad = data;
                 })
                 .error(function(error){
-                    //TODO: notify in case not able to fetch the selected Ad and redirect to userMyAds
+                    infoService.error('Error fetching from server the requested Ad for editing.');
                 });
 
             // Event handler for editing selected Ad
             $scope.editAd = function () {
-                userService.deleteUserAdById($scope.ad.id)
+                userService.editUserAd($scope.ad)
                     .success(function (data) {
-                        $rootScope.$broadcast('userAdDeleted');
+                        $rootScope.$broadcast('userAdEdited');
+                        // TODO: finish the event in Right panel
                         $state.go('userMyAds');
                     })
                     .error(function (error) {
