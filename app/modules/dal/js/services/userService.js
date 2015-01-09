@@ -81,7 +81,7 @@ angular.module('adsSystem.dal')
                 })
         }
 
-        function editUserAd(id, adData, imageStatus) {
+        function editUserAd(adData, imageStatus) {
             var data = {
                 title: adData.title,
                 text: adData.text
@@ -128,6 +128,7 @@ angular.module('adsSystem.dal')
                 })
         }
 
+        // tested
         function changeUserPassword(passwordData) {
             var data = {
                 oldPassword: passwordData.oldPassword,

@@ -45,7 +45,7 @@ angular.module('adsSystem.user')
                     .error(function (error) {
                         //TODO: notify about error
                     });
-            }
+            };
 
             $scope.fileSelected = function (fileInputField) {
                 delete $scope.ad.imageDataUrl;
