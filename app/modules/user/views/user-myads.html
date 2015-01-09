@@ -2,7 +2,7 @@
 	<div class="form-horizontal">
 		<div data-ng-repeat="ad in ads"
 			 class="col-md-12 form-group form-control my-form-control well">
-			<div class="col-md-10 right-border">
+			<div class="col-md-9 right-border">
 				<div class="row">
 					<!--{{'Category: ' + ad.categoryId + '| Town: ' + ad.townId}}-->
 					<div class="col-md-9"><h4>{{ad.title}}</h4></div>
@@ -41,7 +41,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-2 ">
+			<div class="col-md-3 ">
 				<p class="text-center">
 					<label for="ad-status" >Status:</label>
 					<span class="form-control status-box" data-ng-bind="ad.status" id="ad-status"></span>

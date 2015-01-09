@@ -1,79 +1,10 @@
 <div class="col-md-10 col-md-offset-1">
-	<form class="form-horizontal well" name="newAdForm" flow-init="{singleFile:true}"  novalidate data-ng-submit="submitted=true; publishAd(ad)">
-		<fieldset flow-file-added="fileSelected($file)">
+	<form class="form-horizontal well" name="form" novalidate data-ng-submit="submitted=true; publishAd(ad)">
+		<fieldset>
 			<div class="col-sm-12 form-title">
 				<h3 class="text-center">Publish New Ad</h3>
 			</div>
-			<div class="col-sm-12">
-				<div class="col-sm-9">
-
-					<div class="form-group">
-						<label for="title" class="col-sm-2 control-label">Title:</label>
-
-						<div class="col-sm-10">
-							<input type="text" class="form-control input-md" id="title" name="title"
-								   data-ng-model="ad.title" placeholder="Enter title for ad..." required autofocus
-								   ng-class="{true: 'error'}[submitted && newAdForm.title.$invalid]"/>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="text" class="col-sm-2 control-label">Text:</label>
-
-						<div class="col-sm-10">
-							<textarea class="form-control" name="text" id="text" rows="4" data-ng-model="ad.text"
-									  placeholder="Some information..." required
-									  ng-class="{true: 'error'}[submitted && newAdForm.text.$invalid]"></textarea>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="ads-image" class="col-sm-2 control-label">Image:</label>
-
-						<div class="col-sm-10">
-							<div id="ads-image">
-								<div class="input-group">
-									<span class="form-control no-overlay" data-ng-bind="$flow.files[0].relativePath"></span>
-									<span class="input-group-btn">
-										<span class="btn btn-default" flow-btn >
-											Browse
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="ads-category" class="col-sm-2 control-label">Category:</label>
-
-						<div class="col-sm-10">
-							<select data-ng-options="category.id as category.name for category in categories"
-									name="category"
-									id="ads-category"
-									class="form-control " data-ng-model="ad.categoryId">
-								<option value="">Select category</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="ads-town" class="col-sm-2 control-label">Town:</label>
-
-						<div class="col-sm-10">
-							<select data-ng-options="town.id as town.name for town in towns" name="ads-town"
-									id="ads-town"
-									class="form-control" data-ng-model="ad.townId">
-								<option value="">Select town</option>
-							</select>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-3">
-					<div class="form-group text-center">
-						<div class="image-box img-thumbnail col-sm-12 ">
-							<img flow-img="$flow.files[0]" src="img/noimage.png" alt="" class="col-center"/>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div data-ng-include="'modules/user/views/partials/form-content.html'"></div>
 			<div class="form-group col-sm-12">
 				<div class="col-sm-6 side-padding-30">
 					<input type="submit" class="btn btn-primary form-control" value="Publish"/>
