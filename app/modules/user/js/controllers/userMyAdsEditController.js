@@ -6,6 +6,8 @@ angular.module('adsSystem.user')
         function ($rootScope, $scope, $state, userService, $stateParams, townService, categoryService, infoService) {
             $rootScope.$broadcast("PageChanged", 'Delete Ad');
 
+            //TODO: fix cancel button forwarding to myAds menu
+
             townService.getAllTowns()
                 .success(function (data) {
                     $scope.towns = data;
@@ -47,7 +49,7 @@ angular.module('adsSystem.user')
 
             // Event handler for editing selected Ad
             $scope.editAd = function () {
-                userService.editUserAd($scope.ad)
+                userService.editUserAd($scope.ad, $scope.imageStatus ? $scope.imageStatus : undefined)
                     .success(function (data) {
                         $rootScope.$broadcast('userAdEdited');
                         // TODO: finish the event in Right panel
@@ -56,6 +58,13 @@ angular.module('adsSystem.user')
                     .error(function (error) {
                         //TODO: notify in case of error on deletion Ad
                     });
-
             };
+
+            $scope.deleteImage = function(){
+                $scope.imageStatus = 'delete';
+            };
+
+            $scope.changeImage = function(){
+                $scope.imageStatus = 'update';
+            }
         }]);

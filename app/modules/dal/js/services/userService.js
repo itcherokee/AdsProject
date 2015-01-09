@@ -81,34 +81,34 @@ angular.module('adsSystem.dal')
                 })
         }
 
-        function editUserAd(adData, imageStatus) {
-            var data = {
-                title: adData.title,
-                text: adData.text
+        function editUserAd(data, imageStatus) {
+            var adData = {
+                title: data.title,
+                text: data.text
             };
 
             switch (imageStatus) {
                 case 'delete':
-                    data['changeImage'] = true;
+                    adData['changeImage'] = true;
                     break;
                 case 'update':
-                    data['imageDataUrl'] = adData.imageDataUrl;
-                    data['changeImage'] = true;
+                    adData['imageDataUrl'] = data.imageDataUrl;
+                    adData['changeImage'] = true;
                     break;
                 default:
-                    data['changeImage'] = false;
+                    adData['changeImage'] = false;
                     break;
             }
 
-            if (adData.categoryId) {
-                data['categoryId'] = adData.categoryId;
+            if (data.categoryId) {
+                adData['categoryId'] = data.categoryId;
             }
 
-            if (adData.townId) {
-                data['townId'] = adData.townId;
+            if (data.townId) {
+                adData['townId'] = data.townId;
             }
 
-            return restService.serverRequest(API_USER_ENDPOINT + 'ads/' + id, 'PUT', undefined, data)
+            return restService.serverRequest(API_USER_ENDPOINT + 'ads/' + data.id, 'PUT', undefined, adData)
                 .success(function (data) {
                     return data;
                 })

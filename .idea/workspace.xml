@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/ng-flow-standalone.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" afterPath="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsEditController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsEditController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -50,11 +51,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="userMyAdsEditController.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="userMyAdsEditController.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsEditController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1122">
-                  <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+                <state vertical-scroll-proportion="0.8418605" vertical-offset="658" max-vertical-offset="1275">
+                  <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -80,22 +81,22 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="userService.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="userService.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.31627908" vertical-offset="204" max-vertical-offset="1275">
-                  <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1275">
+                  <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
                   <folding>
                     <element signature="e#212#940#0" expanded="false" />
                     <element signature="e#1017#1482#0" expanded="false" />
                     <element signature="e#1540#1859#0" expanded="false" />
                     <element signature="e#1919#2240#0" expanded="false" />
                     <element signature="e#2295#2603#0" expanded="false" />
-                    <element signature="e#3758#4069#0" expanded="false" />
-                    <element signature="e#4139#4660#0" expanded="false" />
-                    <element signature="e#4714#5020#0" expanded="false" />
-                    <element signature="e#5083#5651#0" expanded="false" />
-                    <element signature="e#5668#6120#0" expanded="false" />
+                    <element signature="e#3763#4074#0" expanded="false" />
+                    <element signature="e#4144#4665#0" expanded="false" />
+                    <element signature="e#4719#5025#0" expanded="false" />
+                    <element signature="e#5088#5656#0" expanded="false" />
+                    <element signature="e#5673#6125#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -105,14 +106,22 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="user-myads-edit.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="user-myads-edit.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4015748" vertical-offset="306" max-vertical-offset="1343">
-                  <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-                  <folding>
-                    <element signature="tag#div#1;tag#div#0;tag#div#1;tag#fieldset#0;tag#form#0;tag#div#0" expanded="false" />
-                  </folding>
+                <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1428">
+                  <caret line="24" column="100" selection-start-line="24" selection-start-column="100" selection-end-line="24" selection-end-column="100" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ng-flow-standalone.min.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/libs/ng-flow-standalone.min.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="534">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -172,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/modules/dal/js/services/townService.js" />
         <option value="$PROJECT_DIR$/app/modules/dal/js/services/categoryService.js" />
         <option value="$PROJECT_DIR$/app/modules/dal/js/services/dal-main.js" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userLogoutController.js" />
@@ -219,10 +227,11 @@
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js" />
         <option value="$PROJECT_DIR$/app/modules/user/user-module.js" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsController.js" />
-        <option value="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" />
         <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js" />
-        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsEditController.js" />
         <option value="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" />
+        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsEditController.js" />
+        <option value="$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html" />
+        <option value="$PROJECT_DIR$/app/libs/ng-flow-standalone.min.js" />
       </list>
     </option>
   </component>
@@ -514,6 +523,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1133,7 +1160,11 @@
       <created>1420795329420</created>
       <updated>1420795329420</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="minor changes in userService - remove id parameter from editUserAd">
+      <created>1420795649362</created>
+      <updated>1420795649362</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1195,7 +1226,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="initial version of edit form created" />
     <MESSAGE value="fixing login form - validation" />
     <MESSAGE value="login form validation - done" />
     <MESSAGE value="working on notification service" />
@@ -1220,7 +1250,8 @@
     <MESSAGE value="fixed delete ad view layout" />
     <MESSAGE value="changes in state routing for editAd&#10;" />
     <MESSAGE value="editAd successful parameter transfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="editAd successful parameter transfer" />
+    <MESSAGE value="minor changes in userService - remove id parameter from editUserAd" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes in userService - remove id parameter from editUserAd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1231,13 +1262,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/homework/ui-bootstrap-tpls-0.12.0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="71604">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/libs/angular-loader.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20890938" vertical-offset="0" max-vertical-offset="651">
@@ -1594,28 +1618,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4015748" vertical-offset="306" max-vertical-offset="1343">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-          <folding>
-            <element signature="tag#div#1;tag#div#0;tag#div#1;tag#fieldset#0;tag#form#0;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userPublishNewAdController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1207">
           <caret line="62" column="14" selection-start-line="49" selection-start-column="12" selection-end-line="62" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsEditController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1122">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1630,20 +1636,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/userService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31627908" vertical-offset="204" max-vertical-offset="1275">
-          <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1275">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
             <element signature="e#212#940#0" expanded="false" />
             <element signature="e#1017#1482#0" expanded="false" />
             <element signature="e#1540#1859#0" expanded="false" />
             <element signature="e#1919#2240#0" expanded="false" />
             <element signature="e#2295#2603#0" expanded="false" />
-            <element signature="e#3758#4069#0" expanded="false" />
-            <element signature="e#4139#4660#0" expanded="false" />
-            <element signature="e#4714#5020#0" expanded="false" />
-            <element signature="e#5083#5651#0" expanded="false" />
-            <element signature="e#5668#6120#0" expanded="false" />
+            <element signature="e#3763#4074#0" expanded="false" />
+            <element signature="e#4144#4665#0" expanded="false" />
+            <element signature="e#4719#5025#0" expanded="false" />
+            <element signature="e#5088#5656#0" expanded="false" />
+            <element signature="e#5673#6125#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsEditController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8418605" vertical-offset="658" max-vertical-offset="1275">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/user/views/user-myads-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1428">
+          <caret line="24" column="100" selection-start-line="24" selection-start-column="100" selection-end-line="24" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/ng-flow-standalone.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="534">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
