@@ -3,7 +3,7 @@
 angular.module('adsSystem.public')
     .controller('PublicHomeController', ['$rootScope', '$scope', 'adsService', 'infoService',
         function ($rootScope, $scope, adsService, infoService) {
-            $rootScope.$broadcast("PageChanged", 'Home');
+            $rootScope.$broadcast("PageChanged", 'Ads - Home');
 
             var selections = {
                 townId: undefined,

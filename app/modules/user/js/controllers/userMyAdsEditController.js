@@ -4,7 +4,7 @@ angular.module('adsSystem.user')
     .controller('UserMyAdsEditController',
     ['$rootScope', '$scope', '$state', 'userService', '$stateParams', 'townService', 'categoryService', 'infoService', 'flowFactory',
         function ($rootScope, $scope, $state, userService, $stateParams, townService, categoryService, infoService, flowFactory) {
-            $rootScope.$broadcast("PageChanged", 'Edit Ad');
+            $rootScope.$broadcast("PageChanged", 'Ads - Edit Ad');
 
             $scope.image = {};
 

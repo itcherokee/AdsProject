@@ -4,7 +4,7 @@ angular.module('adsSystem.user')
     .controller('UserMyAdsNewController', ['$rootScope', '$scope', 'userService', 'townService', 'categoryService',
         '$state', 'infoService',
         function ($rootScope, $scope, userService, townService, categoryService, $state, infoService) {
-            $rootScope.$broadcast("PageChanged", 'Publish New Ad');
+            $rootScope.$broadcast("PageChanged", 'Ads - Publish New Ad');
 
             var newAd = {
                     title: '',

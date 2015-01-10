@@ -4,7 +4,7 @@ angular.module('adsSystem.user')
     .controller('UserEditProfileController',
     ['$rootScope', '$scope', '$state', 'userService', '$stateParams', 'infoService', 'townService',
         function ($rootScope, $scope, $state, userService, $stateParams, infoService, townService) {
-            $rootScope.$broadcast("PageChanged", 'Edit Ad');
+            $rootScope.$broadcast("PageChanged", 'Ads - Edit Ad');
 
             var pass = {
                 oldPassword: '',

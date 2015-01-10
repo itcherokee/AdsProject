@@ -7,6 +7,7 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router', 'adsSystem.public', 'a
             $rootScope.$stateParams = $stateParams;
 
             if (sessionStorage.user) {
+                if
                 $rootScope.$broadcast("UserLoggedIn", sessionStorage.user);
                 $state.go('userHome');
             }

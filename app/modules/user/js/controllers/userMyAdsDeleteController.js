@@ -3,7 +3,7 @@
 angular.module('adsSystem.user')
     .controller('UserMyAdsDeleteController', ['$rootScope', '$scope', '$state', 'userService', '$stateParams', 'infoService',
         function ($rootScope, $scope, $state, userService, $stateParams, infoService) {
-            $rootScope.$broadcast("PageChanged", 'Delete Ad');
+            $rootScope.$broadcast("PageChanged", 'Ads - Delete Ad');
 
             userService.getUserAdById($stateParams.id)
                 .success(function (data) {

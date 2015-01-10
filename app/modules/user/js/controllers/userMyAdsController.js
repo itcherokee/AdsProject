@@ -3,7 +3,7 @@
 angular.module('adsSystem.user')
     .controller('UserMyAdsController', ['$rootScope', '$scope', 'userService', '$state', 'infoService',
         function ($rootScope, $scope, userService, $state, infoService) {
-            $rootScope.$broadcast("PageChanged", 'My Ads');
+            $rootScope.$broadcast("PageChanged", 'Ads - My Ads');
 
             var selections = {
                 startPage: 1,

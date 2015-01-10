@@ -3,7 +3,7 @@
 angular.module('adsSystem.public')
     .controller('PublicRegisterController', ['$rootScope', '$scope', 'townService', 'authenticateService', '$state', 'infoService',
         function ($rootScope, $scope, townService, authenticateService, $state, infoService) {
-            $rootScope.$broadcast("PageChanged", 'Registration');
+            $rootScope.$broadcast("PageChanged", 'Ads - Registration');
 
             $scope.towns = [];
             townService.getAllTowns()

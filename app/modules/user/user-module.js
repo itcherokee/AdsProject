@@ -44,24 +44,4 @@ angular.module('adsSystem.user', ['flow'])
                 controller: 'UserMyAdsEditController',
                 templateUrl: 'modules/user/views/user-myads-edit.html'
             });
-
-
-//            .state('user', {
-//                url: '/user',
-//                controller: 'UserController as user',
-//                templateUrl: '/user/views/user.html'
-//            });
-//            .state('view2', {
-//                url: '/view2/:firstname/:lastname',
-//                controller: 'Controller2',
-//                resolve: {
-//                    names: function () {
-//                        return;
-//                    }
-//                },
-//                templateUrl: '/partials/view2.html'
-//            });
-//        $urlRouterProvider.otherwise('home');
-
-    })
-    .run();
+    });

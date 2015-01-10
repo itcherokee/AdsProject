@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('adsSystem.user')
-    .controller('UserHomeController', ['$rootScope', '$scope', 'adsService', 'infoService',
+angular.module('adsSystem.admin')
+    .controller('AdminHomeController', ['$rootScope', '$scope', 'adsService', 'infoService',
         function ($rootScope, $scope, adsService, infoService) {
-            $rootScope.$broadcast("PageChanged", 'Ads - Home');
+            $rootScope.$broadcast("PageChanged", 'Home');
 
             var selections = {
                 townId: undefined,
