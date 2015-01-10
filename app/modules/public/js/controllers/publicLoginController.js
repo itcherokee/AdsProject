@@ -8,6 +8,18 @@ angular.module('adsSystem.public')
                 if ($scope.loginForm.$valid) {
                     authenticateService.userLogin($scope.user)
                         .success(function (data) {
+                            if (sessionStorage['user']) {
+                                $rootScope.$broadcast("UserLoggedIn", sessionStorage.user);
+
+                                if (sessionStorage['isAdmin'] == true){
+                                    $state.go('userHome');
+                                } else {
+                                    $state.go('adminHome');
+                                }
+                            } else {
+                                $state.go('home');
+                            }
+
                             $rootScope.$broadcast("UserLoggedIn", data.username);
                             infoService.success('Successful login.');
                             $state.go('userHome');

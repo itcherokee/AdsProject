@@ -14,7 +14,7 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router', 'adsSystem.public', 'a
                 } else {
                     $state.go('adminHome');
                 }
+            } else {
+                $state.go('home');
             }
-
-            $state.go('home');
         }]);

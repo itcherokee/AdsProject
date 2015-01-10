@@ -9,7 +9,7 @@ angular.module('adsSystem.user')
                 townId: undefined,
                 categoryId: undefined,
                 startPage: 1,
-                pageSize: 3,
+                pageSize: 2,
                 totalAds: undefined,
                 numPages: undefined
             };
