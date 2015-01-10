@@ -11,8 +11,7 @@ angular.module('adsSystem.user', ['flow'])
                 url: '/user/home',
                 parent: 'user',
                 controller: 'UserHomeController',
-                templateUrl: 'modules/user/views/user-home.html',
-                re
+                templateUrl: 'modules/user/views/user-home.html'
             })
             .state('userMyAds', {
                 url: '/user/ads',

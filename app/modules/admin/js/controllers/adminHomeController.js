@@ -3,7 +3,7 @@
 angular.module('adsSystem.admin')
     .controller('AdminHomeController', ['$rootScope', '$scope', 'adsService', 'infoService',
         function ($rootScope, $scope, adsService, infoService) {
-            $rootScope.$broadcast("PageChanged", 'Home');
+            $rootScope.$broadcast("PageChanged", 'Ads Administration - Ads');
 
             var selections = {
                 townId: undefined,
