@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserPublishNewAdController', ['$rootScope', '$scope', 'userService', 'townService', 'categoryService',
+    .controller('UserMyAdsNewController', ['$rootScope', '$scope', 'userService', 'townService', 'categoryService',
         '$state', 'infoService',
         function ($rootScope, $scope, userService, townService, categoryService, $state, infoService) {
             $rootScope.$broadcast("PageChanged", 'Publish New Ad');

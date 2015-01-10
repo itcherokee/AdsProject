@@ -89,6 +89,7 @@ angular.module('adsSystem.user')
             if ($scope.mainMenuItems.selected.id === 1) {
                 sessionStorage['userMyAdsMenuItems-Enabled'] = true;
                 sessionStorage['userMyAdsMenuItemId'] = 0;
+//                sessionStorage['userMyAdsMenuItemStatus'] = undefined;
                 $scope.myAdsMenuItems.enabled = true;
                 $scope.myAdsMenuItems.selected =  myAdsMenuItems.items[0];
             } else {
@@ -113,7 +114,7 @@ angular.module('adsSystem.user')
                     $scope.myAdsMenuItems.selected = myAdsMenuItems.items[0];
                     sessionStorage['userMyAdsMenuItems-Enabled'] = true;
                     sessionStorage['userMyAdsMenuItemId'] = 0;
-                    sessionStorage['userMyAdsMenuItemStatus'] = undefined;
+                    sessionStorage.removeItem('userMyAdsMenuItemStatus');
                 } else {
                     disableMyAdsSubMenu()
                 }
