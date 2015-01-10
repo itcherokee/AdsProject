@@ -140,7 +140,7 @@ angular.module('adsSystem.user')
                 $scope.clickMainMenuHandler(mainMenuItems.items[1]);
             });
 
-            $scope.$on('userProfileChanged', function (event) {
+            $scope.$on('userMainCancelClicked', function (event) {
                 $scope.mainMenuItems.selected = mainMenuItems.items[0];
                 $scope.clickMainMenuHandler(mainMenuItems.items[0]);
             });

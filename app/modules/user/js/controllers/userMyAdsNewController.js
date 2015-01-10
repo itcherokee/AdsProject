@@ -50,6 +50,11 @@ angular.module('adsSystem.user')
                 }
             };
 
+            $scope.cancel = function () {
+                $rootScope.$broadcast('userMainCancelClicked');
+                $state.go('userHome');
+            };
+
             $scope.fileSelected = function ($file) {
                 delete $scope.ad.imageDataUrl;
                 var file = $file.file;

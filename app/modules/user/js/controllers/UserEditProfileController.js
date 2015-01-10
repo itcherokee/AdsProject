@@ -14,8 +14,8 @@ angular.module('adsSystem.user')
 
             $scope.pass = pass;
 
-            $scope.cancelProfileEdit = function () {
-                $rootScope.$broadcast('userProfileChanged');
+            $scope.cancel = function () {
+                $rootScope.$broadcast('userMainCancelClicked');
                 $state.go('userHome');
             };
 
