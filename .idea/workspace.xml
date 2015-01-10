@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/admin/admin-module.js" afterPath="$PROJECT_DIR$/app/modules/admin/admin-module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/authService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/authService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/public-module.js" afterPath="$PROJECT_DIR$/app/modules/public/public-module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/js/controllers/publicLoginController.js" afterPath="$PROJECT_DIR$/app/modules/public/js/controllers/publicLoginController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/public/js/controllers/publicRegisterController.js" afterPath="$PROJECT_DIR$/app/modules/public/js/controllers/publicRegisterController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/user-module.js" afterPath="$PROJECT_DIR$/app/modules/user/user-module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -1241,7 +1234,11 @@
       <created>1420928832473</created>
       <updated>1420928832473</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="fixed authentication in public states&#10;">
+      <created>1420933763638</created>
+      <updated>1420933763638</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1303,7 +1300,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="changes in state routing for editAd&#10;" />
     <MESSAGE value="editAd successful parameter transfer" />
     <MESSAGE value="minor changes in userService - remove id parameter from editUserAd" />
     <MESSAGE value="added ng-flow lib" />
@@ -1328,7 +1324,8 @@
     <MESSAGE value="initial admin views and controllers uploaded in order to deploy authentication&#10;" />
     <MESSAGE value="public.module - fix states redirection related to authentication" />
     <MESSAGE value="working on authorization - fixing states" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on authorization - fixing states" />
+    <MESSAGE value="fixed authentication in public states&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed authentication in public states&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
