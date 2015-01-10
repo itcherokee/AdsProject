@@ -2,7 +2,7 @@
 
 angular.module('adsSystem.user')
     .controller('UserPublishNewAdController', ['$rootScope', '$scope', 'userService', 'townService', 'categoryService',
-            '$state', 'infoService',
+        '$state', 'infoService',
         function ($rootScope, $scope, userService, townService, categoryService, $state, infoService) {
             $rootScope.$broadcast("PageChanged", 'Publish New Ad');
 
@@ -33,17 +33,21 @@ angular.module('adsSystem.user')
                     infoService.warning('Categories cannot be loaded from server!');
                 });
 
-            $scope.publishAd = function(data) {
+            $scope.publishAd = function (data) {
+                if ($scope.form.$valid) {
+                    userService.createNewAd(data)
+                        .success(function (data) {
+                            $rootScope.$broadcast('userNewAdPublished');
+                            infoService.success('Advertisement has been successfully published (waiting approval status).')
+                            $state.go('userMyAds');
 
-                userService.createNewAd(data)
-                    .success(function (data) {
-                        //TODO: notify about successful publishment of new Ad
-                        $rootScope.$broadcast('userNewAdPublished');
-                        $state.go('userMyAds');
-                    })
-                    .error(function (error) {
-                        infoService.error('Error occurred. New advertisement cannot be published.');
-                    });
+                        })
+                        .error(function (error) {
+                            infoService.error('Error occurred. New advertisement cannot be published.');
+                        })
+                } else {
+                    infoService.error('All fields marked in red are mandatory!');
+                }
             };
 
             $scope.fileSelected = function ($file) {
