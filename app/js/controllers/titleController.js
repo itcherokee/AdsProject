@@ -27,7 +27,7 @@ angular.module('adsSystem')
                         $state.go('home');
                     })
                     .error(function (data) {
-                        infoService.success('There was a problem to log you off. Try again later or just close the browser.')
+                        infoService.error('There was a problem to log you off. Try again later or just close the browser.')
                     });
             }
         }]);
