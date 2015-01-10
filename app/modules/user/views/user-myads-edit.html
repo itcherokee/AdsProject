@@ -1,11 +1,11 @@
 <div class="col-md-11 col-md-offset-1 ">
-	<form class="form-horizontal well" name="form" data-ng-submit="editAd(ad)">
+	<form class="form-horizontal well" name="form" novalidate data-ng-submit="submitted=true; editAd(ad)">
 		<fieldset>
 			<div class="col-sm-12 form-title">
 				<h3 class="text-center">Edit Ad</h3>
 			</div>
 			<!--<div data-ng-include="'modules/user/views/partials/form-content.html'"></div>-->
-			<div class="col-sm-12" flow-init="{singleFile:true}" flow-file-added="fileSelected($file)" flow-name="image.flow">
+			<div class="col-sm-12" flow-init="{singleFile:true}" flow-file-added="convertImage($file)" flow-name="image.flow">
 				<div class="col-sm-9">
 
 					<div class="form-group">
@@ -27,20 +27,20 @@
 						</div>
 					</div>
 					<!--<div class="form-group">-->
-						<!--<label for="ads-image" class="col-sm-2 control-label">Image:</label>-->
+					<!--<label for="ads-image" class="col-sm-2 control-label">Image:</label>-->
 
-						<!--<div class="col-sm-10">-->
-							<!--<div id="ads-image">-->
-								<!--<div class="input-group">-->
-									<!--<span class="form-control no-overlay" data-ng-bind="$flow.files[0].name"></span>-->
-									<!--<span class="input-group-btn">-->
-										<!--<span class="btn btn-default" flow-btn>-->
-											<!--Browse-->
-										<!--</span>-->
-									<!--</span>-->
-								<!--</div>-->
-							<!--</div>-->
-						<!--</div>-->
+					<!--<div class="col-sm-10">-->
+					<!--<div id="ads-image">-->
+					<!--<div class="input-group">-->
+					<!--<span class="form-control no-overlay" data-ng-bind="$flow.files[0].name"></span>-->
+					<!--<span class="input-group-btn">-->
+					<!--<span class="btn btn-default" flow-btn>-->
+					<!--Browse-->
+					<!--</span>-->
+					<!--</span>-->
+					<!--</div>-->
+					<!--</div>-->
+					<!--</div>-->
 					<!--</div>-->
 					<div class="form-group">
 						<label for="ads-category" class="col-sm-2 control-label">Category:</label>
@@ -70,75 +70,77 @@
 				<div class="col-sm-3">
 					<div class="form-group text-center">
 						<div class="image-box img-thumbnail col-sm-12 ">
-							<img flow-img="$flow.files[0]" src="img/noimage.png" alt="" class="col-center" ng-hide="false"/>
-							<!--<img ng-src="ad.imageDataUrl" src="img/noimage.png" alt="" class="col-center"/>-->
+							<img flow-img="$flow.files[0]" src="img/noimage.png" alt="" class="col-center"	ng-show="$flow.files.length" />
+
+							<img ng-src="{{ad.imageDataUrl}}" src="img/noimage.png" alt="" class="col-center" ng-hide="$flow.files.length"/>
 						</div>
-						<a ng-click="" class="btn btn-default form-control ">Change image</a>
-						<a ng-click="" class="btn btn-default form-control ">Delete image</a>
+						<span class="btn btn-default form-control " flow-btn >Change image</span>
+						<!--<a ng-click="" class="btn btn-default form-control ">Change image</a>-->
+						<a ng-click="deleteImage()" class="btn btn-default form-control ">Delete image</a>
 					</div>
 				</div>
 			</div>
 			<!--<div class="col-sm-12">-->
-				<!--<div class="col-sm-9">-->
+			<!--<div class="col-sm-9">-->
 
-					<!--<div class="form-group">-->
-						<!--<label for="ads-title" class="col-sm-2 control-label">Title:</label>-->
+			<!--<div class="form-group">-->
+			<!--<label for="ads-title" class="col-sm-2 control-label">Title:</label>-->
 
-						<!--<div class="col-sm-10">-->
-							<!--<input type="text" class="form-control input-md" id="ads-title" name="adstitle"-->
-								   <!--data-ng-model="ad.title" placeholder="Enter title for ad..."-->
-								   <!--data-ng-required="true"/>-->
-													<!--</div>-->
-					<!--</div>-->
-					<!--<div class="form-group">-->
-						<!--<label for="ads-text" class="col-sm-2 control-label">Text:</label>-->
+			<!--<div class="col-sm-10">-->
+			<!--<input type="text" class="form-control input-md" id="ads-title" name="adstitle"-->
+			<!--data-ng-model="ad.title" placeholder="Enter title for ad..."-->
+			<!--data-ng-required="true"/>-->
+			<!--</div>-->
+			<!--</div>-->
+			<!--<div class="form-group">-->
+			<!--<label for="ads-text" class="col-sm-2 control-label">Text:</label>-->
 
-						<!--<div class="col-sm-10">-->
-							<!--<textarea class="form-control" name="adstext" id="ads-text" rows="4" data-ng-model="ad.text"-->
-									  <!--placeholder="Some information..." data-ng-required></textarea>-->
-						<!--</div>-->
-					<!--</div>-->
-					<!--<div class="form-group">-->
-						<!--<label for="ads-image" class="col-sm-2 control-label">Image:</label>-->
+			<!--<div class="col-sm-10">-->
+			<!--<textarea class="form-control" name="adstext" id="ads-text" rows="4" data-ng-model="ad.text"-->
+			<!--placeholder="Some information..." data-ng-required></textarea>-->
+			<!--</div>-->
+			<!--</div>-->
+			<!--<div class="form-group">-->
+			<!--<label for="ads-image" class="col-sm-2 control-label">Image:</label>-->
 
-						<!--<div class="col-sm-10">-->
-							<!--<input type="file" id="ads-image" class="input-file"-->
-								   <!--onchange="angular.element(this).scope().fileSelected(this)"/>-->
-						<!--</div>-->
-					<!--</div>-->
-					<!--<div class="form-group">-->
-						<!--<label for="ads-category" class="col-sm-2 control-label">Category:</label>-->
+			<!--<div class="col-sm-10">-->
+			<!--<input type="file" id="ads-image" class="input-file"-->
+			<!--onchange="angular.element(this).scope().fileSelected(this)"/>-->
+			<!--</div>-->
+			<!--</div>-->
+			<!--<div class="form-group">-->
+			<!--<label for="ads-category" class="col-sm-2 control-label">Category:</label>-->
 
-						<!--<div class="col-sm-10">-->
-							<!--<select data-ng-options="category.id as category.name for category in categories  | orderBy:'name'"-->
-									<!--name="category" id="ads-category" class="form-control " data-ng-model="ad.categoryId">-->
-								<!--<option value="">Select category</option>-->
-							<!--</select>-->
-						<!--</div>-->
-					<!--</div>-->
-					<!--<div class="form-group">-->
-						<!--<label for="ads-town" class="col-sm-2 control-label">Town:</label>-->
+			<!--<div class="col-sm-10">-->
+			<!--<select data-ng-options="category.id as category.name for category in categories  | orderBy:'name'"-->
+			<!--name="category" id="ads-category" class="form-control " data-ng-model="ad.categoryId">-->
+			<!--<option value="">Select category</option>-->
+			<!--</select>-->
+			<!--</div>-->
+			<!--</div>-->
+			<!--<div class="form-group">-->
+			<!--<label for="ads-town" class="col-sm-2 control-label">Town:</label>-->
 
-						<!--<div class="col-sm-10">-->
-							<!--<select data-ng-options="town.id as town.name for town in towns | orderBy:'name'"-->
-									<!--name="ads-town"-->
-									<!--id="ads-town"-->
-									<!--class="form-control" data-ng-model="ad.townId">-->
-								<!--<option value="">Select town</option>-->
-							<!--</select>-->
-						<!--</div>-->
-					<!--</div>-->
+			<!--<div class="col-sm-10">-->
+			<!--<select data-ng-options="town.id as town.name for town in towns | orderBy:'name'"-->
+			<!--name="ads-town"-->
+			<!--id="ads-town"-->
+			<!--class="form-control" data-ng-model="ad.townId">-->
+			<!--<option value="">Select town</option>-->
+			<!--</select>-->
+			<!--</div>-->
+			<!--</div>-->
 
-				<!--</div>-->
+			<!--</div>-->
 
-				<!--<div class="form-group col-sm-3" data-ng-show="true">-->
-					<!--<div class="image-box form-control my-form-control">-->
-						<!--<img data-ng-src="{{ad.imageDataUrl}}" src="img/noimage.png" alt=""/>-->
-					<!--</div>-->
-					<!--<a ng-click="" class="btn btn-default form-control ">Change image</a>-->
-					<!--<a ng-click="" class="btn btn-default form-control ">Delete image</a>-->
+			<!--<div class="form-group col-sm-3" data-ng-show="true">-->
+			<!--<div class="image-box form-control my-form-control">-->
+			<!--<img data-ng-src="{{ad.imageDataUrl}}" src="img/noimage.png" alt=""/>-->
+			<!--</div>-->
+			<!--<a ng-click="" class="btn btn-default form-control ">Change image</a>-->
+			<!--<a ng-click="" class="btn btn-default form-control ">Delete image</a>-->
 
-				<!--</div>-->
+			<!--</div>-->
 			<!--</div>-->
 			<div class="form-group col-sm-12">
 				<div class="col-sm-6 ">
