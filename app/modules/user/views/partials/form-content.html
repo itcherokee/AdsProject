@@ -1,4 +1,4 @@
-<div class="col-sm-12" flow-init="{singleFile:true}" flow-file-added="fileSelected($file)">
+<div class="col-sm-12" flow-init="{singleFile:true}" flow-file-added="fileSelected($file)" flow-name="image.flow">
 	<div class="col-sm-9">
 
 		<div class="form-group">
@@ -25,7 +25,7 @@
 			<div class="col-sm-10">
 				<div id="ads-image">
 					<div class="input-group">
-						<span class="form-control no-overlay" data-ng-bind="$flow.files[0].relativePath"></span>
+						<span class="form-control no-overlay" data-ng-bind="$flow.files[0].name"></span>
 									<span class="input-group-btn">
 										<span class="btn btn-default" flow-btn>
 											Browse
@@ -63,8 +63,11 @@
 	<div class="col-sm-3">
 		<div class="form-group text-center">
 			<div class="image-box img-thumbnail col-sm-12 ">
+				<img flow-img="$flow.files[0]" src="img/noimage.png" alt="" class="col-center" ng-hide=""/>
 				<img flow-img="$flow.files[0]" src="img/noimage.png" alt="" class="col-center"/>
 			</div>
+			<a ng-click="" class="btn btn-default form-control ">Change image</a>
+			<a ng-click="" class="btn btn-default form-control ">Delete image</a>
 		</div>
 	</div>
 </div>

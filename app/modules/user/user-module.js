@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adsSystem.user', [])
+angular.module('adsSystem.user', ['flow'])
     .config(function ($stateProvider) {
         $stateProvider
             .state('user', {

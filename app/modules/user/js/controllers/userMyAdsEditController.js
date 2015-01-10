@@ -2,9 +2,11 @@
 
 angular.module('adsSystem.user')
     .controller('UserMyAdsEditController',
-                ['$rootScope', '$scope', '$state', 'userService', '$stateParams', 'townService', 'categoryService', 'infoService',
-        function ($rootScope, $scope, $state, userService, $stateParams, townService, categoryService, infoService) {
+    ['$rootScope', '$scope', '$state', 'userService', '$stateParams', 'townService', 'categoryService', 'infoService', 'flowFactory',
+        function ($rootScope, $scope, $state, userService, $stateParams, townService, categoryService, infoService, flowFactory) {
             $rootScope.$broadcast("PageChanged", 'Delete Ad');
+
+            $scope.image = {};
 
             //TODO: fix cancel button forwarding to myAds menu
 
@@ -25,10 +27,16 @@ angular.module('adsSystem.user')
                 });
 
             userService.getUserAdById($stateParams.id)
-                .success(function(data){
+                .success(function (data) {
                     $scope.ad = data;
+                    if (data.imageDataUrl) {
+                        var blob = new Blob([data.imageDataUrl], {type: "image/png"});
+                        blob.name = 'file.png';
+
+                     //   $scope.image.flow.files = [blob];
+                    }
                 })
-                .error(function(error){
+                .error(function (error) {
                     infoService.error('Error fetching from server the requested Ad for editing.');
                 });
 
@@ -39,11 +47,11 @@ angular.module('adsSystem.user')
                     var reader = new FileReader();
                     reader.onload = function () {
                         $scope.ad.imageDataUrl = reader.result;
-                        $(".image-box").html("<img src='" + reader.result + "'>");
+//                        $(".image-box").html("<img src='" + reader.result + "'>");
                     };
                     reader.readAsDataURL(file);
                 } else {
-                    $(".image-box").html("<p>File type not supported!</p>");
+                    infoService.warning('File type not supported!');
                 }
             };
 
@@ -60,11 +68,11 @@ angular.module('adsSystem.user')
                     });
             };
 
-            $scope.deleteImage = function(){
+            $scope.deleteImage = function () {
                 $scope.imageStatus = 'delete';
             };
 
-            $scope.changeImage = function(){
+            $scope.changeImage = function () {
                 $scope.imageStatus = 'update';
             }
         }]);

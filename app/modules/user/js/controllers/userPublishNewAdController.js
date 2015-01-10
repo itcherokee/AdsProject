@@ -22,8 +22,7 @@ angular.module('adsSystem.user')
                     $scope.towns = data;
                 })
                 .error(function (error) {
-                    //TODO: probably error notification ?!?!
-                    console.log('Towns cannot be loaded from server!');
+                    infoService.warning('Towns cannot be loaded from server!');
                 });
 
             categoryService.getAllCategories()
@@ -31,8 +30,7 @@ angular.module('adsSystem.user')
                     $scope.categories = data;
                 })
                 .error(function (error) {
-                    //TODO: probably error notification ?!?!
-                    console.log('Categories cannot be loaded from server!');
+                    infoService.warning('Categories cannot be loaded from server!');
                 });
 
             $scope.publishAd = function(data) {
@@ -44,7 +42,7 @@ angular.module('adsSystem.user')
                         $state.go('userMyAds');
                     })
                     .error(function (error) {
-                        //TODO: notify about error
+                        infoService.error('Error occurred. New advertisement cannot be published.');
                     });
             };
 
@@ -55,13 +53,10 @@ angular.module('adsSystem.user')
                     var reader = new FileReader();
                     reader.onload = function () {
                         $scope.ad.imageDataUrl = reader.result;
-//                        $(".image-box img").attr("src", reader.result);
                     };
                     reader.readAsDataURL(file);
                 } else {
                     infoService.warning('File type not supported!');
                 }
             };
-
-
         }]);
