@@ -1,20 +1,35 @@
 'use strict';
 
-angular.module('adsSystem', ['ui.bootstrap', 'ui.router', 'adsSystem.public', 'adsSystem.dal', 'adsSystem.user', 'adsSystem.admin', 'flow'])
-    .run(['$state', '$rootScope', '$stateParams',
-        function ($state, $rootScope, $stateParams) {
+angular.module('adsSystem', ['ui.bootstrap', 'ui.router', 'adsSystem.dal', 'adsSystem.public', 'adsSystem.user', 'adsSystem.admin', 'flow'])
+    .run(['$state', '$rootScope', '$stateParams', 'authService',
+        function ($state, $rootScope, $stateParams, authService) {
             $rootScope.$state = $state;
             $rootScope.$stateParams = $stateParams;
 
-            if (sessionStorage['user']) {
-                $rootScope.$broadcast("UserLoggedIn", sessionStorage.user);
+//            if (sessionStorage['user']) {
+            if (authService.isLoggedIn()) {
+                $rootScope.$broadcast("UserLoggedIn", authService.username);
 
-                if (sessionStorage['isAdmin'] == true){
-                    $state.go('userHome');
-                } else {
+                if (authService.isAdmin) {
                     $state.go('adminHome');
+                } else {
+                    $state.go('userHome');
                 }
             } else {
                 $state.go('home');
             }
+
+            $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
+                if (error.unAuthorized) {
+                    $state.go('home');
+                } else if (error.authorized) {
+                    if (authService.isAdmin) {
+                        $state.go('adminHome');
+                    } else {
+                        $state.go('userHome');
+                    }
+                }
+            });
+
+            //authService.loadUserDataFromSession();
         }]);

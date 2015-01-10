@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem')
-    .controller('TitleController', ['$rootScope', '$scope', '$state', 'authenticateService', 'infoService',
-        function ($rootScope, $scope, $state, authenticateService, infoService) {
+    .controller('TitleController', ['$rootScope', '$scope', '$state', 'authService', 'infoService',
+        function ($rootScope, $scope, $state, authService, infoService) {
             $scope.currentPage = 'Home';
 
             if (sessionStorage.user) {
@@ -19,7 +19,7 @@ angular.module('adsSystem')
 
             $scope.clickLogoutHandler = function () {
                 $scope.currentPage = 'Home';
-                authenticateService.userLogout()
+                authService.userLogout()
                     .success(function () {
                         $scope.username = undefined;
                         sessionStorage.clear();

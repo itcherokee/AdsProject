@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('adsSystem.dal')
-    .factory('authenticateService', ['restService', 'API_USER_ENDPOINT', function (restService, API_USER_ENDPOINT) {
+    .factory('authService', ['restService', 'API_USER_ENDPOINT', function (restService, API_USER_ENDPOINT) {
         var authentication = {};
 
         //TODO: It is good to introduce check for logged-in user
@@ -14,12 +14,15 @@ angular.module('adsSystem.dal')
         }
 
         function loadUserDataFromSession() {
-            authentication.user = sessionStorage.getItem['user'];
-            authentication.user = sessionStorage.getItem['isAdmin'];
-            authentication.user = sessionStorage.getItem['accessToken'];
+            if (sessionStorage.getItem['user'] && sessionStorage.getItem['isAdmin'] && sessionStorage.getItem['accessToken']){
+                authentication.user = sessionStorage.getItem['user'];
+                authentication.user = sessionStorage.getItem['isAdmin'];
+                authentication.user = sessionStorage.getItem['accessToken'];
+            }
         }
 
         function isLoggedIn() {
+            loadUserDataFromSession();
             return authentication.user ? true : false;
         }
 
@@ -72,6 +75,7 @@ angular.module('adsSystem.dal')
             userLogout: userLogout,
             isLoggedIn: isLoggedIn,
             isAdmin: isAdmin,
+            username : authentication.username,
             loadUserDataFromSession: loadUserDataFromSession
         }
     }]);

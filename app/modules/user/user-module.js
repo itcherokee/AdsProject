@@ -5,7 +5,16 @@ angular.module('adsSystem.user', ['flow'])
         $stateProvider
             .state('user', {
                 abstract: true,
-                templateUrl: 'modules/user/views/user.html'
+                templateUrl: 'modules/user/views/user.html',
+                resolve: {
+                    user: ['authService', '$q', function (authService, $q) {
+                        if (authService.isLoggedIn()){
+                            return $q.reject({authorized: true});
+                        } else {
+                            return $q.reject({unAuthorized : true})
+                        }
+                    }]
+                }
             })
             .state('userHome', {
                 url: '/user/home',

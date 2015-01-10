@@ -5,7 +5,16 @@ angular.module('adsSystem.admin', ['flow'])
         $stateProvider
             .state('admin', {
                 abstract: true,
-                templateUrl: 'modules/admin/views/admin.html'
+                templateUrl: 'modules/admin/views/admin.html',
+                resolve: {
+                    user: ['authService', '$q', function (authService, $q) {
+                        if (authService.isLoggedIn()){
+                            return $q.reject({authorized: true});
+                        } else {
+                            return $q.reject({unAuthorized : true})
+                        }
+                    }]
+                }
             })
             .state('adminHome', {
                 url: '/admin/home',
@@ -13,23 +22,4 @@ angular.module('adsSystem.admin', ['flow'])
                 controller: 'AdminHomeController',
                 templateUrl: 'modules/admin/views/admin-home.html'
             });
-
-
-//            .state('user', {
-//                url: '/user',
-//                controller: 'UserController as user',
-//                templateUrl: '/user/views/user.html'
-//            });
-//            .state('view2', {
-//                url: '/view2/:firstname/:lastname',
-//                controller: 'Controller2',
-//                resolve: {
-//                    names: function () {
-//                        return;
-//                    }
-//                },
-//                templateUrl: '/partials/view2.html'
-//            });
-//        $urlRouterProvider.otherwise('home');
-
     });
