@@ -8,7 +8,10 @@ angular.module('adsSystem.user')
 
             $scope.image = {};
 
-            //TODO: fix cancel button forwarding to myAds menu
+            $scope.cancel = function () {
+                $rootScope.$broadcast('userAdEdited');
+                $state.go('userMyAds');
+            };
 
             townService.getAllTowns()
                 .success(function (data) {
@@ -60,11 +63,11 @@ angular.module('adsSystem.user')
                 userService.editUserAd($scope.ad, $scope.imageStatus ? $scope.imageStatus : undefined)
                     .success(function (data) {
                         $rootScope.$broadcast('userAdEdited');
-                        // TODO: finish the event in Right panel
+                        infoService.success('Advertisement successfully edited.');
                         $state.go('userMyAds');
                     })
                     .error(function (error) {
-                        //TODO: notify in case of error on deletion Ad
+                        infoService.error('An error occurred. Advertisement changes has not been saved.');
                     });
             };
 

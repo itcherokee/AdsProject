@@ -100,11 +100,16 @@ angular.module('adsSystem.user')
                 return item;
             }
 
+            function refreshMainMenu (){
+
+            }
+
+
             function disableMyAdsSubMenu() {
                 myAdsMenuItems.enabled = false;
-                sessionStorage.removeItem('userMyAdsMenuItems-Enabled');
-                sessionStorage.removeItem('userMyAdsMenuItemId');
-                sessionStorage.removeItem('userMyAdsMenuItemStatus');
+//                sessionStorage.removeItem('userMyAdsMenuItems-Enabled');
+//                sessionStorage.removeItem('userMyAdsMenuItemId');
+//                sessionStorage.removeItem('userMyAdsMenuItemStatus');
             }
 
             $scope.clickMainMenuHandler = function (item) {
@@ -141,10 +146,12 @@ angular.module('adsSystem.user')
                 $scope.clickMainMenuHandler(mainMenuItems.items[0]);
             });
 
-            $scope.$on('userEditAdStarted', function (event) {
-                $scope.mainMenuItems.selected = undefined;
-                disableMyAdsSubMenu();
-            });
+//            $scope.$on('userEditAdStarted', function (event) {
+//                $scope.mainMenuItems.selected = undefined;
+//                myAdsMenuItems.enabled = false;
+//            });
+
+
 
             function restoreMyAdsMenuSelection(status) {
                 var selectedMyAdsMenuItem = getMyAdsItemByStatus(status);
@@ -161,7 +168,14 @@ angular.module('adsSystem.user')
 
                 restoreMyAdsMenuSelection(status);
             });
+
             $scope.$on('userAdEdited', function (event, status) {
+                var status = undefined;
+
+                if (sessionStorage['userMyAdsMenuItemStatus']) {
+                    status = sessionStorage.getItem('userMyAdsMenuItemStatus');
+                }
+
                 restoreMyAdsMenuSelection(status);
             });
 
@@ -174,5 +188,6 @@ angular.module('adsSystem.user')
             $scope.$on('userAdRePublished', function (event, status) {
                 restoreMyAdsMenuSelection(status);
             });
+
 
         }]);

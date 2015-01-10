@@ -57,7 +57,7 @@ angular.module('adsSystem.user')
 
             //Event for editing Ad
             $scope.userEditAd= function(ad){
-                $rootScope.$broadcast('userEditAdStarted');
+//                $rootScope.$broadcast('userEditAdStarted');
                 $state.go('userEditAd', {id: ad.id});
             };
 

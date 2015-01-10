@@ -5,7 +5,7 @@
 		</div>
 		<div class="panel-body">
 			<a href="" class="btn btn-block" data-ng-repeat="mainItem in mainMenuItems.items"
-			   data-ng-class="{'active-link' : mainMenuItems.selected == mainItem }"
+			   data-ng-class="{'active-link' : mainMenuItems.selected.id == mainItem.id }"
 			   data-ng-click="mainMenuItems.selected = mainItem;  clickMainMenuHandler(mainItem)">
 				{{mainItem.title}}
 			</a>
@@ -17,7 +17,7 @@
 		</div>
 		<div class="panel-body">
 			<a href="" class="btn btn-block" data-ng-repeat="myAdItem in myAdsMenuItems.items"
-			   data-ng-class="{'active-link' : myAdsMenuItems.selected == myAdItem }"
+			   data-ng-class="{'active-link' : myAdsMenuItems.selected.id == myAdItem.id }"
 			   data-ng-click="myAdsMenuItems.selected = myAdItem;  clickMyAdsMenuHandler(myAdItem)">
 				{{myAdItem.title}}
 			</a>
