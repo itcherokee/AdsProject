@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('UserMyAdsController', ['$rootScope', '$scope', 'userService', '$state',
-        function ($rootScope, $scope, userService, $state) {
+    .controller('UserMyAdsController', ['$rootScope', '$scope', 'userService', '$state', 'infoService',
+        function ($rootScope, $scope, userService, $state, infoService) {
             $rootScope.$broadcast("PageChanged", 'My Ads');
 
             var selections = {
@@ -13,7 +13,9 @@ angular.module('adsSystem.user')
                 status: undefined
             };
 
+            selections.status = sessionStorage['userMyAdsMenuItemStatus'] || undefined;
             $scope.selections = selections;
+
 
             $scope.$on('userMyAdsStatusSelected', function (event, status) {
                 $scope.selections.status = status;
@@ -29,11 +31,12 @@ angular.module('adsSystem.user')
                 var $that = $(this.ad)[0];
                 userService.deactivateUserAd(ad.id)
                     .success(function (data) {
+                        infoService.success('Advertisement successfully deactivated.');
                         $rootScope.$broadcast('userAdDeactivated', $that.status);
                         loadUserAds($scope.selections);
                     })
                     .error(function (error) {
-                        //TODO: notify in case of error on deactivation Ad
+                        infoService.error('Error occurred. Advertisement cannot be deactivated.');
                     });
 
             };
@@ -43,11 +46,12 @@ angular.module('adsSystem.user')
                 var $that = $(this.ad)[0];
                 userService.publishAgainUserAd(ad.id)
                     .success(function (data) {
+                        infoService.success('Advertisement successfully re-published.');
                         $rootScope.$broadcast('userAdRePublished', $that.status);
                         loadUserAds($scope.selections);
                     })
                     .error(function (error) {
-                        //TODO: notify in case of error on re-publishing Ad
+                        infoService.error('Error occurred. Advertisement cannot be re-published..');
                     });
             };
 
@@ -69,7 +73,7 @@ angular.module('adsSystem.user')
                         $scope.selections.numPages = data.numPages;
                     })
                     .error(function (error) {
-                        console.log('Ads can not be loaded from server!');
+                        infoService.error('Error occurred. Advertisements cannot be loaded.');
                     });
             }
 

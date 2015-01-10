@@ -4,6 +4,7 @@ angular.module('adsSystem.user')
     .controller('UserLeftMenuController', ['$rootScope', '$scope', '$state',
         function ($rootScope, $scope, $state) {
 
+
             var mainMenuItems = {
                     selected: null,
                     items: [
@@ -85,8 +86,14 @@ angular.module('adsSystem.user')
             $scope.mainMenuItems = mainMenuItems;
             $scope.mainMenuItems.selected = mainMenuItems.items[parseInt(sessionStorage['userMainMenuItemId'], 10)] || mainMenuItems.items[0];
             $scope.myAdsMenuItems = myAdsMenuItems;
-            $scope.myAdsMenuItems.enabled = sessionStorage['userMyAdsMenuItems-Enabled'] || false;
-            $scope.myAdsMenuItems.selected = myAdsMenuItems.items[parseInt(sessionStorage['userMyAdsMenuItemId'], 10)] || myAdsMenuItems.items[0];
+            if ($scope.mainMenuItems.selected.id === 1) {
+                sessionStorage['userMyAdsMenuItems-Enabled'] = true;
+                sessionStorage['userMyAdsMenuItemId'] = 0;
+                $scope.myAdsMenuItems.enabled = true;
+                $scope.myAdsMenuItems.selected =  myAdsMenuItems.items[0];
+            } else {
+                disableMyAdsSubMenu()
+            }
 
             function getMyAdsItemByStatus(statusName) {
                 var item = undefined;
@@ -108,10 +115,7 @@ angular.module('adsSystem.user')
                     sessionStorage['userMyAdsMenuItemId'] = 0;
                     sessionStorage['userMyAdsMenuItemStatus'] = undefined;
                 } else {
-                    myAdsMenuItems.enabled = false;
-                    sessionStorage.removeItem('userMyAdsMenuItems-Enabled');
-                    sessionStorage.removeItem('userMyAdsMenuItemId');
-                    sessionStorage.removeItem('userMyAdsMenuItemStatus');
+                    disableMyAdsSubMenu()
                 }
 
                 item.state();
@@ -123,10 +127,11 @@ angular.module('adsSystem.user')
                 item.state()
             };
 
-            function restoreMyAdsMenuSelection(status) {
-                var selectedMyAdsMenuItem = getMyAdsItemByStatus(status);
-                $scope.myAdsMenuItems.selected = myAdsMenuItems.items[selectedMyAdsMenuItem.id];
-                $scope.clickMyAdsMenuHandler(myAdsMenuItems.items[selectedMyAdsMenuItem.id]);
+            function disableMyAdsSubMenu() {
+                myAdsMenuItems.enabled = false;
+                sessionStorage.removeItem('userMyAdsMenuItems-Enabled');
+                sessionStorage.removeItem('userMyAdsMenuItemId');
+                sessionStorage.removeItem('userMyAdsMenuItemStatus');
             }
 
             $scope.$on('userNewAdPublished', function (event) {
@@ -139,13 +144,16 @@ angular.module('adsSystem.user')
                 $scope.clickMainMenuHandler(mainMenuItems.items[0]);
             });
 
-            $scope.$on('userEditAdStarted', function(event){
+            $scope.$on('userEditAdStarted', function (event) {
                 $scope.mainMenuItems.selected = undefined;
-                myAdsMenuItems.enabled = false;
-                sessionStorage.removeItem('userMyAdsMenuItems-Enabled');
-                sessionStorage.removeItem('userMyAdsMenuItemId');
-                sessionStorage.removeItem('userMyAdsMenuItemStatus');
+                disableMyAdsSubMenu();
             });
+
+            function restoreMyAdsMenuSelection(status) {
+                var selectedMyAdsMenuItem = getMyAdsItemByStatus(status);
+                $scope.myAdsMenuItems.selected = myAdsMenuItems.items[selectedMyAdsMenuItem.id];
+                $scope.clickMyAdsMenuHandler(myAdsMenuItems.items[selectedMyAdsMenuItem.id]);
+            }
 
             $scope.$on('userAdDeleted', function (event) {
                 var status = undefined;
