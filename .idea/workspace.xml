@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsEditController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsEditController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -1062,7 +1061,11 @@
       <created>1420913013638</created>
       <updated>1420913013638</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="delete image in edit Ad available now">
+      <created>1420914847561</created>
+      <updated>1420914847562</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1124,7 +1127,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="edit profile and password form done - responsible, validation" />
     <MESSAGE value="edit Ad form title set" />
     <MESSAGE value="small fix in userServices (phone -&gt; phoneNumber)" />
     <MESSAGE value="fixed password change validation in edit profile" />
@@ -1149,7 +1151,8 @@
     <MESSAGE value="fixed problem with Sub menu Ads selection and pressing Cancel buttons" />
     <MESSAGE value="small fixes in handling cancel buttons" />
     <MESSAGE value="image change done in Edit Ad view" />
-    <option name="LAST_COMMIT_MESSAGE" value="image change done in Edit Ad view" />
+    <MESSAGE value="delete image in edit Ad available now" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete image in edit Ad available now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
