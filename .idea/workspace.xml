@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\User\Documents\GitHub\AdsProject\app\modules\user\js\services\sessionService.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/user-module.js" afterPath="$PROJECT_DIR$/app/modules/user/user-module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\User\Documents\GitHub\AdsProject\app\modules\user\js\controllers\userPublishNewAdController.js" afterPath="$PROJECT_DIR$/app/modules/user/js/controllers/userMyAdsNewController.js" />
     </list>
     <ignored path="AdsProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +48,8 @@
       <file leaf-file-name="userLeftMenuController.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.139" vertical-offset="2111" max-vertical-offset="3162">
-              <caret line="116" column="73" selection-start-line="116" selection-start-column="73" selection-end-line="116" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.167" vertical-offset="2111" max-vertical-offset="3162">
+              <caret line="134" column="69" selection-start-line="134" selection-start-column="69" selection-end-line="134" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -994,7 +989,11 @@
       <created>1420892023510</created>
       <updated>1420892023510</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="fixed problem with loading user ads">
+      <created>1420894533640</created>
+      <updated>1420894533640</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1056,7 +1055,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixed public home view and controller" />
     <MESSAGE value="set autofocus on login and register forms" />
     <MESSAGE value="some fixes on public home controller" />
     <MESSAGE value="small fixes in user view : allignment of buttons" />
@@ -1081,7 +1079,8 @@
     <MESSAGE value="fixed new Ad Controller - added warnings and error messages&#10;" />
     <MESSAGE value="added information announce in Delete controller." />
     <MESSAGE value="fixed error to return to selected sub mya ads menu after deleting an ad" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed error to return to selected sub mya ads menu after deleting an ad" />
+    <MESSAGE value="fixed problem with loading user ads" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed problem with loading user ads" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1456,8 +1455,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/user/js/controllers/userLeftMenuController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.139" vertical-offset="2111" max-vertical-offset="3162">
-          <caret line="116" column="73" selection-start-line="116" selection-start-column="73" selection-end-line="116" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.167" vertical-offset="2111" max-vertical-offset="3162">
+          <caret line="134" column="69" selection-start-line="134" selection-start-column="69" selection-end-line="134" selection-end-column="69" />
           <folding />
         </state>
       </provider>
