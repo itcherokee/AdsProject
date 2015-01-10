@@ -69,10 +69,13 @@ angular.module('adsSystem.user')
                         .success(function (data) {
                             $rootScope.$broadcast('userAdEdited');
                             infoService.success('Advertisement successfully edited.');
-                            $state.go('userMyAds');
+//                            $state.go('userMyAds');
                         })
                         .error(function (error) {
                             infoService.error('An error occurred. Advertisement changes has not been saved.');
+                        })
+                        .finally(function(){
+                            $state.go('userMyAds');
                         });
                 } else {
                     infoService.error('All fields marked in red are mandatory!');
@@ -82,7 +85,7 @@ angular.module('adsSystem.user')
             $scope.deleteImage = function () {
                 $scope.imageStatus = 'delete';
                 $scope.image.flow.cancel();
-                delete $scope.ad.imageDataUrl;
+                $scope.ad.imageDataUrl = 'img/noimage.png';
             };
 
 //            $scope.changeImage = function () {
