@@ -10,7 +10,7 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router', 'adsSystem.dal', 'adsS
             if (authService.isLoggedIn()) {
                 $rootScope.$broadcast("UserLoggedIn", authService.username);
 
-                if (authService.isAdmin) {
+                if (authService.isAdmin()) {
                     $state.go('adminHome');
                 } else {
                     $state.go('userHome');
@@ -23,7 +23,7 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router', 'adsSystem.dal', 'adsS
                 if (error.unAuthorized) {
                     $state.go('home');
                 } else if (error.authorized) {
-                    if (authService.isAdmin) {
+                    if (authService.isAdmin()) {
                         $state.go('adminHome');
                     } else {
                         $state.go('userHome');

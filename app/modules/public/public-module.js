@@ -5,7 +5,14 @@ angular.module('adsSystem.public', []).
         $stateProvider
             .state('root', {
                 abstract: true,
-                templateUrl: 'modules/public/views/public.html'
+                templateUrl: 'modules/public/views/public.html',
+                resolve: {
+                    user: ['authService', '$q', function (authService, $q) {
+                        if (authService.username){
+                            return $q.reject({authorized: true});
+                        }
+                    }]
+                }
             })
             .state('home', {
                 url: '/',
@@ -17,7 +24,8 @@ angular.module('adsSystem.public', []).
                 url: '/login',
                 parent: 'root',
                 controller: 'PublicLoginController',
-                templateUrl: 'modules/public/views/public-login.html'
+                templateUrl: 'modules/public/views/public-login.html',
+
             })
             .state('register', {
                 url: '/register',

@@ -22,7 +22,6 @@ angular.module('adsSystem.dal')
         }
 
         function isLoggedIn() {
-            loadUserDataFromSession();
             return authentication.user ? true : false;
         }
 
@@ -62,6 +61,7 @@ angular.module('adsSystem.dal')
         function userLogout() {
             return restService.serverRequest(API_USER_ENDPOINT + 'logout', 'POST', undefined, undefined)
                 .success(function (data) {
+                    authentication = {};
                     return data;
                 })
                 .error(function (error) {

@@ -11,7 +11,7 @@ angular.module('adsSystem.public')
                             infoService.success('Successful login.');
                             $rootScope.$broadcast("UserLoggedIn", data.username);
 
-                            if (authService.isAdmin) {
+                            if (authService.isAdmin()) {
                                 $state.go('adminHome');
                             } else {
                                 $state.go('userHome');

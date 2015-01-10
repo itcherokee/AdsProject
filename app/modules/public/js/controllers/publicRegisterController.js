@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem.public')
-    .controller('PublicRegisterController', ['$rootScope', '$scope', 'townService', 'authenticateService', '$state', 'infoService',
-        function ($rootScope, $scope, townService, authenticateService, $state, infoService) {
+    .controller('PublicRegisterController', ['$rootScope', '$scope', 'townService', 'authService', '$state', 'infoService',
+        function ($rootScope, $scope, townService, authService, $state, infoService) {
             $rootScope.$broadcast("PageChanged", 'Ads - Registration');
 
             $scope.towns = [];
