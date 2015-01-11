@@ -25,5 +25,11 @@ angular.module('adsSystem.admin', ['flow'])
                 parent: 'admin',
                 controller: 'AdminAdsDeleteController',
                 templateUrl: 'modules/admin/views/admin-ads-delete.html'
+            })
+            .state('AdminEditAd', {
+                url: '/admin/ads/{id:[0-9]+}',
+                parent: 'user',
+                controller: 'AdminAdsEditController',
+                templateUrl: 'modules/admin/views/admin-ads-edit.html'
             });
     });
