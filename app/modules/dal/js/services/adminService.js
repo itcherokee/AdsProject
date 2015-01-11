@@ -48,6 +48,15 @@ angular.module('adsSystem.dal')
                 })
         }
 
+        function getAdById(id) {
+            return restService.serverRequest(API_ADMIN_ENDPOINT + 'ads/' + id, 'GET', undefined, undefined)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
+        }
 //
 //        // tested
 //        function getUserAds(status, startPage, pageSize) {
@@ -89,15 +98,7 @@ angular.module('adsSystem.dal')
 //        }
 //
 //        // tested
-//        function getUserAdById(id) {
-//            return restService.serverRequest(API_ADMIN_ENDPOINT + 'ads/' + id, 'GET', undefined, undefined)
-//                .success(function (data) {
-//                    return data;
-//                })
-//                .error(function (error) {
-//                    return error;
-//                })
-//        }
+
 //
 //        function editUserAd(data, imageStatus) {
 //            var adData = {
@@ -198,11 +199,13 @@ angular.module('adsSystem.dal')
         return {
             getAllPublishedAds: getAllPublishedAds,
             approveAd: approveAd,
-            rejectAd: rejectAd
+            rejectAd: rejectAd,
+            getAdById: getAdById
+
+
 //            getUserAds: getUserAds,
 //            deactivateUserAd: deactivateUserAd,
 //            publishAgainUserAd: publishAgainUserAd,
-//            getUserAdById: getUserAdById,
 //            editUserAd: editUserAd,
 //            deleteUserAdById: deleteUserAdById,
 //            changeUserPassword: changeUserPassword,
