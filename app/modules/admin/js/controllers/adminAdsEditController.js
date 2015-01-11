@@ -58,7 +58,7 @@ angular.module('adsSystem.user')
                         $scope.imageStatus = 'update';
                     }
 
-                    admin.editAd($scope.ad, $scope.imageStatus ? $scope.imageStatus : undefined)
+                    adminService.editAd($scope.ad, $scope.imageStatus ? $scope.imageStatus : undefined)
                         .success(function (data) {
                             $rootScope.$broadcast('userAdEdited');
                             infoService.success('Advertisement successfully edited.');

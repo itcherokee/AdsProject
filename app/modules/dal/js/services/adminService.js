@@ -68,6 +68,41 @@ angular.module('adsSystem.dal')
                 })
         }
 
+        function editAd(data, imageStatus) {
+            var adData = {
+                title: data.title,
+                text: data.text
+            };
+
+            switch (imageStatus) {
+                case 'delete':
+                    adData['changeImage'] = true;
+                    break;
+                case 'update':
+                    adData['imageDataUrl'] = data.imageDataUrl;
+                    adData['changeImage'] = true;
+                    break;
+                default:
+                    adData['changeImage'] = false;
+                    break;
+            }
+
+            if (data.categoryId) {
+                adData['categoryId'] = data.categoryId;
+            }
+
+            if (data.townId) {
+                adData['townId'] = data.townId;
+            }
+
+            return restService.serverRequest(API_ADMIN_ENDPOINT + 'ads/' + data.id, 'PUT', undefined, adData)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
+        }
 //
 //        // tested
 //        function getUserAds(status, startPage, pageSize) {
@@ -204,7 +239,8 @@ angular.module('adsSystem.dal')
             approveAd: approveAd,
             rejectAd: rejectAd,
             getAdById: getAdById,
-            deleteAdById: deleteAdById
+            deleteAdById: deleteAdById,
+            editAd : editAd
 
 
 //            getUserAds: getUserAds,

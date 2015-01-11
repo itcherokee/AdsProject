@@ -9,27 +9,35 @@
 				<div class="col-sm-9">
 
 					<div class="form-group">
-						<label for="title" class="col-sm-2 control-label">Title:</label>
+						<label for="title" class="col-sm-3 control-label">Title:</label>
 
-						<div class="col-sm-10">
+						<div class="col-sm-9">
 							<input type="text" class="form-control input-md" id="title" name="title"
 								   data-ng-model="ad.title" placeholder="Enter title for ad..." required autofocus
 								   ng-class="{true: 'error'}[submitted && form.title.$invalid]"/>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="text" class="col-sm-2 control-label">Text:</label>
+						<label for="text" class="col-sm-3 control-label">Text:</label>
 
-						<div class="col-sm-10">
+						<div class="col-sm-9">
 							<textarea class="form-control" name="text" id="text" rows="4" data-ng-model="ad.text"
 									  placeholder="Some information..." required
 									  ng-class="{true: 'error'}[submitted && form.text.$invalid]"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="ads-category" class="col-sm-2 control-label">Category:</label>
+						<label for="username" class="col-sm-3 control-label">Username:</label>
 
-						<div class="col-sm-10">
+						<div class="col-sm-9">
+							<input type="text" class="form-control input-md" id="username" name="username"
+								   data-ng-model="ad.ownerUsername" placeholder="Enter username..." />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="ads-category" class="col-sm-3 control-label">Category:</label>
+
+						<div class="col-sm-9">
 							<select data-ng-options="category.id as category.name for category in categories"
 									name="category"
 									id="ads-category"
@@ -39,9 +47,9 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="ads-town" class="col-sm-2 control-label">Town:</label>
+						<label for="ads-town" class="col-sm-3 control-label">Town:</label>
 
-						<div class="col-sm-10">
+						<div class="col-sm-9">
 							<select data-ng-options="town.id as town.name for town in towns" name="ads-town"
 									id="ads-town"
 									class="form-control" data-ng-model="ad.townId">
