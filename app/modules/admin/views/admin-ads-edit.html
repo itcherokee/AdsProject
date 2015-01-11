@@ -5,7 +5,8 @@
 				<h3 class="text-center">Edit Ad</h3>
 			</div>
 			<!--<div data-ng-include="'modules/user/views/partials/form-content.html'"></div>-->
-			<div class="col-sm-12" flow-init="{singleFile:true}" flow-file-added="convertImage($file)" flow-name="image.flow">
+			<div class="col-sm-12" flow-init="{singleFile:true}" flow-file-added="convertImage($file)"
+				 flow-name="image.flow">
 				<div class="col-sm-9">
 
 					<div class="form-group">
@@ -31,7 +32,7 @@
 
 						<div class="col-sm-9">
 							<input type="text" class="form-control input-md" id="username" name="username"
-								   data-ng-model="ad.ownerUsername" placeholder="Enter username..." />
+								   data-ng-model="ad.ownerUsername" placeholder="Enter username..."/>
 						</div>
 					</div>
 					<div class="form-group">
@@ -47,7 +48,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="ads-town" class="col-sm-3 control-label">Town:</label>
+						<label for="ads-town" class="col-sm-3 control-label">Status:</label>
 
 						<div class="col-sm-9">
 							<select data-ng-options="town.id as town.name for town in towns" name="ads-town"
@@ -57,16 +58,43 @@
 							</select>
 						</div>
 					</div>
+
+					<div class="form-group">
+						<label for="adsdate" class="col-sm-3 control-label">Date:</label>
+
+						<div class="col-sm-9" id="adsdate">
+							<div class="col-sm-9">
+
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label for="adsstatus" class="col-sm-3 control-label">Status:</label>
+
+						<div class="col-sm-9">
+							<select name="adsstatus" id="adsstatus" class="form-control" data-ng-model="ad.status">
+								<option value="Inactive">Inactive</option>
+								<option value="WaitingApproval">Waiting Approval</option>
+								<option value="Published">Published</option>
+								<option value="Rejected">Rejected</option>
+							</select>
+						</div>
+					</div>
+
 				</div>
 
 				<div class="col-sm-3">
 					<div class="form-group text-center">
 						<div class="image-box img-thumbnail col-sm-12 ">
-							<img flow-img="$flow.files[0]" src="img/noimage.png" alt="" class="col-center"	ng-show="$flow.files.length" />
+							<img flow-img="$flow.files[0]" src="img/noimage.png" alt="" class="col-center"
+								 ng-show="$flow.files.length"/>
 
-							<img ng-src="{{ad.imageDataUrl}}" src="img/noimage.png" alt="" class="col-center" ng-hide="$flow.files.length"/>
+							<img ng-src="{{ad.imageDataUrl}}" src="img/noimage.png" alt="" class="col-center"
+								 ng-hide="$flow.files.length"/>
 						</div>
-						<span class="btn btn-default form-control " flow-btn >Change image</span>
+						<span class="btn btn-default form-control " flow-btn>Change image</span>
 						<!--<a ng-click="" class="btn btn-default form-control ">Change image</a>-->
 						<a ng-click="deleteImage()" class="btn btn-default form-control ">Delete image</a>
 					</div>
