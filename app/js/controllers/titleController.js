@@ -16,9 +16,9 @@ angular.module('adsSystem')
             $scope.$on("UserLoggedIn", function (event, username) {
                 $scope.username = username;
                 if (username === 'admin'){
-                    $scope.adminTitle ='admin-color'
+                    $rootScope.adminTitle ='admin-color'
                 } else {
-                    $scope.adminTitle ='well'
+                    $rootScope.adminTitle ='well'
                 }
             });
 
