@@ -3,7 +3,7 @@
 angular.module('adsSystem.user')
     .controller('AdminTownsListController', ['$rootScope', '$scope', '$state', 'adminService', 'infoService',
         function ($rootScope, $scope, $state, adminService, infoService) {
-            $rootScope.$broadcast("PageChanged", 'Ads Administration - Categories');
+            $rootScope.$broadcast("PageChanged", 'Ads Administration - Towns');
 
             var selections = {
                 startPage: 1,
@@ -31,7 +31,7 @@ angular.module('adsSystem.user')
                         $scope.selections.numPages = data.numPages;
                     })
                     .error(function (error) {
-                        infoService.error('Categories can not be loaded from server!');
+                        infoService.error('Towns can not be loaded from server!');
                     });
             }
 

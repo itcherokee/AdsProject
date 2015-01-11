@@ -137,6 +137,22 @@ angular.module('adsSystem.dal')
                     return error;
                 })
         }
+
+        function getAllTowns(startPage, pageSize) {
+            var parameters = {
+                PageSize: pageSize || 2,
+                StartPage: startPage || 1
+
+            };
+
+            return restService.serverRequest(API_ADMIN_ENDPOINT + 'towns', 'GET', parameters, undefined)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
+        }
 //
 //        // tested
 //        function getUserAds(status, startPage, pageSize) {
@@ -276,7 +292,8 @@ angular.module('adsSystem.dal')
             deleteAdById: deleteAdById,
             editAd : editAd,
             getAllUsers : getAllUsers,
-            getAllCategories : getAllCategories
+            getAllCategories : getAllCategories,
+            getAllTowns : getAllTowns
 
 
 //            getUserAds: getUserAds,

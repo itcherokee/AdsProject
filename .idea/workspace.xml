@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/views/admin-towns-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/js/controllers/adminTownsListController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/admin/admin-module.js" afterPath="$PROJECT_DIR$/app/modules/admin/admin-module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/admin/views/admin-towns-list.html" afterPath="$PROJECT_DIR$/app/modules/admin/views/admin-towns-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/adminService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/adminService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/admin/js/controllers/adminTownsListController.js" afterPath="$PROJECT_DIR$/app/modules/admin/js/controllers/adminTownsListController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -27,31 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="admin-module.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/modules/admin/admin-module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-              <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminCategoriesListController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/modules/admin/js/controllers/adminCategoriesListController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-              <caret line="27" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminTownsListController.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="adminTownsListController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/admin/js/controllers/adminTownsListController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.663" vertical-offset="0" max-vertical-offset="1000">
-              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -67,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-towns-list.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="admin-towns-list.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/modules/admin/views/admin-towns-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="544">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.45379877" vertical-offset="0" max-vertical-offset="974">
+              <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -92,8 +75,8 @@
       <file leaf-file-name="adminService.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/adminService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1550" max-vertical-offset="5032">
-              <caret line="131" column="77" selection-start-line="131" selection-start-column="77" selection-end-line="131" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4304" max-vertical-offset="5321">
+              <caret line="295" column="37" selection-start-line="295" selection-start-column="37" selection-end-line="295" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -102,8 +85,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-34.615383" vertical-offset="205" max-vertical-offset="1241">
-              <caret line="65" column="74" selection-start-line="65" selection-start-column="74" selection-end-line="65" selection-end-column="74" />
+            <state vertical-scroll-proportion="-32.884617" vertical-offset="267" max-vertical-offset="1258">
+              <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -165,14 +148,14 @@
         <option value="$PROJECT_DIR$/app/modules/admin/views/admin-ads-edit.html" />
         <option value="$PROJECT_DIR$/app/modules/admin/views/admin-users-list.html" />
         <option value="$PROJECT_DIR$/app/modules/admin/js/controllers/adminUsersListController.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/css/app.css" />
-        <option value="$PROJECT_DIR$/app/modules/admin/admin-module.js" />
-        <option value="$PROJECT_DIR$/app/modules/dal/js/services/adminService.js" />
         <option value="$PROJECT_DIR$/app/modules/admin/js/controllers/adminCategoriesListController.js" />
         <option value="$PROJECT_DIR$/app/modules/admin/views/admin-categories-list.html" />
-        <option value="$PROJECT_DIR$/app/modules/admin/views/admin-towns-list.html" />
         <option value="$PROJECT_DIR$/app/modules/admin/js/controllers/adminTownsListController.js" />
+        <option value="$PROJECT_DIR$/app/modules/admin/admin-module.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/modules/dal/js/services/adminService.js" />
+        <option value="$PROJECT_DIR$/app/modules/admin/views/admin-towns-list.html" />
       </list>
     </option>
   </component>
@@ -1276,7 +1259,11 @@
       <created>1420984077456</created>
       <updated>1420984077457</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="added admin town controller">
+      <created>1420984236374</created>
+      <updated>1420984236374</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1338,7 +1325,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="working on authorization - fixing states" />
     <MESSAGE value="fixed authentication in public states&#10;" />
     <MESSAGE value="athentication fixed" />
     <MESSAGE value="clearing accessToken when login out" />
@@ -1363,7 +1349,8 @@
     <MESSAGE value="added getAllUsers to adminService" />
     <MESSAGE value="added admin list categories controller" />
     <MESSAGE value="list categories implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="list categories implemented" />
+    <MESSAGE value="added admin town controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="added admin town controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1715,14 +1702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-34.615383" vertical-offset="205" max-vertical-offset="1241">
-          <caret line="65" column="74" selection-start-line="65" selection-start-column="74" selection-end-line="65" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/admin/js/controllers/adminUsersListController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
@@ -1747,22 +1726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/admin/admin-module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/adminService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1550" max-vertical-offset="5032">
-          <caret line="131" column="77" selection-start-line="131" selection-start-column="77" selection-end-line="131" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/admin/views/admin-categories-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="544">
@@ -1771,26 +1734,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/admin-towns-list.html">
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/admin-module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="544">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.884" vertical-offset="0" max-vertical-offset="1000">
+          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/admin/js/controllers/adminCategoriesListController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="27" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.204" vertical-offset="0" max-vertical-offset="1000">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.884617" vertical-offset="267" max-vertical-offset="1258">
+          <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/admin/js/controllers/adminTownsListController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.663" vertical-offset="0" max-vertical-offset="1000">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/adminService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4304" max-vertical-offset="5321">
+          <caret line="295" column="37" selection-start-line="295" selection-start-column="37" selection-end-line="295" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/admin-towns-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45379877" vertical-offset="0" max-vertical-offset="974">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
           <folding />
         </state>
       </provider>

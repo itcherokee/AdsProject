@@ -43,5 +43,11 @@ angular.module('adsSystem.admin', ['flow'])
                 parent: 'admin',
                 controller: 'AdminCategoriesListController',
                 templateUrl: 'modules/admin/views/admin-categories-list.html'
+            })
+            .state('adminTowns', {
+                url: '/admin/towns/list',
+                parent: 'admin',
+                controller: 'AdminTownsListController',
+                templateUrl: 'modules/admin/views/admin-towns-list.html'
             });
     });
