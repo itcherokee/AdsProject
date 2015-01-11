@@ -1,3 +1,31 @@
-<div class="col-md-11 col-md-offset-1 ">
-	UserLists
+<div class="col-md-12 table-responsive">
+	<table class="table table-bordered table-striped">
+		<thead>
+		<tr>
+			<th>Username</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Phone</th>
+			<th>Action</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="user in users | orderBy:username">
+			<td class="td-small">{{user.username}}</td>
+			<td class="td-small">{{user.name}}</td>
+			<td class="td-big"><a href="mailto://{{user.email}}">{{user.email}}</a></td>
+			<td class="td-big">{{user.phoneNumber}}</td>
+			<td class="td-small">
+				<a href="">Edit</a>
+				<a href="">Delete</a>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	<div class="text-center">
+		<pagination total-items="selections.totalAds" ng-model="selections.startPage" max-size="5"
+					items-per-page="selections.pageSize" class="pagination-sm"
+					boundary-links="true" rotate="true" num-pages="numPages"
+					ng-change="pageChanged()"></pagination>
+	</div>
 </div>

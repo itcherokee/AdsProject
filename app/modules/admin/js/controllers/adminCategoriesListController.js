@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('adsSystem.user')
-    .controller('AdminUsersListController', ['$rootScope', '$scope', '$state', 'adminService', 'infoService',
+    .controller('AdminCategoriesListController', ['$rootScope', '$scope', '$state', 'adminService', 'infoService',
         function ($rootScope, $scope, $state, adminService, infoService) {
             $rootScope.$broadcast("PageChanged", 'Ads Administration - Users');
 

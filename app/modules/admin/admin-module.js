@@ -35,7 +35,7 @@ angular.module('adsSystem.admin', ['flow'])
             .state('adminUsers', {
                 url: '/admin/users/list',
                 parent: 'admin',
-                controller: 'AdminUserListController',
+                controller: 'AdminUsersListController',
                 templateUrl: 'modules/admin/views/admin-users-list.html'
             });;
     });
