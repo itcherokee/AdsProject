@@ -27,6 +27,7 @@ angular.module('adsSystem')
                 authService.userLogout()
                     .success(function () {
                         $scope.username = undefined;
+                        $rootScope.adminTitle = 'well';
                         sessionStorage.clear();
                         infoService.success('You have been successfully logged-off.')
                         $state.go('home');

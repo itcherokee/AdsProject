@@ -5,6 +5,7 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router', 'adsSystem.dal', 'adsS
         function ($state, $rootScope, $stateParams, authService) {
             $rootScope.$state = $state;
             $rootScope.$stateParams = $stateParams;
+            $rootScope.adminTitle = 'well';
 
             authService.loadUserDataFromSession();
 
