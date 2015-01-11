@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/admin/views/admin-ads-edit.html" afterPath="$PROJECT_DIR$/app/modules/admin/views/admin-ads-edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -1273,7 +1272,11 @@
       <created>1420977981038</created>
       <updated>1420977981038</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary=" date control in edit ad view">
+      <created>1420978730845</created>
+      <updated>1420978730845</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1335,7 +1338,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="delete image in edit Ad available now" />
     <MESSAGE value="fix minor bug in Title controller" />
     <MESSAGE value="fixed title model in all Controllers" />
     <MESSAGE value="initial admin views and controllers uploaded in order to deploy authentication&#10;" />
@@ -1360,7 +1362,8 @@
     <MESSAGE value="fix in admin edit state" />
     <MESSAGE value="admin edit fixed submitting&#10;" />
     <MESSAGE value="added Status to Admin edit ad" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Status to Admin edit ad" />
+    <MESSAGE value=" date control in edit ad view" />
+    <option name="LAST_COMMIT_MESSAGE" value=" date control in edit ad view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
