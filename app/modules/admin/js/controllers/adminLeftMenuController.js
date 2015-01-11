@@ -149,7 +149,7 @@ angular.module('adsSystem.admin')
                 $scope.clickMyAdsMenuHandler(myAdsMenuItems.items[selectedMyAdsMenuItem.id]);
             }
 
-            $scope.$on('userAdDeleted', function (event) {
+            $scope.$on('adminAdDeleted', function (event) {
                 var status = undefined;
 
                 if (sessionStorage['userMyAdsMenuItemStatus']) {
