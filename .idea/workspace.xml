@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/admin/views/admin-ads-delete.html" afterPath="$PROJECT_DIR$/app/modules/admin/views/admin-ads-delete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/admin/js/controllers/adminAdsDeleteController.js" afterPath="$PROJECT_DIR$/app/modules/admin/js/controllers/adminAdsDeleteController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/admin/js/controllers/adminLeftMenuController.js" afterPath="$PROJECT_DIR$/app/modules/admin/js/controllers/adminLeftMenuController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -1231,7 +1228,11 @@
       <created>1420973227176</created>
       <updated>1420973227176</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="fixed admin edit view">
+      <created>1420974422873</created>
+      <updated>1420974422873</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1293,7 +1294,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixed new Ad Controller - added warnings and error messages&#10;" />
     <MESSAGE value="added information announce in Delete controller." />
     <MESSAGE value="fixed error to return to selected sub mya ads menu after deleting an ad" />
     <MESSAGE value="fixed problem with loading user ads" />
@@ -1318,7 +1318,8 @@
     <MESSAGE value="adminService added getAdsById" />
     <MESSAGE value="added state for admin edit" />
     <MESSAGE value="adminService - added deleteAdById" />
-    <option name="LAST_COMMIT_MESSAGE" value="adminService - added deleteAdById" />
+    <MESSAGE value="fixed admin edit view" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed admin edit view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
