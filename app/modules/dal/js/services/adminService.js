@@ -71,7 +71,8 @@ angular.module('adsSystem.dal')
         function editAd(data, imageStatus) {
             var adData = {
                 title: data.title,
-                text: data.text
+                text: data.text,
+                date: data.date
             };
 
             switch (imageStatus) {

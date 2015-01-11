@@ -86,6 +86,6 @@ angular.module('adsSystem.admin')
                 $state.go('adminEditAd', {id: ad.id});
             };
 
-
+            $rootScope.adminTitle ='admin-color';
             loadAds(selections);
         }]);

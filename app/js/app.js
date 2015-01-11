@@ -12,6 +12,7 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router', 'adsSystem.dal', 'adsS
                 $rootScope.$broadcast("UserLoggedIn", authService.username);
 
                 if (authService.isAdmin()) {
+
                     $state.go('adminHome');
                 } else {
                     $state.go('userHome');
