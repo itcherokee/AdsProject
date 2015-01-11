@@ -4,9 +4,6 @@ angular.module('adsSystem.dal')
     .factory('authService', ['restService', 'API_USER_ENDPOINT', function (restService, API_USER_ENDPOINT) {
         var authentication = {};
 
-        //TODO: It is good to introduce check for logged-in user
-        // here (including check of sessionStorage in case of page refresh,
-        // instead doing that by TitleController
         function saveUserDataToSession(username, isAdmin, accessToken) {
             sessionStorage['user'] = username;
             sessionStorage['isAdmin'] = isAdmin;
@@ -35,11 +32,6 @@ angular.module('adsSystem.dal')
                 .success(function (data) {
                     saveUserDataToSession(data.username, data.isAdmin, data.access_token);
                     authentication.user = data;
-//                    isLoggedIn = true;
-//                    if (data.isAdmin){
-//                        isAdmin = true;
-//                    }
-
                     return data;
                 })
                 .error(function (error) {
@@ -62,6 +54,7 @@ angular.module('adsSystem.dal')
             return restService.serverRequest(API_USER_ENDPOINT + 'logout', 'POST', undefined, undefined)
                 .success(function (data) {
                     authentication = {};
+                    restService.clearAccessToken();
                     return data;
                 })
                 .error(function (error) {

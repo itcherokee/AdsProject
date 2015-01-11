@@ -3,7 +3,7 @@
 angular.module('adsSystem')
     .controller('TitleController', ['$rootScope', '$scope', '$state', 'authService', 'infoService',
         function ($rootScope, $scope, $state, authService, infoService) {
-            $scope.currentPage = 'Home';
+            $scope.currentPage = 'Ads - Home';
 
             if (sessionStorage.user) {
                 $scope.username = sessionStorage.user;
@@ -18,7 +18,7 @@ angular.module('adsSystem')
             });
 
             $scope.clickLogoutHandler = function () {
-                $scope.currentPage = 'Home';
+                $scope.currentPage = 'Ads - Home';
                 authService.userLogout()
                     .success(function () {
                         $scope.username = undefined;
