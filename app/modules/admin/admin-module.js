@@ -28,7 +28,7 @@ angular.module('adsSystem.admin', ['flow'])
             })
             .state('adminEditAd', {
                 url: '/admin/ads/{id:[0-9]+}',
-                parent: 'user',
+                parent: 'admin',
                 controller: 'AdminAdsEditController',
                 templateUrl: 'modules/admin/views/admin-ads-edit.html'
             });
