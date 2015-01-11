@@ -121,6 +121,22 @@ angular.module('adsSystem.dal')
                     return error;
                 })
         }
+
+        function getAllCategories(startPage, pageSize) {
+            var parameters = {
+                PageSize: pageSize || 2,
+                StartPage: startPage || 1
+
+            };
+
+            return restService.serverRequest(API_ADMIN_ENDPOINT + 'categories', 'GET', parameters, undefined)
+                .success(function (data) {
+                    return data;
+                })
+                .error(function (error) {
+                    return error;
+                })
+        }
 //
 //        // tested
 //        function getUserAds(status, startPage, pageSize) {
@@ -259,7 +275,8 @@ angular.module('adsSystem.dal')
             getAdById: getAdById,
             deleteAdById: deleteAdById,
             editAd : editAd,
-            getAllUsers : getAllUsers
+            getAllUsers : getAllUsers,
+            getAllCategories : getAllCategories
 
 
 //            getUserAds: getUserAds,

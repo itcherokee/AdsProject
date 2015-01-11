@@ -1,0 +1,27 @@
+<div class="col-md-8 col-md-offset-2 table-responsive">
+	<table class="table table-bordered table-striped">
+		<thead>
+		<tr>
+			<th>Id</th>
+			<th>Category</th>
+			<th>Action</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="category in categories | orderBy:username">
+			<td class="td-10">{{category.id}}</td>
+			<td class="td-60">{{category.username}}</td>
+			<td class="td-30">
+				<a href="">Edit</a>
+				<a href="">Delete</a>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	<div class="text-center">
+		<pagination total-items="selections.totalAds" ng-model="selections.startPage" max-size="5"
+					items-per-page="selections.pageSize" class="pagination-sm"
+					boundary-links="true" rotate="true" num-pages="numPages"
+					ng-change="pageChanged()"></pagination>
+	</div>
+</div>

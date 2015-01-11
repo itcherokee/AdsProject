@@ -3,7 +3,7 @@
 angular.module('adsSystem.user')
     .controller('AdminCategoriesListController', ['$rootScope', '$scope', '$state', 'adminService', 'infoService',
         function ($rootScope, $scope, $state, adminService, infoService) {
-            $rootScope.$broadcast("PageChanged", 'Ads Administration - Users');
+            $rootScope.$broadcast("PageChanged", 'Ads Administration - Categories');
 
             var selections = {
                 startPage: 1,
@@ -16,25 +16,25 @@ angular.module('adsSystem.user')
             $scope.selections = selections;
 
             $scope.pageChanged = function () {
-                loadUsers(selections);
+                loadCategories(selections);
             };
 
-            function loadUsers(selections) {
+            function loadCategories(selections) {
                 var startPage = selections.startPage,
                     pageSize = selections.pageSize;
 
-                adminService.getAllUsers(startPage, pageSize)
+                adminService.getAllCategories(startPage, pageSize)
                     .success(function (data) {
-                        $scope.users = data.users;
+                        $scope.categories = data.categories;
                         $scope.adsLoaded = true;
                         $scope.selections.totalAds = data.numItems;
                         $scope.selections.numPages = data.numPages;
                     })
                     .error(function (error) {
-                        infoService.error('Users can not be loaded from server!');
+                        infoService.error('Categories can not be loaded from server!');
                     });
             }
 
             $rootScope.adminTitle = 'admin-color';
-            loadUsers(selections);
+            loadCategories(selections);
         }]);

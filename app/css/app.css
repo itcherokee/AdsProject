@@ -147,3 +147,15 @@ input.ng-dirty.ng-invalid {
 .td-big {
     width: 25%;
 }
+
+.td-60 {
+    width: 60%;
+}
+
+.td-10 {
+    width: 10%;
+}
+
+.td-30 {
+    width: 30%;
+}
