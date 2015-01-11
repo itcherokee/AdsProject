@@ -21,15 +21,21 @@ angular.module('adsSystem.admin', ['flow'])
                 templateUrl: 'modules/admin/views/admin-home.html'
             })
             .state('adminDeleteAd', {
-                url: '/admin/ads/{id:[0-9]+}',
+                url: '/admin/ads/delete/{id:[0-9]+}',
                 parent: 'admin',
                 controller: 'AdminAdsDeleteController',
                 templateUrl: 'modules/admin/views/admin-ads-delete.html'
             })
             .state('adminEditAd', {
-                url: '/admin/ads/{id:[0-9]+}',
+                url: '/admin/ads/edit/{id:[0-9]+}',
                 parent: 'admin',
                 controller: 'AdminAdsEditController',
                 templateUrl: 'modules/admin/views/admin-ads-edit.html'
-            });
+            })
+            .state('adminUsers', {
+                url: '/admin/users/list',
+                parent: 'admin',
+                controller: 'AdminUserListController',
+                templateUrl: 'modules/admin/views/admin-users-list.html'
+            });;
     });

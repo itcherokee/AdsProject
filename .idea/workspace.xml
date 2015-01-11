@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e190249c-3c4d-491c-8b78-95e1bf8bae6d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/views/admin-users-list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/js/controllers/adminUsersListController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/admin/admin-module.js" afterPath="$PROJECT_DIR$/app/modules/admin/admin-module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/dal/js/services/adminService.js" afterPath="$PROJECT_DIR$/app/modules/dal/js/services/adminService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdsProject.iws" />
@@ -28,8 +32,28 @@
       <file leaf-file-name="admin-module.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/admin/admin-module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+              <caret line="37" column="52" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminUsersListController.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/modules/admin/js/controllers/adminUsersListController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.102" vertical-offset="0" max-vertical-offset="1105">
+              <caret line="6" column="76" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-users-list.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/admin/views/admin-users-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="136">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -45,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-ads-edit.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin-ads-edit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/admin/views/admin-ads-edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3439425" vertical-offset="668" max-vertical-offset="2244">
+            <state vertical-scroll-proportion="-12.884615" vertical-offset="668" max-vertical-offset="2244">
               <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
               <folding />
             </state>
@@ -68,58 +92,8 @@
       <file leaf-file-name="adminService.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/adminService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="955" max-vertical-offset="4437">
-              <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="1207">
-              <caret line="12" column="71" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="titleController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/controllers/titleController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-              <caret line="18" column="52" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/css/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1482" max-vertical-offset="2482">
-              <caret line="134" column="14" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="91821" max-vertical-offset="107746">
-              <caret line="5421" column="0" selection-start-line="5421" selection-start-column="0" selection-end-line="5428" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1108" max-vertical-offset="4454">
+              <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -138,8 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/modules/public/views/public.html" />
-        <option value="$PROJECT_DIR$/app/modules/user/js/controllers/userRightMenuController.js" />
         <option value="$PROJECT_DIR$/app/modules/public/js/controllers/publicRightMenuController.js" />
         <option value="$PROJECT_DIR$/app/modules/public/views/public-register.html" />
         <option value="$PROJECT_DIR$/app/modules/dal/js/services/userService.js" />
@@ -183,12 +155,14 @@
         <option value="$PROJECT_DIR$/app/modules/admin/js/controllers/adminLeftMenuController.js" />
         <option value="$PROJECT_DIR$/app/modules/admin/views/admin-home.html" />
         <option value="$PROJECT_DIR$/app/modules/admin/js/controllers/adminAdsEditController.js" />
-        <option value="$PROJECT_DIR$/app/modules/admin/admin-module.js" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/css/app.css" />
         <option value="$PROJECT_DIR$/app/modules/admin/js/controllers/adminHomeController.js" />
-        <option value="$PROJECT_DIR$/app/modules/dal/js/services/adminService.js" />
         <option value="$PROJECT_DIR$/app/modules/admin/views/admin-ads-edit.html" />
+        <option value="$PROJECT_DIR$/app/modules/dal/js/services/adminService.js" />
+        <option value="$PROJECT_DIR$/app/modules/admin/views/admin-users-list.html" />
+        <option value="$PROJECT_DIR$/app/modules/admin/admin-module.js" />
+        <option value="$PROJECT_DIR$/app/modules/admin/js/controllers/adminUsersListController.js" />
       </list>
     </option>
   </component>
@@ -608,8 +582,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\User\Documents\GitHub\AdsProject\app\modules\admin\views" />
       <recent name="D:\User\Documents\GitHub\AdsProject\app\modules\admin\js\controllers" />
+      <recent name="D:\User\Documents\GitHub\AdsProject\app\modules\admin\views" />
       <recent name="D:\User\Documents\GitHub\AdsProject\app\modules\dal\js\services" />
       <recent name="D:\User\Documents\GitHub\AdsProject\app\modules\public\js\controllers" />
       <recent name="D:\User\Documents\GitHub\AdsProject\app\modules\user\js\controllers" />
@@ -1374,22 +1348,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/townService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3763021" vertical-offset="0" max-vertical-offset="768">
-          <caret line="17" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/public/views/public-register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1241">
-          <caret line="1" column="84" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/libs/ng-flow-standalone.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05964912" vertical-offset="0" max-vertical-offset="285">
@@ -1715,14 +1673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/admin/admin-module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/title.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
@@ -1779,18 +1729,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/adminService.js">
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/admin-ads-edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="955" max-vertical-offset="4437">
-          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+        <state vertical-scroll-proportion="-12.884615" vertical-offset="668" max-vertical-offset="2244">
+          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/admin-ads-edit.html">
+    <entry file="file://$PROJECT_DIR$/app/modules/dal/js/services/adminService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3439425" vertical-offset="668" max-vertical-offset="2244">
-          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1108" max-vertical-offset="4454">
+          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/admin-users-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="136">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/admin-module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <caret line="37" column="52" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/js/controllers/adminUsersListController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.102" vertical-offset="0" max-vertical-offset="1105">
+          <caret line="6" column="76" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
           <folding />
         </state>
       </provider>
