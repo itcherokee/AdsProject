@@ -26,7 +26,7 @@ angular.module('adsSystem.admin', ['flow'])
                 controller: 'AdminAdsDeleteController',
                 templateUrl: 'modules/admin/views/admin-ads-delete.html'
             })
-            .state('AdminEditAd', {
+            .state('adminEditAd', {
                 url: '/admin/ads/{id:[0-9]+}',
                 parent: 'user',
                 controller: 'AdminAdsEditController',

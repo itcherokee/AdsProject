@@ -1,5 +1,5 @@
 <div class="col-md-9">
-	<div class="form-horizontal">Admin
+	<div class="form-horizontal">
 		<div data-ng-repeat="ad in ads"
 			 class="col-md-12 form-group form-control my-form-control well">
 			<div class="row">
@@ -74,14 +74,8 @@
 				<div class="col-sm-12">
 					<input type="button" class="btn btn-default col-sm-3" value="Approve" ng-click="approveAd(ad)"/>
 					<input type="button" class="btn btn-default col-sm-3" value="Reject" ng-click="rejectAd(ad)"/>
-					<input type="button" class="btn btn-default col-sm-3" value="Edit" ng-click=""/>
+					<input type="button" class="btn btn-default col-sm-3" value="Edit" ng-click="editAd(ad)"/>
 					<input type="button" class="btn btn-default col-sm-3" value="Delete" ui-sref="adminDeleteAd({ id: ad.id })"/>
-					<!--<div class="col-sm-3 ">-->
-						<!--<input type="button" class="btn btn-default col-sm-3" value="Approve"/>-->
-					<!--</div>-->
-					<!--<div class="col-sm-3 ">-->
-						<!--<a ui-sref="register" class="btn btn-default form-control ">Register</a>-->
-					<!--</div>-->
 				</div>
 		</div>
 

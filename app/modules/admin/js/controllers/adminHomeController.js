@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('adsSystem.admin')
-    .controller('AdminHomeController', ['$rootScope', '$scope', 'adminService', 'infoService',
-        function ($rootScope, $scope, adminService, infoService) {
+    .controller('AdminHomeController', ['$rootScope', '$scope', 'adminService', 'infoService', '$state',
+        function ($rootScope, $scope, adminService, infoService, $state) {
             $rootScope.$broadcast("PageChanged", 'Ads Administration - Ads');
 
             var selections = {
@@ -81,17 +81,11 @@ angular.module('adsSystem.admin')
                     });
             };
 
-//            $scope.editAd = function (ad) {
-////                            $scope.userEditAd= function(ad){
+            $scope.editAd = function (ad) {
 //                $rootScope.$broadcast('userEditAdStarted');
-//            $state.go('userEditAd', {id: ad.id});
-//        };
-//            };
-//
-//            $scope.deleteAd = function (ad) {
-////                $state.go('adminAdDelete');
-//
-//            };
+                $state.go('adminEditAd', {id: ad.id});
+            };
+
 
             loadAds(selections);
         }]);
