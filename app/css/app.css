@@ -127,3 +127,7 @@ input.ng-dirty.ng-invalid {
     overflow: hidden;
     display: inline;
 }
+
+.admin-color {
+    background: yellow;
+}

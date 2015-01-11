@@ -15,6 +15,11 @@ angular.module('adsSystem')
 
             $scope.$on("UserLoggedIn", function (event, username) {
                 $scope.username = username;
+                if (username === 'admin'){
+                    $scope.adminTitle ='admin-color'
+                } else {
+                    $scope.adminTitle ='well'
+                }
             });
 
             $scope.clickLogoutHandler = function () {

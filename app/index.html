@@ -10,8 +10,8 @@
 	<title>Ads System</title>
 </head>
 <body ng-app="adsSystem" class="container">
-<header class="row page-header well" data-ng-cloak>
-	<div data-ng-include="'views/title.html'" data-ng-controller="TitleController" ></div>
+<header class="row page-header well" data-ng-cloak ng-class="adminTitle" data-ng-controller="TitleController" >
+	<div data-ng-include="'views/title.html'" ></div>
 </header>
 <div ui-view class="row"></div>
 <footer class="row well">
