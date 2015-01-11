@@ -12,28 +12,28 @@ angular.module('adsSystem.admin')
                             id: 0,
                             title: 'Home',
                             state: function () {
-                                $state.go('userHome')
+                                $state.go('adminHome')
                             }
                         },
                         {
                             id: 1,
-                            title: 'My Ads',
+                            title: 'Users',
                             state: function () {
-                                $state.go('userMyAds')
+                                $state.go('adminUsers')
                             }
                         },
                         {
                             id: 2,
-                            title: 'Publish New Ad',
+                            title: 'Categories',
                             state: function () {
-                                $state.go('userPublish')
+                                $state.go('adminCategories')
                             }
                         },
                         {
                             id: 3,
-                            title: 'Edit Profile',
+                            title: 'Towns',
                             state: function () {
-                                $state.go('editProfile')
+                                $state.go('adminTowns')
                             }
                         }
                     ]},
@@ -87,7 +87,7 @@ angular.module('adsSystem.admin')
             $scope.mainMenuItems.selected = mainMenuItems.items[parseInt(sessionStorage['userMainMenuItemId'], 10)] || mainMenuItems.items[0];
             $scope.myAdsMenuItems = myAdsMenuItems;
             $scope.myAdsMenuItems.selected = myAdsMenuItems.items[parseInt(sessionStorage['userMyAdsMenuItemId'], 10)] || myAdsMenuItems.items[0];
-            $scope.myAdsMenuItems.enabled = sessionStorage['userMyAdsMenuItems-Enabled'] || false;
+            $scope.myAdsMenuItems.enabled = sessionStorage['userMyAdsMenuItems-Enabled'] || true;
 
             function getMyAdsItemByStatus(statusName) {
                 var item = undefined;
@@ -107,14 +107,11 @@ angular.module('adsSystem.admin')
 
             function disableMyAdsSubMenu() {
                 myAdsMenuItems.enabled = false;
-//                sessionStorage.removeItem('userMyAdsMenuItems-Enabled');
-//                sessionStorage.removeItem('userMyAdsMenuItemId');
-//                sessionStorage.removeItem('userMyAdsMenuItemStatus');
             }
 
             $scope.clickMainMenuHandler = function (item) {
                 sessionStorage['userMainMenuItemId'] = item.id;
-                if (item.title === 'My Ads') {
+                if (item.title === 'Home') {
                     myAdsMenuItems.enabled = true;
                     $scope.myAdsMenuItems.selected = myAdsMenuItems.items[0];
                     sessionStorage['userMyAdsMenuItems-Enabled'] = true;
@@ -145,13 +142,6 @@ angular.module('adsSystem.admin')
                 $scope.mainMenuItems.selected = mainMenuItems.items[0];
                 $scope.clickMainMenuHandler(mainMenuItems.items[0]);
             });
-
-//            $scope.$on('userEditAdStarted', function (event) {
-//                $scope.mainMenuItems.selected = undefined;
-//                myAdsMenuItems.enabled = false;
-//            });
-
-
 
             function restoreMyAdsMenuSelection(status) {
                 var selectedMyAdsMenuItem = getMyAdsItemByStatus(status);

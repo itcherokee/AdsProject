@@ -1,1 +1,1 @@
-HomeController - convert Categories menu & Towns menu into Directives
+convert Categories menu & Towns menu into Directives

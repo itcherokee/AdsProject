@@ -3,17 +3,20 @@
 		<div data-ng-repeat="ad in ads"
 			 class="col-md-12 form-group form-control my-form-control well">
 			<div class="row">
-				<!--{{'Category: ' + ad.categoryId + '| Town: ' + ad.townId}}-->
 				<div class="col-md-9"><h4>{{ad.title}}</h4></div>
 				<span class="col-md-3 text-right">{{ad.date | date:'d-MMM-yyyy'}}</span>
 			</div>
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<div class="image-box form-control my-form-control">
 						<img data-ng-src="{{ad.imageDataUrl}}" src="img/noimage.png" alt=""/>
 					</div>
+					<p class="text-center">
+					<label for="ad-status" >Status:</label>
+					<span class="form-control status-box" data-ng-bind="ad.status" id="ad-status"></span>
+				</p>
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-8">
 					<div class="form-horizontal">
 						<div class="form-group">
 							<div class="col-sm-12 ">
@@ -23,30 +26,63 @@
 					</div>
 					<div class="form-horizontal">
 						<div class="form-group">
-							<label for="ownerName" class="col-sm-2 control-label ">Name:</label>
+							<label for="ownerUsername" class="col-sm-3 control-label ">Username:</label>
 
-							<div class="col-sm-10">
+							<div class="col-sm-9">
+								<span class="form-control" data-ng-bind="ad.ownerUsername" id="ownerUsername"></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="ownerName" class="col-sm-3 control-label ">Name:</label>
+
+							<div class="col-sm-9">
 								<span class="form-control" data-ng-bind="ad.ownerName" id="ownerName"></span>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="ownerEmail" class="col-sm-2 control-label ">Email:</label>
+							<label for="ownerEmail" class="col-sm-3 control-label ">Email:</label>
 
-							<div class="col-sm-10">
+							<div class="col-sm-9">
 								<a class="form-control" href="mailto://{{ad.ownerEmail}}"
 								   id="ownerEmail">{{ad.ownerEmail}}</a>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="ownerPhone" class="col-sm-2 control-label">Tel:</label>
+							<label for="ownerPhone" class="col-sm-3 control-label">Tel:</label>
 
-							<div class="col-sm-10">
+							<div class="col-sm-9">
 								<span class="form-control" data-ng-bind="ad.ownerPhone" id="ownerPhone"></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="categoryName" class="col-sm-3 control-label ">Category:</label>
+
+							<div class="col-sm-9">
+								<span class="form-control" data-ng-bind="ad.categoryName" id="categoryName"></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="townName" class="col-sm-3 control-label ">Town:</label>
+
+							<div class="col-sm-9">
+								<span class="form-control" data-ng-bind="ad.townName" id="townName"></span>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+				<div class="col-sm-12">
+					<input type="button" class="btn btn-default col-sm-3" value="Approve" ng-click="approveAd(ad)"/>
+					<input type="button" class="btn btn-default col-sm-3" value="Reject" ng-click="rejectAd(ad)"/>
+					<input type="button" class="btn btn-default col-sm-3" value="Edit" ng-click=""/>
+					<input type="button" class="btn btn-default col-sm-3" value="Delete" ng-click=""/>
+					<!--<div class="col-sm-3 ">-->
+						<!--<input type="button" class="btn btn-default col-sm-3" value="Approve"/>-->
+					<!--</div>-->
+					<!--<div class="col-sm-3 ">-->
+						<!--<a ui-sref="register" class="btn btn-default form-control ">Register</a>-->
+					<!--</div>-->
+				</div>
 		</div>
 
 		<div class="text-center">

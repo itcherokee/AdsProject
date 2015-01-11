@@ -6,6 +6,8 @@ angular.module('adsSystem', ['ui.bootstrap', 'ui.router', 'adsSystem.dal', 'adsS
             $rootScope.$state = $state;
             $rootScope.$stateParams = $stateParams;
 
+            authService.loadUserDataFromSession();
+
             if (authService.isLoggedIn()) {
                 $rootScope.$broadcast("UserLoggedIn", authService.username);
 

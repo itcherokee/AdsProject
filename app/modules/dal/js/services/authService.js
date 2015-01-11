@@ -11,10 +11,11 @@ angular.module('adsSystem.dal')
         }
 
         function loadUserDataFromSession() {
-            if (sessionStorage.getItem['user'] && sessionStorage.getItem['isAdmin'] && sessionStorage.getItem['accessToken']){
-                authentication.user = sessionStorage.getItem['user'];
-                authentication.user = sessionStorage.getItem['isAdmin'];
-                authentication.user = sessionStorage.getItem['accessToken'];
+            if (sessionStorage.user && sessionStorage.isAdmin && sessionStorage.accessToken){
+                authentication.user = {};
+                authentication.user.username = sessionStorage.user;
+                authentication.user.isAdmin = sessionStorage.isAdmin;
+                authentication.user.accessToken = sessionStorage.accessToken;
             }
         }
 
