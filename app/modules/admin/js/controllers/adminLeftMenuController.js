@@ -149,14 +149,16 @@ angular.module('adsSystem.admin')
                 $scope.clickMyAdsMenuHandler(myAdsMenuItems.items[selectedMyAdsMenuItem.id]);
             }
 
-            $scope.$on('adminAdDeleted', function (event) {
-                var status = undefined;
-
-                if (sessionStorage['userMyAdsMenuItemStatus']) {
-                    status = sessionStorage.getItem('userMyAdsMenuItemStatus');
-                }
-
-                restoreMyAdsMenuSelection(status);
+            $scope.$on('userAdDeleted', function (event) {
+                $scope.mainMenuItems.selected = mainMenuItems.items[0];
+                $scope.clickMainMenuHandler(mainMenuItems.items[0]);
+//                var status = undefined;
+//
+//                if (sessionStorage['userMyAdsMenuItemStatus']) {
+//                    status = sessionStorage.getItem('userMyAdsMenuItemStatus');
+//                }
+//
+//                restoreMyAdsMenuSelection(status);
             });
 
             $scope.$on('userAdEdited', function (event, status) {

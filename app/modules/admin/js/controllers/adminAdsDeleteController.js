@@ -14,16 +14,18 @@ angular.module('adsSystem.user')
                 });
 
             // Event handler for deleting selected Ad
-            $scope.deleteAd = function () {
-                adminService.deleteAdById($scope.ad.id)
+            $scope.deleteAd = function (ad) {
+                adminService.deleteAdById(ad.id)
                     .success(function (data) {
-                        $rootScope.$broadcast('adminAdDeleted');
+                        $rootScope.$broadcast('userAdDeleted');
                         infoService.success('Advertisement has been deleted successfully.');
 
-                        $state.go('userMyAds');
+                        $state.go('adminHome');
                     })
                     .error(function (error) {
-                        infoService.error('Error occurred. Advertisement cannot be deleted.')
+                        infoService.error('Error occurred. Advertisement cannot be deleted.');
+                        $state.go('adminHome');
+
                     });
 
             };
