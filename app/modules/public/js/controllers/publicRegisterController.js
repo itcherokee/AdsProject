@@ -19,7 +19,7 @@ angular.module('adsSystem.public')
                     if ($scope.registerForm.password.$modelValue !== $scope.registerForm.confirmPassword.$modelValue) {
                         infoService.error('Passwords do not match!!');
                     } else {
-                        authenticateService.userRegister($scope.user)
+                        authService.userRegister($scope.user)
                             .success(function (data) {
                                 $rootScope.$broadcast("UserLoggedIn", data.username);
                                 infoService.success('User account created. Successful login.');

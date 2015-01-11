@@ -31,9 +31,7 @@ angular.module('adsSystem.dal').factory('restService', ['$http', function ($http
                     accessToken = data.access_token;
                 }
             })
-            .error(function (data, status, headers, config) {
-                //TODO: log rest error
-            })
+            .error(function (error) { })
     }
 
     function clearAccessToken(){
