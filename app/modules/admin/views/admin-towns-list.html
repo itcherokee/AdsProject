@@ -1,14 +1,23 @@
 <div class="col-md-8 col-md-offset-2 table-responsive">
-	<table class="table table-bordered table-striped">
+	<table class="table table-bordered table-striped" ng-init="orderByField='id'">
 		<thead>
 		<tr>
-			<th>Id</th>
-			<th>Town</th>
+			<th>
+				<a ng-click="orderByField='id'; reverseSort = !reverseSort">
+					Id</a> <span ng-show="orderByField == 'id'"><span ng-show="reverseSort"  class="glyphicon glyphicon-chevron-up"></span><span
+						ng-show="!reverseSort" class="glyphicon glyphicon-chevron-down"></span></span>
+			</th>
+			<th>
+				<a ng-click="orderByField='username'; reverseSort = !reverseSort">
+					Town</a> <span ng-show="orderByField == 'username'"><span ng-show="reverseSort"  class="glyphicon glyphicon-chevron-up"></span><span
+						ng-show="!reverseSort" class="glyphicon glyphicon-chevron-down"></span></span>
+
+			</th>
 			<th>Action</th>
 		</tr>
 		</thead>
 		<tbody>
-		<tr ng-repeat="town in towns | orderBy:username">
+		<tr ng-repeat="town in towns | orderBy:orderByField:reverseSort">
 			<td class="td-10">{{town.id}}</td>
 			<td class="td-60">{{town.username}}</td>
 			<td class="td-30">
